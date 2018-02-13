@@ -8,7 +8,7 @@ pip --version
 ansible --version
 
 git clone https://github.com/ARTbio/GalaxyKickStart.git
-rm rf GalaxyKickStart/Dockerfile GalaxyKickStart/Dockerfile.test
+rm -rf GalaxyKickStart/Dockerfile GalaxyKickStart/Dockerfile.test
 mv Dockerfile Dockerfile.test GalaxyKickStart/
 rm -rf GalaxyKickStart/group_vars/metavisitor GalaxyKickStart/group_vars/test 
 mv group_vars/metavisitor group_vars/test GalaxyKickStart/group_vars/
