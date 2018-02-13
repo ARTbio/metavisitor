@@ -1,4 +1,4 @@
-[docker]
+[test]
 localhost ansible_connection=local
 
 # change with the line bellow if remote target host
