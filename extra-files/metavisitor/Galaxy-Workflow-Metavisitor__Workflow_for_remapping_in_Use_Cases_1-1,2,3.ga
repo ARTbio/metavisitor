@@ -1,0 +1,510 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "", 
+    "format-version": "0.1", 
+    "name": "Metavisitor: Workflow for remapping in Use Cases 1-1,2,3", 
+    "steps": {
+        "0": {
+            "annotation": "", 
+            "content_id": null, 
+            "errors": null, 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Read fastq files"
+                }
+            ], 
+            "label": "Read fastq files", 
+            "name": "Input dataset collection", 
+            "outputs": [], 
+            "position": {
+                "left": 199.53125, 
+                "top": 207.515625
+            }, 
+            "tool_id": null, 
+            "tool_state": "{\"collection_type\": \"list\", \"name\": \"Read fastq files\"}", 
+            "tool_version": null, 
+            "type": "data_collection_input", 
+            "uuid": "ca202c6a-46b7-4f3a-a2ab-dbc781f331b7", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "output", 
+                    "uuid": "19eaa717-5b9a-4b27-a1c4-a895fc673970"
+                }
+            ]
+        }, 
+        "1": {
+            "annotation": "", 
+            "content_id": null, 
+            "errors": null, 
+            "id": 1, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Nora Virus Genomes"
+                }
+            ], 
+            "label": "Nora Virus Genomes", 
+            "name": "Input dataset collection", 
+            "outputs": [], 
+            "position": {
+                "left": 634.53125, 
+                "top": 412.53125
+            }, 
+            "tool_id": null, 
+            "tool_state": "{\"collection_type\": \"list\", \"name\": \"Nora Virus Genomes\"}", 
+            "tool_version": null, 
+            "type": "data_collection_input", 
+            "uuid": "e8e196c7-c854-4bd9-ace2-345a0d797090", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "output", 
+                    "uuid": "46b1caea-3a7c-4663-b2e1-6536a346567a"
+                }
+            ]
+        }, 
+        "2": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/artbio/yac_clipper/yac/2.0.1", 
+            "errors": null, 
+            "id": 2, 
+            "input_connections": {
+                "input": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Clip adapter", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Clip adapter", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "fasta"
+                }
+            ], 
+            "position": {
+                "left": 387.515625, 
+                "top": 324.53125
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionoutput": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output"
+                }
+            }, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/artbio/yac_clipper/yac/2.0.1", 
+            "tool_shed_repository": {
+                "changeset_revision": "7c913274e22a", 
+                "name": "yac_clipper", 
+                "owner": "artbio", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"out_format\": \"\\\"fasta\\\"\", \"__page__\": 0, \"min\": \"\\\"18\\\"\", \"max\": \"\\\"30\\\"\", \"__rerun_remap_job_id__\": null, \"clip_source\": \"{\\\"clip_source_list\\\": \\\"prebuilt\\\", \\\"clip_sequence\\\": \\\"CTGTAGGCACCATCAATCGT\\\", \\\"__current_case__\\\": 0}\", \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"Nmode\": \"\\\"reject\\\"\"}", 
+            "tool_version": "2.0.1", 
+            "type": "tool", 
+            "uuid": "afa187ce-544c-4287-8699-a9efe8ce45ab", 
+            "workflow_outputs": []
+        }, 
+        "3": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/mvdbeek/concatenate_multiple_datasets/cat_multiple/0.2", 
+            "errors": null, 
+            "id": 3, 
+            "input_connections": {
+                "input": {
+                    "id": 1, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Concatenate multiple datasets", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Concatenate multiple datasets", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 969.71875, 
+                "top": 500.71875
+            }, 
+            "post_job_actions": {
+                "ChangeDatatypeActionout_file1": {
+                    "action_arguments": {
+                        "newtype": "fasta"
+                    }, 
+                    "action_type": "ChangeDatatypeAction", 
+                    "output_name": "out_file1"
+                }, 
+                "HideDatasetActionout_file1": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/mvdbeek/concatenate_multiple_datasets/cat_multiple/0.2", 
+            "tool_shed_repository": {
+                "changeset_revision": "201c568972c3", 
+                "name": "concatenate_multiple_datasets", 
+                "owner": "mvdbeek", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"__page__\": 0}", 
+            "tool_version": "0.2", 
+            "type": "tool", 
+            "uuid": "73d5e37a-8a61-4bab-8bf5-12b12fc45988", 
+            "workflow_outputs": []
+        }, 
+        "4": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/mvdbeek/concatenate_multiple_datasets/cat_multiple/0.2", 
+            "errors": null, 
+            "id": 4, 
+            "input_connections": {
+                "input": {
+                    "id": 2, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Concatenate multiple datasets", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Concatenate multiple datasets", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 552.515625, 
+                "top": 226.53125
+            }, 
+            "post_job_actions": {
+                "ChangeDatatypeActionout_file1": {
+                    "action_arguments": {
+                        "newtype": "fasta"
+                    }, 
+                    "action_type": "ChangeDatatypeAction", 
+                    "output_name": "out_file1"
+                }, 
+                "HideDatasetActionout_file1": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "out_file1"
+                }, 
+                "RenameDatasetActionout_file1": {
+                    "action_arguments": {
+                        "newname": "clipped Reads"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/mvdbeek/concatenate_multiple_datasets/cat_multiple/0.2", 
+            "tool_shed_repository": {
+                "changeset_revision": "201c568972c3", 
+                "name": "concatenate_multiple_datasets", 
+                "owner": "mvdbeek", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"__page__\": 0}", 
+            "tool_version": "0.2", 
+            "type": "tool", 
+            "uuid": "f15e8add-3a18-4607-b5e2-51448dcdeb77", 
+            "workflow_outputs": []
+        }, 
+        "5": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/artbio/sr_bowtie/bowtieForSmallRNA/2.0.1", 
+            "errors": null, 
+            "id": 5, 
+            "input_connections": {
+                "input": {
+                    "id": 4, 
+                    "output_name": "out_file1"
+                }, 
+                "refGenomeSource|ownFile": {
+                    "id": 1, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool sR_bowtie", 
+                    "name": "input"
+                }, 
+                {
+                    "description": "runtime parameter for tool sR_bowtie", 
+                    "name": "refGenomeSource"
+                }
+            ], 
+            "label": null, 
+            "name": "sR_bowtie", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "aligned", 
+                    "type": "fasta"
+                }, 
+                {
+                    "name": "unaligned", 
+                    "type": "fasta"
+                }
+            ], 
+            "position": {
+                "left": 851.5, 
+                "top": 103
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionaligned": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "aligned"
+                }, 
+                "HideDatasetActionoutput": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output"
+                }, 
+                "HideDatasetActionunaligned": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "unaligned"
+                }
+            }, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/artbio/sr_bowtie/bowtieForSmallRNA/2.0.1", 
+            "tool_shed_repository": {
+                "changeset_revision": "5f4fbba31b6a", 
+                "name": "sr_bowtie", 
+                "owner": "artbio", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"output_format\": \"\\\"tabular\\\"\", \"additional_fasta\": \"\\\"No\\\"\", \"v_mismatches\": \"\\\"0\\\"\", \"__rerun_remap_job_id__\": null, \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"refGenomeSource\": \"{\\\"genomeSource\\\": \\\"history\\\", \\\"ownFile\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"__current_case__\\\": 1}\", \"method\": \"\\\"multiple\\\"\"}", 
+            "tool_version": "2.0.1", 
+            "type": "tool", 
+            "uuid": "b72cf7c6-0970-46bb-873b-64780d790c67", 
+            "workflow_outputs": []
+        }, 
+        "6": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/artbio/sr_bowtie/bowtieForSmallRNA/2.0.1", 
+            "errors": null, 
+            "id": 6, 
+            "input_connections": {
+                "input": {
+                    "id": 4, 
+                    "output_name": "out_file1"
+                }, 
+                "refGenomeSource|ownFile": {
+                    "id": 3, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool sR_bowtie", 
+                    "name": "input"
+                }, 
+                {
+                    "description": "runtime parameter for tool sR_bowtie", 
+                    "name": "refGenomeSource"
+                }
+            ], 
+            "label": null, 
+            "name": "sR_bowtie", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "aligned", 
+                    "type": "fasta"
+                }, 
+                {
+                    "name": "unaligned", 
+                    "type": "fasta"
+                }
+            ], 
+            "position": {
+                "left": 1272.5, 
+                "top": 423
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionaligned": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "aligned"
+                }, 
+                "HideDatasetActionoutput": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output"
+                }, 
+                "HideDatasetActionunaligned": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "unaligned"
+                }
+            }, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/artbio/sr_bowtie/bowtieForSmallRNA/2.0.1", 
+            "tool_shed_repository": {
+                "changeset_revision": "5f4fbba31b6a", 
+                "name": "sr_bowtie", 
+                "owner": "artbio", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"__page__\": null, \"output_format\": \"\\\"bam\\\"\", \"additional_fasta\": \"\\\"No\\\"\", \"v_mismatches\": \"\\\"0\\\"\", \"__rerun_remap_job_id__\": null, \"input\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"refGenomeSource\": \"{\\\"genomeSource\\\": \\\"history\\\", \\\"ownFile\\\": {\\\"__class__\\\": \\\"RuntimeValue\\\"}, \\\"__current_case__\\\": 1}\", \"method\": \"\\\"a_option\\\"\"}", 
+            "tool_version": "2.0.1", 
+            "type": "tool", 
+            "uuid": "280d915c-de96-4aa0-92e3-999ccc5daa1c", 
+            "workflow_outputs": []
+        }, 
+        "7": {
+            "annotation": "", 
+            "content_id": "wc_gnu", 
+            "errors": null, 
+            "id": 7, 
+            "input_connections": {
+                "input1": {
+                    "id": 5, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool Line/Word/Character count", 
+                    "name": "input1"
+                }
+            ], 
+            "label": null, 
+            "name": "Line/Word/Character count", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 1289.5, 
+                "top": 291
+            }, 
+            "post_job_actions": {
+                "RenameDatasetActionout_file1": {
+                    "action_arguments": {
+                        "newname": "nbre of remapped reads"
+                    }, 
+                    "action_type": "RenameDatasetAction", 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "tool_id": "wc_gnu", 
+            "tool_state": "{\"__page__\": null, \"include_header\": \"\\\"true\\\"\", \"input1\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"options\": \"[\\\"lines\\\", \\\"words\\\", \\\"characters\\\"]\", \"__rerun_remap_job_id__\": null}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "uuid": "c8a5c107-93fc-4e16-bd42-cd86efdbd79a", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "out_file1", 
+                    "uuid": "b773db8b-eefc-4d13-8402-4f419883370b"
+                }
+            ]
+        }, 
+        "8": {
+            "annotation": "", 
+            "content_id": "toolshed.g2.bx.psu.edu/repos/artbio/small_rna_maps/small_rna_maps/2.4.1", 
+            "errors": null, 
+            "id": 8, 
+            "input_connections": {
+                "inputs": {
+                    "id": 6, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool small_rna_maps", 
+                    "name": "inputs"
+                }
+            ], 
+            "label": null, 
+            "name": "small_rna_maps", 
+            "outputs": [
+                {
+                    "name": "output_tab", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "extra_output_tab", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "output_pdf", 
+                    "type": "pdf"
+                }
+            ], 
+            "position": {
+                "left": 1611.5, 
+                "top": 587
+            }, 
+            "post_job_actions": {
+                "HideDatasetActionextra_output_tab": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "extra_output_tab"
+                }, 
+                "HideDatasetActionoutput_tab": {
+                    "action_arguments": {}, 
+                    "action_type": "HideDatasetAction", 
+                    "output_name": "output_tab"
+                }
+            }, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/artbio/small_rna_maps/small_rna_maps/2.4.1", 
+            "tool_shed_repository": {
+                "changeset_revision": "c3fb2a864526", 
+                "name": "small_rna_maps", 
+                "owner": "artbio", 
+                "tool_shed": "toolshed.g2.bx.psu.edu"
+            }, 
+            "tool_state": "{\"inputs\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__page__\": null, \"__rerun_remap_job_id__\": null, \"minsize\": \"\\\"0\\\"\", \"cluster\": \"\\\"0\\\"\", \"maxsize\": \"\\\"10000\\\"\", \"plots_options\": \"{\\\"extra_plot\\\": \\\"Counts\\\", \\\"plots_options_selector\\\": \\\"two_plot\\\", \\\"first_plot\\\": \\\"Size\\\", \\\"__current_case__\\\": 0}\", \"normalization\": \"\\\"\\\"\"}", 
+            "tool_version": "2.4.1", 
+            "type": "tool", 
+            "uuid": "4149c0c4-4b2f-44fe-a003-45978c0135bb", 
+            "workflow_outputs": [
+                {
+                    "label": null, 
+                    "output_name": "output_pdf", 
+                    "uuid": "e9570311-d012-4aa4-9def-8f370040f771"
+                }
+            ]
+        }
+    }, 
+    "uuid": "bd8af3e0-428b-4021-b6cd-eb7e8cabad29"
+}
