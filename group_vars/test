@@ -1,10 +1,5 @@
 galaxy_tools_tool_list_files:
-  - "extra-files/docker/metavisitor_docker_tool_list.yml"
-galaxy_web_processes: 2
-galaxy_handler_processes: 4
-postgres_user_uid: 1550
-postgres_user_gid: 1550
-install_apparmor: false
+  - "extra-files/test/metavisitor_test_tool_list.yml"
 
 galaxy_restart_handler_enabled: no
 galaxy_tools_install_data_managers: no
