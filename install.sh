@@ -10,8 +10,8 @@ ansible --version
 git clone https://github.com/ARTbio/GalaxyKickStart.git
 mv Dockerfile Dockerfile.test GalaxyKickStart/
 mv group_vars/metavisitor group_vars/test GalaxyKickStart/group_vars/
-mv extra-files/metavisitor extra-files/test GalaxyKickStart/extra-files/
-mv inventory_files/metavisitor inventory_files/test inventory_files/
+mv -f extra-files/metavisitor extra-files/test GalaxyKickStart/extra-files/
+mv -f inventory_files/metavisitor inventory_files/test inventory_files/
 
 cd GalaxyKickStart/
 ansible-galaxy install -r requirements_roles.yml -p roles/ -f
