@@ -21,10 +21,4 @@ cd GalaxyKickStart/
 ansible-galaxy install -r requirements_roles.yml -p roles/ -f
 echo "Editing group_vars/all"
 sed -i -e 's/galaxy_manage_trackster: true/galaxy_manage_trackster: false/' group_vars/all
-ansible-playbook -i inventory_files/metavisitor galaxy.yml
-echo "Sleeping 15 sec before restarting Metavisitor Test Galaxy server"
-echo "zzzz zzzz..."
-sleep 15
-supervisorctl restart galaxy:
-sleep 15
-supervisorctl status
+docker build -t metavisitor .
