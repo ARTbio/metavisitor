@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 set -e
-apt-get install -y python-pip python-dev python-setuptools git htop
 echo "Upgrading pip to v 1.9"
 pip install -U pip
 pip --version
@@ -22,13 +21,10 @@ ansible-galaxy install -r requirements_roles.yml -p roles/ -f
 echo "Editing group_vars/all"
 sed -i -e 's/galaxy_manage_trackster: true/galaxy_manage_trackster: false/' group_vars/all
 ansible-playbook -i inventory_files/test galaxy.yml
-echo "Sleeping 15 sec before restarting Metavisitor Test Galaxy server"
-echo "zzzz zzzz..."
-sleep 15
-supervisorctl restart galaxy:
+echo "Sleeping 15 sec before display status"
 sleep 15
 supervisorctl status
-
+echo "shut down supervisor service"
 service supervisor stop
 sleep 5
 docker build -t metavisitor -f Dockerfile.test .
