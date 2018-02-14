@@ -3,7 +3,7 @@ set -e
 echo "Upgrading pip to v 1.9"
 pip install -U pip
 pip --version
-/usr/local/bin/pip install ansible==2.2
+pip install ansible==2.2
 ansible --version
 
 git clone https://github.com/ARTbio/GalaxyKickStart.git
