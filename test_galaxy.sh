@@ -12,9 +12,9 @@ curl --fail ${BIOBLEND_GALAXY_URL}api/version
 docker exec -it $CID1 supervisorctl status | grep proftpd | grep RUNNING
 date > $HOME/date.txt && curl --fail -T $HOME/date.txt ftp://localhost:21 --user $GALAXY_USER:$GALAXY_USER_PASSWD
 docker stop $CID1 && docker rm $CID1
-service supervisor start
+sudo service supervisor start
 sleep 15s
-supervisorctl status
+sudo supervisorctl status
 export BIOBLEND_GALAXY_URL="http://localhost:80"
 sudo -E su $GALAXY_TRAVIS_USER -c "export PATH=$GALAXY_HOME/.local/bin/:$PATH &&
   cd $GALAXY_HOME &&

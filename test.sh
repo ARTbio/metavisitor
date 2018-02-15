@@ -23,8 +23,8 @@ sed -i -e 's/galaxy_manage_trackster: true/galaxy_manage_trackster: false/' grou
 ansible-playbook -i inventory_files/test galaxy.yml
 echo "Sleeping 15 sec before display status"
 sleep 15
-supervisorctl status
+sudo supervisorctl status
 echo "shut down supervisor service"
-service supervisor stop
+sudo service supervisor stop
 sleep 5
 docker build -t metavisitor -f Dockerfile.test .
