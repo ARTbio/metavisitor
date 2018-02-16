@@ -49,7 +49,7 @@ if [ "$TRACK" = "docker" ]; then
     sudo mkdir /docker-tmp && sudo chown $GALAXY_UID:$GALAXY_GID /docker-tmp
     export CID1=`docker run -d --privileged=true -p 80:80 -p 21:21 \
                  -e NAT_MASQUERADE=true \
-                 -e NGINX_GALAXY_LOCATION=/subdir \
+                 -e NGINX_GALAXY_LOCATION=/subdir/ \
                  -v /export:/export \
                  -v /docker-tmp:/tmp \
                  metavisitor`
