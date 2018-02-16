@@ -32,6 +32,7 @@ matrix:
         - BIOBLEND_GALAXY_URL="http://localhost:80/subdir/"
 
 before_install:
+  - sudo apt-get update -y
   - . ./travis_before_install.sh $TRAVIS_JOB
 
 install:
