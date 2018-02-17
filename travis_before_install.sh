@@ -18,7 +18,7 @@ cd GalaxyKickStart/
 echo "Upgrading pip to v 1.9";
 pip install -U pip
 pip --version
-pip install ansible==2.2
+pip install ansible==2.2.0.0
 ansible --version
 ansible-galaxy install -r requirements_roles.yml -p roles/ -f
 echo "Editing group_vars/all"
@@ -47,15 +47,18 @@ if [ "$TRACK" = "docker" ]; then
     docker build -t metavisitor -f Dockerfile.test .
     sudo mkdir /export && sudo chown $GALAXY_UID:$GALAXY_GID /export
 #    sudo mkdir /docker-tmp && sudo chown $GALAXY_UID:$GALAXY_GID /docker-tmp
-    export CID1=`docker run -d --privileged=true -p 80:80 -p 21:21 \
-                 -e NAT_MASQUERADE=true \
+    export CID1=`docker run -d -p 80:80 -p 21:21 -p 8800:8800 \
+                 --privileged=true \
                  -e GALAXY_CONFIG_ALLOW_USER_DATASET_PURGE=True \
                  -e GALAXY_CONFIG_ALLOW_LIBRARY_PATH_PASTE=True \
                  -e GALAXY_CONFIG_ENABLE_USER_DELETION=True \
                  -e GALAXY_CONFIG_ENABLE_BETA_WORKFLOW_MODULES=True \
                  -e NGINX_GALAXY_LOCATION=/subdir \
+                 -v /tmp/:/tmp/ \
                  -v /export:/export \
                  metavisitor`
+
+
     echo "wait for export data of container"
     sleep 180s
     docker logs $CID1
