@@ -46,7 +46,7 @@ if [ "$TRACK" = "docker" ]; then
     sudo chown -R $GALAXY_TRAVIS_USER:$GALAXY_TRAVIS_USER $GALAXY_HOME
     docker build -t metavisitor -f Dockerfile.test .
     sudo mkdir /export && sudo chown $GALAXY_UID:$GALAXY_GID /export
-    sudo mkdir /docker-tmp && sudo chown $GALAXY_UID:$GALAXY_GID /docker-tmp
+#    sudo mkdir /docker-tmp && sudo chown $GALAXY_UID:$GALAXY_GID /docker-tmp
     export CID1=`docker run -d --privileged=true -p 80:80 -p 21:21 \
                  -e NAT_MASQUERADE=true \
                  -e GALAXY_CONFIG_ALLOW_USER_DATASET_PURGE=True \
@@ -55,7 +55,6 @@ if [ "$TRACK" = "docker" ]; then
                  -e GALAXY_CONFIG_ENABLE_BETA_WORKFLOW_MODULES=True \
                  -e NGINX_GALAXY_LOCATION=/subdir \
                  -v /export:/export \
-                 -v /docker-tmp:/tmp \
                  metavisitor`
     echo "wait for export data of container"
     sleep 180s
