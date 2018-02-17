@@ -49,14 +49,19 @@ if [ "$TRACK" = "docker" ]; then
     sudo mkdir /docker-tmp && sudo chown $GALAXY_UID:$GALAXY_GID /docker-tmp
     export CID1=`docker run -d --privileged=true -p 80:80 -p 21:21 \
                  -e NAT_MASQUERADE=true \
-                 -e NGINX_GALAXY_LOCATION=/subdir/ \
+                 -e GALAXY_CONFIG_ALLOW_USER_DATASET_PURGE=True \
+                 -e GALAXY_CONFIG_ALLOW_LIBRARY_PATH_PASTE=True \
+                 -e GALAXY_CONFIG_ENABLE_USER_DELETION=True \
+                 -e GALAXY_CONFIG_ENABLE_BETA_WORKFLOW_MODULES=True \
+                 -e NGINX_GALAXY_LOCATION=/subdir \
                  -v /export:/export \
                  -v /docker-tmp:/tmp \
                  metavisitor`
     echo "wait for export data of container"
-    sleep 120s
+    sleep 180s
     docker logs $CID1
     docker exec -it $CID1 supervisorctl status
+    docker exec -it $CID1 service --status-all
     echo "Going to test docker container CID1 $CID1"
 fi
 
