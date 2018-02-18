@@ -30,6 +30,9 @@ matrix:
       env:
         - TRAVIS_JOB=docker
         - BIOBLEND_GALAXY_URL="http://localhost:80/subdir/"
+    - python: 2.7
+      env:
+        - TRAVIS_JOB=build_docker
 
 before_install:
   - sudo apt-get update -y
@@ -40,4 +43,4 @@ install:
  
 script:
   - . $TRAVIS_BUILD_DIR/travis_test.sh
-  - if [ "$TRAVIS_JOB" = "docker" ]; then . ./travis_push_docker.sh; fi
+  - if [ "$TRAVIS_JOB" = "build_docker" ]; then . ./travis_push_docker.sh; fi
