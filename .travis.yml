@@ -40,3 +40,4 @@ install:
  
 script:
   - . $TRAVIS_BUILD_DIR/travis_test.sh
+  - if [ "$TRAVIS_JOB" = "docker" ]; then . ./travis_push_docker.sh; fi
