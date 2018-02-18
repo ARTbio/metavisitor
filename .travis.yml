@@ -46,4 +46,4 @@ deploy:
   - provider: script
     script: bash travis_push_docker.sh
     on:
-      branch: master
+      branch: docker_image_push
