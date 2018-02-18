@@ -44,6 +44,6 @@ script:
 deploy:
   # deploy master to production
   - provider: script
-    script: bash travis_push_docker.sh
+    script: bash $TRAVIS_BUILD_DIR/travis_push_docker.sh
     on:
       branch: docker_image_push
