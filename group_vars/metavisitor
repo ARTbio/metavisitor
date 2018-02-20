@@ -2,6 +2,7 @@ galaxy_tools_tool_list_files:
   - "extra-files/metavisitor/metavisitor_tool_list.yml"
 
 galaxy_restart_handler_enabled: no
+gks_run_data_managers: no
 galaxy_tools_install_data_managers: no
 galaxy_tools_data_managers_list: "extra-files/metavisitor/metavisitor_run_data_managers.yaml"
 
@@ -20,6 +21,12 @@ galaxy_tools_workflows:
   - "extra-files/metavisitor/Galaxy-Workflow-Metavisitor__Workflow_for_small_RNA_profiling_of_contigs.ga"
   - "extra-files/metavisitor/Galaxy-Workflow-Metavisitor__Trinity_test_in_Use_Case_2-2.ga"
   - "extra-files/metavisitor/Galaxy-Workflow-Metavisitor__Spades_test_in_Use_Case_2-2.ga"
+  - "extra-files/metavisitor/Galaxy-Workflow-Metavisitor__Workflow_for_nucleic_vir2_generation_and_test.ga"
+  - "extra-files/metavisitor/Galaxy-Workflow-Metavisitor__Workflow_for_nucleic_vir2_generation.ga"
+  - "extra-files/metavisitor/Galaxy-Workflow-Metavisitor__Workflow_for_proteic_vir2_generation_and_test.ga"
+  - "extra-files/metavisitor/Galaxy-Workflow-Metavisitor__Workflow_for_proteic_vir2_generation.ga"
+
+galaxy_web_processes: 2
 
 additional_files_list:
   - { src: "extra-files/metavisitor/logo.png", dest: "{{ galaxy_server_dir }}/static/images/" }
