@@ -25,7 +25,7 @@ echo "Editing group_vars/all"
 sed -i -e 's/galaxy_manage_trackster: true/galaxy_manage_trackster: false/' group_vars/all
 
 
-if [ "$TRACK" = "ansible" ]; then
+if [ "$TRACK" == "ansible" ]; then
     sudo /etc/init.d/postgresql stop
     sudo apt-get -y --purge remove postgresql libpq-dev libpq5 postgresql-client-common postgresql-common
     sudo rm -rf /var/lib/postgresql
@@ -36,7 +36,7 @@ if [ "$TRACK" = "ansible" ]; then
     sudo supervisorctl status
 fi
 
-if [ "$TRACK" = "docker" ]; then
+if [ "$TRACK" == "docker" ]; then
     docker --version
     docker info
     sudo groupadd -r $GALAXY_TRAVIS_USER -g $GALAXY_GID
@@ -46,7 +46,6 @@ if [ "$TRACK" = "docker" ]; then
     sudo chown -R $GALAXY_TRAVIS_USER:$GALAXY_TRAVIS_USER $GALAXY_HOME
     docker build -t metavisitor -f Dockerfile.test .
     sudo mkdir /export && sudo chown $GALAXY_UID:$GALAXY_GID /export
-#    sudo mkdir /docker-tmp && sudo chown $GALAXY_UID:$GALAXY_GID /docker-tmp
     export CID1=`docker run -d -p 80:80 -p 21:21 -p 8800:8800 \
                  --privileged=true \
                  -e GALAXY_CONFIG_ALLOW_USER_DATASET_PURGE=True \
@@ -65,5 +64,19 @@ if [ "$TRACK" = "docker" ]; then
     docker exec -it $CID1 supervisorctl status
     docker exec -it $CID1 service --status-all
     echo "Going to test docker container CID1 $CID1"
+fi
+
+if [ "$TRACK" == "build-docker" ]; then
+    docker --version
+    docker info
+    sudo groupadd -r $GALAXY_TRAVIS_USER -g $GALAXY_GID
+    sudo useradd -u $GALAXY_UID -r -g $GALAXY_TRAVIS_USER -d $GALAXY_HOME -p travis_testing\
+        -c "Galaxy user" $GALAXY_TRAVIS_USER
+    sudo mkdir $GALAXY_HOME
+    sudo chown -R $GALAXY_TRAVIS_USER:$GALAXY_TRAVIS_USER $GALAXY_HOME
+    docker build -t metavisitor .
+    docker tag metavisitor artbio/metavisitor-2-beta:$TRAVIS_COMMIT
+    docker tag metavisitor artbio/metavisitor-2-beta:latest
+
 fi
 
