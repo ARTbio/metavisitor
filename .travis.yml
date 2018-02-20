@@ -30,6 +30,10 @@ matrix:
       env:
         - TRAVIS_JOB=docker
         - BIOBLEND_GALAXY_URL="http://localhost:80/subdir/"
+    - python: 2.7
+      env:
+        - TRAVIS_JOB=build-docker
+        - BIOBLEND_GALAXY_URL="useless"
 
 before_install:
   - sudo apt-get update -y
