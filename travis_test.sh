@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -e
-if [ $TRAVIS_JOB = "docker" ] || [ $TRAVIS_JOB = "ansible" ]; then
+echo "$TRAVIS_JOB has been received"
+if [[ $TRAVIS_JOB = "docker" ]] || [[ $TRAVIS_JOB = "ansible" ]]; then
     echo "Bioblend Testing"
     curl --fail ${BIOBLEND_GALAXY_URL}/api/version
     date > $HOME/date.txt && curl --fail -T $HOME/date.txt ftp://localhost:21 --user $GALAXY_USER:$GALAXY_USER_PASSWD
