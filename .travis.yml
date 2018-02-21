@@ -45,7 +45,7 @@ install:
 script:
   - if [ $TRAVIS_JOB = "docker" ]; then . $TRAVIS_BUILD_DIR/travis_test.sh fi
   - if [ $TRAVIS_JOB = "ansible" ]; then . $TRAVIS_BUILD_DIR/travis_test.sh fi
-  - if [ $TRAVIS_JOB = "build-docker" ]; then echo "skipping test for docker built" fi
+  - if [ $TRAVIS_JOB = "build-docker" ]; then echo "skipping Bioblend testing" fi
 
 deploy:
   # deploy master to production
