@@ -44,11 +44,3 @@ install:
  
 script:
   - . $TRAVIS_BUILD_DIR/travis_test.sh
-
-deploy:
-  # deploy master to production
-  - provider: script
-    script:
-      - if [ "$TRACK" = "build-docker" ]; then bash $TRAVIS_BUILD_DIR/travis_push_docker.sh fi
-    on:
-      branch: docker_image_push
