@@ -43,13 +43,13 @@ install:
   - sudo su $GALAXY_TRAVIS_USER -c 'pip install --ignore-installed --user https://github.com/galaxyproject/bioblend/archive/master.zip pytest'
  
 script:
-  - if [ $TRAVIS_JOB == "ansible" ] || [ $TRAVIS_JOB == "docker" ]; then . $TRAVIS_BUILD_DIR/travis_test.sh fi
-  - if [ $TRAVIS_JOB == "build-docker" ]; then echo "skipping test for docker built" fi
+  - if [ $TRAVIS_JOB = "ansible" ] || [ $TRAVIS_JOB == "docker" ]; then . $TRAVIS_BUILD_DIR/travis_test.sh fi
+  - if [ $TRAVIS_JOB = "build-docker" ]; then echo "skipping test for docker built" fi
 
 deploy:
   # deploy master to production
   - provider: script
     script:
-      - if [ "$TRACK" == "build-docker" ]; then bash $TRAVIS_BUILD_DIR/travis_push_docker.sh fi
+      - if [ "$TRACK" = "build-docker" ]; then bash $TRAVIS_BUILD_DIR/travis_push_docker.sh fi
     on:
       branch: docker_image_push
