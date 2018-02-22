@@ -21,6 +21,6 @@ if [[ $TRAVIS_JOB = "ansible" ]]; then
 fi
 
 
-if [ $TRAVIS_JOB = "build-docker" ] && [ "${TRAVIS_PULL_REQUEST}" = "true" ]; then
+if [ $TRAVIS_JOB = "build-docker" ] && [ "${TRAVIS_EVENT_TYPE}" = "pull_request" ]; then
     echo "skipping Bioblend testing, metavisitor image is going to be uploaded to docker hub"
 fi
