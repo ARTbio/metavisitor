@@ -9,7 +9,7 @@ if [[ $TRAVIS_JOB = "docker" ]]; then
     sudo -E su $GALAXY_TRAVIS_USER -c "export PATH=$GALAXY_HOME/.local/bin/:$PATH &&
         cd $GALAXY_HOME &&
         bioblend-galaxy-tests -v $GALAXY_HOME/.local/lib/python2.7/site-packages/bioblend/_tests/TestGalaxy*.py"
-if
+fi
 
 if [[ $TRAVIS_JOB = "ansible" ]]; then
     echo "Bioblend Testing"
@@ -18,7 +18,7 @@ if [[ $TRAVIS_JOB = "ansible" ]]; then
     sudo -E su $GALAXY_TRAVIS_USER -c "export PATH=$GALAXY_HOME/.local/bin/:$PATH &&
         cd $GALAXY_HOME &&
         bioblend-galaxy-tests -v $GALAXY_HOME/.local/lib/python2.7/site-packages/bioblend/_tests/TestGalaxy*.py"
-if
+fi
 
 
 if [ $TRAVIS_JOB = "build-docker" ]; then
