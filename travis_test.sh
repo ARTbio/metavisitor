@@ -22,5 +22,5 @@ fi
 
 
 if [ $TRAVIS_JOB = "build-docker" ]; then
-    echo "skipping Bioblend testing"
+    echo "skipping Bioblend testing, metavisitor image is going to be uploaded to docker hub"
 fi
