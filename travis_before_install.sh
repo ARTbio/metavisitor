@@ -66,7 +66,7 @@ if [ "$TRACK" = "docker" ]; then
     echo "Going to test docker container CID1 $CID1"
 fi
 
-if [ "$TRACK" = "build-docker" ]; then
+if [ "$TRACK" = "build-docker" ] && [ "${TRAVIS_PULL_REQUEST}" = "true" ]; then
     docker --version
     docker info
     sudo groupadd -r $GALAXY_TRAVIS_USER -g $GALAXY_GID
