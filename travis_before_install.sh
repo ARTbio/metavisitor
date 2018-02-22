@@ -66,7 +66,7 @@ if [ "$TRACK" = "docker" ]; then
     echo "Going to test docker container CID1 $CID1"
 fi
 
-if [ "$TRACK" = "build-docker" ] && [ "${TRAVIS_PULL_REQUEST}" = "true" ]; then
+if [ "$TRACK" = "build-docker" ]; then
     docker --version
     docker info
     sudo groupadd -r $GALAXY_TRAVIS_USER -g $GALAXY_GID
@@ -74,9 +74,11 @@ if [ "$TRACK" = "build-docker" ] && [ "${TRAVIS_PULL_REQUEST}" = "true" ]; then
         -c "Galaxy user" $GALAXY_TRAVIS_USER
     sudo mkdir $GALAXY_HOME
     sudo chown -R $GALAXY_TRAVIS_USER:$GALAXY_TRAVIS_USER $GALAXY_HOME
+fi
+
+if [ "$TRACK" = "build-docker" ] && [ "${TRAVIS_PULL_REQUEST}" = "true" ]; then
     docker build -t metavisitor .
     docker tag metavisitor artbio/metavisitor-2-beta:$TRAVIS_COMMIT
     docker tag metavisitor artbio/metavisitor-2-beta:latest
-
 fi
 
