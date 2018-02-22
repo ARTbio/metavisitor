@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -ev
+set -e
 # Next we upload to docker
 if [ $TRAVIS_JOB = "build-docker" ]; then
     echo "pushing docker image to docker hub"

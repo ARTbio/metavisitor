@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -ev
+set -e
 echo "$TRAVIS_JOB has been received"
 
 if [[ $TRAVIS_JOB = "docker" ]]; then
