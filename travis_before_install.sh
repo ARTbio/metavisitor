@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -ev
 # TRACK may be equal to "ansible" or "docker"
 TRACK=$1
 
