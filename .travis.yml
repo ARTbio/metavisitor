@@ -30,13 +30,20 @@ matrix:
       env:
         - TRAVIS_JOB=docker
         - BIOBLEND_GALAXY_URL="http://localhost:80/subdir/"
+    - python: 2.7
+      env:
+        - TRAVIS_JOB=build-docker
+        - BIOBLEND_GALAXY_URL="useless"
 
 before_install:
   - sudo apt-get update -y
-  - . ./travis_before_install.sh $TRAVIS_JOB
+  - . $TRAVIS_BUILD_DIR/travis_before_install.sh $TRAVIS_JOB
 
 install:
-  - sudo su $GALAXY_TRAVIS_USER -c 'pip install --ignore-installed --user https://github.com/galaxyproject/bioblend/archive/master.zip pytest'
+  - sudo su $GALAXY_TRAVIS_USER -c 'pip install --ignore-installed --user https://github.com/galaxyproject/bioblend/archive/master.zip pytest' fi
  
 script:
   - . $TRAVIS_BUILD_DIR/travis_test.sh
+
+after_success:
+  - . $TRAVIS_BUILD_DIR/travis_push_docker.sh
