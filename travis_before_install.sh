@@ -76,7 +76,7 @@ if [ "$TRACK" = "build-docker" ]; then
     sudo chown -R $GALAXY_TRAVIS_USER:$GALAXY_TRAVIS_USER $GALAXY_HOME
 fi
 
-if [ "$TRACK" = "build-docker" ] && [ "${TRAVIS_PULL_REQUEST}" = "true" ]; then
+if [ "$TRACK" = "build-docker" ] && [ "${TRAVIS_EVENT_TYPE}" = "pull_request" ]; then
     docker build -t metavisitor .
     docker tag metavisitor artbio/metavisitor-2-beta:$TRAVIS_COMMIT
     docker tag metavisitor artbio/metavisitor-2-beta:latest
