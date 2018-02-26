@@ -4,7 +4,7 @@ set -e
 TRACK=$1
 
 ## Common manipulations
-git clone https://github.com/ARTbio/GalaxyKickStart.git
+tar -xvzf GalaxyKickStart-galaxy_17.09.tar.gz
 rm -rf GalaxyKickStart/Dockerfile GalaxyKickStart/Dockerfile.test
 mv Dockerfile Dockerfile.test GalaxyKickStart/
 rm -rf GalaxyKickStart/group_vars/metavisitor GalaxyKickStart/group_vars/test 
@@ -20,7 +20,6 @@ pip install -U pip
 pip --version
 pip install ansible==2.2.0.0
 ansible --version
-ansible-galaxy install -r requirements_roles.yml -p roles/ -f
 echo "Editing group_vars/all"
 sed -i -e 's/galaxy_manage_trackster: true/galaxy_manage_trackster: false/' group_vars/all
 

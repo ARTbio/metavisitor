@@ -7,7 +7,7 @@ pip --version
 /usr/local/bin/pip install ansible==2.2
 ansible --version
 
-git clone https://github.com/ARTbio/GalaxyKickStart.git
+tar -xvzf GalaxyKickStart-galaxy_17.09.tar.gz
 rm -rf GalaxyKickStart/Dockerfile GalaxyKickStart/Dockerfile.test
 mv Dockerfile Dockerfile.test GalaxyKickStart/
 rm -rf GalaxyKickStart/group_vars/metavisitor GalaxyKickStart/group_vars/test 
@@ -18,7 +18,6 @@ rm -rf GalaxyKickStart/inventory_files/*
 mv inventory_files/metavisitor inventory_files/test GalaxyKickStart/inventory_files/
 
 cd GalaxyKickStart/
-ansible-galaxy install -r requirements_roles.yml -p roles/ -f
 echo "Editing group_vars/all"
 sed -i -e 's/galaxy_manage_trackster: true/galaxy_manage_trackster: false/' group_vars/all
 ansible-playbook -i inventory_files/metavisitor galaxy.yml
