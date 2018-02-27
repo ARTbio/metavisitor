@@ -1,0 +1,17 @@
+site_name: Metavisitor
+pages:
+  - Metavisitor: index.md
+  - Prepare Metavisitor Galaxy instance for analyses: metavisitor_configure_references.md
+  - Prepare input data histories: use_cases_input_data.md
+  - Use Cases 1-1 to 1-4: use_case_1.md
+  - Use Cases 2-1 and 2-2: use_case_2.md
+  - Use Case 3-1: use_case_3-1.md
+  - Use Case 3-2: use_case_3-2.md
+  - Use Case 3-3: use_case_3-3.md
+  - Install_Metavisitor:
+    - Intro: install_metavisitor.md
+    - GalaxyKickStart: metavisitor_ansible.md
+    - Docker: metavisitor_docker.md
+    - Access and Control Metavisitor Galaxy instance: metavisitor_access_control.md
+
+theme: readthedocs
