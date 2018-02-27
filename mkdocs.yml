@@ -1,4 +1,4 @@
-site_name: Metavisitor
+site_name: Metavisitor-2
 pages:
   - Metavisitor: index.md
   - Prepare Metavisitor Galaxy instance for analyses: metavisitor_configure_references.md
