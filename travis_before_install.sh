@@ -77,7 +77,7 @@ fi
 
 if [ "$TRACK" = "build-docker" ] && [ "${TRAVIS_EVENT_TYPE}" = "pull_request" ]; then
     docker build -t metavisitor .
-    docker tag metavisitor artbio/metavisitor-2-beta:$TRAVIS_COMMIT
-    docker tag metavisitor artbio/metavisitor-2-beta:latest
+    docker tag metavisitor artbio/metavisitor-2:$TRAVIS_COMMIT
+    docker tag metavisitor artbio/metavisitor-2:latest
 fi
 
