@@ -1,11 +1,13 @@
 ![metavisitor_logo](images/metavisitor_logo.png)
 
-
+# Metavisitor-2
 [Metavisitor](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0168397) is a user-friendly and adaptable software to provide biologists, clinical researchers and possibly diagnostic clinicians with the ability to robustly detect and reconstruct viral genomes from complex deep sequence datasets. A set of modular bioinformatic tools and workflows was implemented as the Metavisitor package in the Galaxy framework. Using the graphical Galaxy workflow editor, users with minimal computational skills can use existing Metavisitor workflows or adapt them to suit specific needs by adding or modifying analysis modules.
 
 # Quick Start
 
-Users who want to use Metavisitor on the [Galaxy Mississippi Server](https://mississippi.snv.jussieu.fr), or got already the Metavisitor suite of tools installed in their own Galaxy server, can jump to the next chapter [Prepare input data histories](use_cases_input_data).
+Users who want to use Metavisitor on the [Galaxy Mississippi Server](https://mississippi.snv.jussieu.fr),
+or got already the Metavisitor suite of tools installed in their own Galaxy server,
+can jump to the next chapter [Prepare input data histories](use_cases_input_data).
 
 
 ## Availability of Metavisitor tools and workflows
