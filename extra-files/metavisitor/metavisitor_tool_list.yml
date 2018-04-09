@@ -123,7 +123,7 @@ tools:
 - name: sr_bowtie
   owner: artbio
   revisions:
-    - 5f4fbba31b6a
+    - 61ab0d4bd187
   tool_panel_section_label: Metavisitor
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
   install_resolver_dependencies: True
