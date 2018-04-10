@@ -132,7 +132,7 @@ tools:
 - name: small_rna_maps
   owner: artbio
   revisions:
-    - d33263e6e812
+    - 458a88317c22
   tool_panel_section_label: Metavisitor
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
   install_resolver_dependencies: True
