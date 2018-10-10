@@ -16,14 +16,14 @@ docker search metavisitor
 Then, to get the docker image, type:
 
 ```
-docker pull artbio/metavisitor-1.2
+docker pull artbio/metavisitor-2
 ```
-In this documentation, we recommend to use the `artbio/metavisitor-1.2` which better corresponds to the environment described in our [Metavisitor preprint](http://dx.doi.org/10.1101/048983)
+In this documentation, we recommend to use the `artbio/metavisitor-2` which better corresponds to the environment described in our [Metavisitor preprint](http://dx.doi.org/10.1101/048983)
 
 When this pull is done (may take a few minutes depending on your connection speed to the dockerhub), you can start the container by typing:
 
 ```
-docker run -d -p 80:80 artbio/metavisitor-1.2
+docker run -d -p 80:80 artbio/metavisitor-2
 ```
 
 This command starts a container in daemon mode (`-d`) from the image and serve it on port 80 of the local machine in the standard docker way.
@@ -36,7 +36,7 @@ If you wish to reach the container on a subdirectory, add `-e NGINX_GALAXY_LOCAT
 
 For instance,
 ```
-docker run -d -e NGINX_GALAXY_LOCATION="/my-subdirectory" -p 80:80 artbio/metavisitor-1.2
+docker run -d -e NGINX_GALAXY_LOCATION="/my-subdirectory" -p 80:80 artbio/metavisitor-2
 ```
 
 will get the metavisitor docker container serving at `http://127.0.0.1:80/my-subdirectory`.
@@ -45,7 +45,7 @@ We recommend also changing the default admin user as well, so the command become
 ```
 docker run -d -e NGINX_GALAXY_LOCATION="/my-subdirectory" -e GALAXY_CONFIG_ADMIN_USERS=admin@artbio.fr -p 80:80 artbio/galaxy-kickstart-base
 ```
-Note that is you do not make this latest change, the admin login for the metavisitor container is by default `admin@galaxy.org` and the password is `admin`.
+Note that if you do not make this latest change, the admin login for the metavisitor container is by default `admin@galaxy.org` and the password is `admin`.
 
 ## Persisting to disk
 
@@ -55,7 +55,7 @@ the containers /export folder.
 Due to the persistance mechanism (we use bind-mounts inside the container), you need to privilege the container.
 Thus, assuming you would like to mount your local `/my/data` folder and persist you Galaxy data in this folder, run
 ```
-docker run -d --privileged -v /my/data:/export -p 80:80 artbio/metavisitor-1.2
+docker run -d --privileged -v /my/data:/export -p 80:80 artbio/metavisitor-2
 ```
 This will run through the persistence tags of the galaxy.yml and export the required files to /export (now on your machine's /my/data).
 From the new location the files are being bind-mounted back into their original location.
