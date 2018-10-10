@@ -1,4 +1,4 @@
-Once you know how to access to your Metavisitor Galaxy instance with a web browser and are able to perform basic start/stop/restart operations, there is still some work needed to import and configure reference data (genomes) so that they are directly available to all instance users for running tools and workflows
+Once you know how to access to your Metavisitor Galaxy instance with a web browser and are able to perform basic start/stop/restart operations, there is still some work needed to import and configure reference data (genomes) so that they are directly available to all instance users for running tools and workflows.
 
 Here we provide the step-by-step description of what we *actually did ourselves* to prepare our Metavisitor instance before performing the analyses described [here](http://dx.doi.org/10.1101/048983).
 
@@ -9,7 +9,7 @@ Here we provide the step-by-step description of what we *actually did ourselves*
 At first, you need to import and prepare the reference datasets you will need for most of the Metavisitor analyses. As a Galaxy admin you will make latter some of these references directly accessible to the Galaxy tools, and/or accessible to any other users by putting them in a Galaxy public library.
 
 #### a. Preliminary actions
-click on the `Analyze Data` menu
+Click on the `Analyze Data` menu
 rename the `Unnamed history` to `References`
 
 #### b. Upload nucleotide vir1 fasta file
@@ -17,16 +17,16 @@ rename the `Unnamed history` to `References`
 ```
 Click on the small arrow icon at the top of the tool bar (left handside of the Galaxy interface)
 In the open window, click on the Paste/Fetch data button
-Paste the URL https://ndownloader.figshare.com/files/4949173
+Paste the URL https://ndownloader.figshare.com/files/11005121
 Click the start button.
 ```
 A first dataset will show up in your history, first in grey (the job is starting), then yellow (the job - upload - is running), and eventually green (job is successfully done).
 
-When finished, rename the dataset 1 `https://ndownloader.figshare.com/files/4949173` to `nucleotide vir1` for clarity (using the small pencil icon).
+When finished, rename the dataset 1 `https://ndownloader.figshare.com/files/11005121` to `nucleotide vir2` for clarity (using the small pencil icon).
 
 #### c. Upload protein vir1 fasta file
-Repeat the same operation as in `b.` using the url `https://ndownloader.figshare.com/files/4949170`.
-When finished, rename the dataset 2 `https://ndownloader.figshare.com/files/4949170` to `protein vir1` for clarity.
+Repeat the same operation as in `b.` using the url `https://ndownloader.figshare.com/files/11005124`.
+When finished, rename the dataset 2 `https://ndownloader.figshare.com/files/11005124` to `protein vir2` for clarity.
 
 
 #### d. Upload the Drosophila melanogaster release 6 genome
@@ -171,4 +171,3 @@ select "hg19" in the `Source FASTA Sequence` menu of the Bowtie index builder to
 
 
 ** When bowtie2 indexes are ready (green in the `Data Manager History (automatically created)`) restart the Galaxy server instance as explained above, so that the bowtie indexes that we've just created for the server are registered and seen by the tools.**
-
