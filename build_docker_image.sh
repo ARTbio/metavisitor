@@ -13,7 +13,7 @@ cp Dockerfile Dockerfile.test GalaxyKickStart/
 rm -rf GalaxyKickStart/group_vars/metavisitor GalaxyKickStart/group_vars/test
 cp group_vars/metavisitor group_vars/test GalaxyKickStart/group_vars/
 rm -rf GalaxyKickStart/extra-files/metavisitor GalaxyKickStart/extra-files/test
-cp extra-files/metavisitor extra-files/test GalaxyKickStart/extra-files/
+cp -r extra-files/metavisitor extra-files/test GalaxyKickStart/extra-files/
 rm -rf GalaxyKickStart/inventory_files/*
 cp inventory_files/metavisitor inventory_files/test GalaxyKickStart/inventory_files/
 
