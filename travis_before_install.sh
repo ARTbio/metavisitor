@@ -4,7 +4,7 @@ set -e
 TRACK=$1
 
 ## Common manipulations
-tar -xvzf GalaxyKickStart.tar.gz
+tar -xvzf GalaxyKickStart.tar.gz && mv GalaxyKickStart-galaxy_[0-9][0-9].[0-9][0-9] GalaxyKickStart
 rm -rf GalaxyKickStart/Dockerfile GalaxyKickStart/Dockerfile.test
 mv Dockerfile Dockerfile.test GalaxyKickStart/
 rm -rf GalaxyKickStart/group_vars/metavisitor GalaxyKickStart/group_vars/test
