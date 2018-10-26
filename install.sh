@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 set -e
+apt-get update -y
 apt-get install -y python-pip python-dev python-setuptools git htop
-echo "Upgrading pip to v 1.9"
+echo "Upgrading pip"
 pip install -U pip
 pip --version
-/usr/local/bin/pip install ansible==2.2
+/usr/local/bin/pip install ansible==2.4
 ansible --version
 
 wget https://github.com/ARTbio/GalaxyKickStart/releases/download/galaxy_18.05/GalaxyKickStart.tar.gz
