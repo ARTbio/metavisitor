@@ -119,12 +119,8 @@ Select "hg19" in the `Source FASTA Sequence` menu of the Bowtie index builder to
 ----
 #### Note that the preparation of bowtie indexes can be long ! (several hours for the vir2 bowtie index for instance)
 
-
-** When bowtie indexes are ready (green in the `Data Manager History (automatically created)`) restart the Galaxy server instance as explained above, so that the bowtie indexes that we've just created for the server are registered and seen by the tools.**
-
 ## 6. Creating Galaxy bowtie2 indexes accessible to tools for every user
 Finally, we are going to generate the bowtie2 indexes using another data manager tool.
-If not done before, restart the Galaxy instance as explained above.
 
 ----
 #### a. vir2 bowtie2 index
@@ -144,6 +140,3 @@ Select "hg19" in the `Source FASTA Sequence` menu of the Bowtie index builder to
 
 ----
 #### Note that the preparation of bowtie2 indexes can be long too ! (several hours for the vir2 bowtie2 index for instance)
-
-
-** When bowtie2 indexes are ready (green in the `Data Manager History (automatically created)`) restart the Galaxy server instance as explained above, so that the bowtie indexes that we've just created for the server are registered and seen by the tools.**
