@@ -1,6 +1,6 @@
 # Histories for Use Cases 2-1, 2-2
 
-Now that you get more familiar with manipulations in Galaxy with the Use Cases 1-1 to 1-4 described in details in the previous chapters, we will describe the other Use Case analyses more concisely. If you experience lack of skills in basic Galaxy operations (tool usage, copy of datasets, etc), do not hesitate to go back and examine the previous chapters step by step.
+Now that are more familiar with manipulations in Galaxy with the Use Cases 1-1 to 1-4 described in details in the previous chapters, we will describe the other Use Case analyses more concisely. If you experience lack of skills in basic Galaxy operations (tool usage, copy of datasets, etc), do not hesitate to go back and examine the previous chapters step by step.
 
 
 ## Input data for Use Cases 2-1 and 2-2
@@ -10,10 +10,9 @@ As for the previous Use Case 1, the first step is to collect all input data in a
 1. Create a new history
 2. Rename this history `Input data for Use Cases 2-1 and 2-2`
 3. For the small RNA sequence datasets (ERP012577) in this study, we are going to use another tool to upload to the Galaxy Metavisitor server: the `EBI SRA ENA SRA`tool which in the "Get data" section of the left tool bar.
-    - click on this tool and enter ERP012577 in the search field that shows up in the European Nucleotide Archive web page, and search. Click on the `ERP012577` link. In the column "Submitted files (galaxy)" of the table, click on the first "fastq file 1". This action should send you back to your Galaxy page automatically and you see the fastq dataset loading (yellow dataset in the history bar).
-    - repeat the exact same operation, for the three other "fastq file 1".
-    - at final you should upload four fastq datasets corresponding to the sequencing runs "post_infected_rep1.fastq", "post_infected_rep2.fastq", "post_non-infected_rep1.fastq" and "post_non-infected_rep2.fastq"
-    - Once the 4 uploads are _completed_ (may takes minutes, depending on your network speed connection), click on the pencil icon of the 4 datasets, click on the `datatype` tab and get it to `fastqsanger`.
+    - Click on this tool and enter ERP012577 in the search field that shows up in the European Nucleotide Archive web page, and search. Click on the `ERP012577` link. In the column "Submitted files (galaxy)" of the table, click on the first "fastq file 1". This action should send you back to your Galaxy page automatically and you see the fastq dataset loading (yellow dataset in the history bar).
+    - Repeat the exact same operation, for the three other "fastq file 1".
+    - At final you should have uploaded four fastq datasets corresponding to the sequencing runs "post_infected_rep1.fastq", "post_infected_rep2.fastq", "post_non-infected_rep1.fastq" and "post_non-infected_rep2.fastq"
 4. Create a dataset collection as [previously explained](use_cases_input_data/#history-with-input-data-for-use-cases-1-1-1-2-1-3-and-1-4) and name it `Small RNA reads ERP012577`
 5. For the RNA sequence datasets (ERS977505) that will be used in Use Case 2-2, use again the `EBI SRA ENA SRA`tool which in the "Get data" section of the left tool bar.
     - click on this tool and enter ERS977505 in the search field that shows up in the European Nucleotide Archive web page, and search. Click on the `ERS977505` link (Sample 1 result found). In the column "Submitted files (galaxy)" of the table, click on the first "fastq file 1". This action should send you back to your Galaxy page automatically and you see the fastq dataset loading (yellow dataset in the history bar).
@@ -28,7 +27,7 @@ ftp://ftp.ensemblgenomes.org/pub/release-28/protists/fasta/plasmodium_berghei/dn
 9. Use the wheel icon at the top of the history bar to copy `nucleotide vir1 blast database` and `protein vir1 blast database` **from** the history `References` **to** the current history `Input data for Use Cases 2-1 and 2-2`. If you don't remember well how to copy datasets between histories, you may read again the explanation [here](use_cases_input_data/#history-with-input-data-for-use-cases-1-1-1-2-1-3-and-1-4) (step 4.)
 
 **_Your are now ready for generating Uses Cases 2-1 and 2-2_**
-    
+
 ## History for Use Case 2-1
 
 1. Stay in the current history `Input data for Use Cases 2-1 and 2-2` !
@@ -68,7 +67,7 @@ Here, we are going to perform manually a few steps, before using another workflo
     - Copy this name, find the tool `Pick Fasta sequences with header satisfying a query string` in the Galaxy tool bar, and paste this name in the field `Select sequences with this string in their header` of the tool form. Select the dataset `Oases_optimiser on data 20: Denovo assembled transcripts` as a source file, and run the tool.
 2. Now, we are going to change the header of the previously extracted fasta sequence using the tool `Regex Find And Replace`.
     - Select the previous dataset `Pick Fasta sequences on data 21 including 'Locus_69_Transcript_1/1_Confidence_0.000_Length_8919' in header` as input dataset for this tool. Click on `+ Insert Check`. Use `Locus_69_Transcript_1/1_Confidence_0.000_Length_8919` as *Find Regex* and `Anopheles_C_Virus|KU169878` as *Replacement*. Execute the tool. Look at the resulting dataset.
-    
+
 3. Copy the dataset collection `Small RNA reads ERP012577` from the history `Input data for Use Cases 2-1 and 2-2` into the *current* history `Use Case 2-2`. You may have the refresh the history bar to see this collection and the attached datasets popping up.
 
 We are now ready to run the workflow.
@@ -80,24 +79,3 @@ We are now ready to run the workflow.
 3. This time, *do not* check the box `Send results to a new history` and directly click the `Run workflow`button.
 
 This workflow will provide you with a graphical view of ERP012577 small RNA mapping to the AnCV genome.
-
-
-    
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
