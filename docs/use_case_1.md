@@ -99,8 +99,8 @@ Now the sequence of operations to be performed should be more familiar to you:
 1. Top menu `Workflow`
 - Select `Metavisitor: Workflow for Use Case 1-4` and the `run` option
 - Step 1 (Input Dataset Collection), select the `SRP013822` option
-- Step 2 (viral nucleotide BLAST database), select `nucleotide vir1 blast database` (forced option if everything went well - only one blast database is available in this input history)
-- click at the bottom the checkbox `Send results to a new history`
+- Step 2 (viral nucleotide BLAST database), select `nucleotide vir2 blast database` (forced option if everything went well - only one blast database is available in this input history)
+- Click at the bottom the checkbox `Send results to a new history`
 - Edit the field that shows up by typing in it: "**History for Use Case 1-4**"
-- execute the workflow by clicking the `Run workflow` button.
+- Execute the workflow by clicking the `Run workflow` button.
 - After few seconds, you may follow the link to the new "**History for Use Case 1-4**" running !
