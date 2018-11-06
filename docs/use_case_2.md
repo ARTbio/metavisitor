@@ -30,20 +30,16 @@ As for the previous Use Case 1, the first step is to collect all input data in a
 2. In the `Workflow` menu, select the workflow `Metavisitor: Workflow for Use Case 2-1` and directly select `Run` (you may also look at the workflow using the `edit` option)
 3. Be careful at selecting `Small RNA reads ERP012577` for the step 1 (Input Dataset Collection)
 4. For the step 2, the option `protein vir2 blast database` is forced, because the workflow is expecting of protein blast database for this step and only one dataset with this datatype is available in the history
-5. **Be careful** at selecting
-```
-ftp://ftp.ensemblgenomes.org/pub/release-28/protists/fasta/plasmodium_berghei/dna/Plasmodium_berghei.May_2010.28.dna_sm.genome.fa.gz
-```
-for **step 10** (sRbowtie)
+5. **Be careful** at selecting `P. berghei` for **step 9** (sRbowtie)
 6. Be careful at selecting
 ```
 Retrieve FASTA from NCBI (Nucleotide) with queryString 'phix174[title]'
 ```
-for step 11 (sRbowtie).
+for **step 10** (sRbowtie).
 7. Click the `Send results to a new history` checkbox and rename the history to "History for Use Case 2-1".
 8. Run Workflow !
 
-You may follow the link to the new history when the workflow is started.
+You may follow the link to the new history when the workflow has started.
 
 ## History for Use Case 2-2
 
