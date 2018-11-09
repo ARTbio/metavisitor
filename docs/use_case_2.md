@@ -57,12 +57,13 @@ The previous workflow allowed to assemble a large contig of 8919 nt which signif
 
 Here, we are going to perform manually a few steps, before using another workflow in the history 2-2 to remap the ERP012577 small RNA reads to the AnCV genome.
 
-1. Look at the `blast analysis, by subjects` dataset and copy the name of the 8919 nt contig that aligned to DCV and CrPV sequences. It is noteworthy that this name may vary from one Oase run to another because the Oases algorithm is not totally deterministic. In the [companion Metavisitor article](http://dx.doi.org/10.1101/048983), this name was Locus_69_Transcript_1/1_Confidence_0.000_Length_8919.
-    - Copy this name, find the tool `Pick Fasta sequences with header satisfying a query string` in the Galaxy tool bar, and paste this name in the field `Select sequences with this string in their header` of the tool form. Select the dataset `Oases_optimiser on data 20: Denovo assembled transcripts` as a source file, and run the tool.
-2. Now, we are going to change the header of the previously extracted fasta sequence using the tool `Regex Find And Replace`.
-    - Select the previous dataset `Pick Fasta sequences on data 21 including 'Locus_69_Transcript_1/1_Confidence_0.000_Length_8919' in header` as input dataset for this tool. Click on `+ Insert Check`. Use `Locus_69_Transcript_1/1_Confidence_0.000_Length_8919` as *Find Regex* and `Anopheles_C_Virus|KU169878` as *Replacement*. Execute the tool. Look at the resulting dataset.
+1. Look at the `blast analysis, by subjects` dataset and copy the name of the 8919 nt contigs that aligned to DCV and CrPV sequences. It is noteworthy that the names may vary from one Oases run to another because the Oases algorithm is not totally deterministic. In the [companion Metavisitor article](http://dx.doi.org/10.1101/048983), this name was Locus_69_Transcript_1/1_Confidence_0.000_Length_8919.
+    - Copy this names, find the tool `Pick Fasta sequences with header satisfying a query string` in the Galaxy tool bar, and paste a name in the field `Select sequences with this string in their header` of the tool form. Select the dataset `Oases_optimiser on data 21: Denovo assembled transcripts` as a source file, and run the tool again for each name.
+2. Use the tool `Concatenate multiple datasets tail-to-head` and select the output files of the previous step as inputs. Run the tool.
+3. Now, we are going to change the header of the previously extracted fasta sequence using the tool `Regex Find And Replace`.
+    - Select the previous dataset `Pick Fasta sequences on data 21 including 'Locus_69_Transcript_1/1_Confidence_0.000_Length_8919' in header` as input dataset for this tool. Click on `+ Insert Check`. Use `Locus_69_Transcript_1/1_Confidence_0.000_Length_8919` (or the equivalent you extracted) as *Find Regex* and `Anopheles_C_Virus|KU169878_confidence _xx` as *Replacement*. Do this for each extracted sequence. Execute the tool. Look at the resulting dataset.
 
-3. Copy the dataset collection `Small RNA reads ERP012577` from the history `Input data for Use Cases 2-1 and 2-2` into the *current* history `Use Case 2-2`. You may have the refresh the history bar to see this collection and the attached datasets popping up.
+4. Copy the dataset collection `Small RNA reads ERP012577` from the history `Input data for Use Cases 2-1 and 2-2` into the *current* history `Use Case 2-2`. You may have to refresh the history bar to see this collection and the attached datasets popping up.
 
 We are now ready to run the workflow.
 
