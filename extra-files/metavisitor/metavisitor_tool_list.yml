@@ -9,7 +9,7 @@ tools:
 - name: bowtie2
   owner: devteam
   revisions:
-    - dc1639b66f12
+    - 17062a0decb7
   tool_panel_section_label: Metavisitor
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
   install_resolver_dependencies: True
@@ -66,7 +66,7 @@ tools:
 - name: fastx_trimmer
   owner: devteam
   revisions:
-    - 377ac2829eac
+    - 547e8d00f11c
   tool_panel_section_label: Metavisitor
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
   install_resolver_dependencies: True
@@ -82,7 +82,7 @@ tools:
 - name: khmer_normalize_by_median
   owner: iuc
   revisions:
-    - f0290a079720
+    - bfd859f04a89
   tool_panel_section_label: Metavisitor
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
   install_resolver_dependencies: True
@@ -91,7 +91,7 @@ tools:
 - name: blastparser_and_hits
   owner: artbio
   revisions:
-    - 9beb85dba280
+    - b4c9c085d709
   tool_panel_section_label: Metavisitor
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
 
@@ -123,7 +123,7 @@ tools:
 - name: sr_bowtie
   owner: artbio
   revisions:
-    - 61ab0d4bd187
+    - 0281bb245635
   tool_panel_section_label: Metavisitor
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
   install_resolver_dependencies: True
@@ -132,7 +132,7 @@ tools:
 - name: small_rna_maps
   owner: artbio
   revisions:
-    - cd75c72e1d75
+    - e75a10eba0a6
   tool_panel_section_label: Metavisitor
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
   install_resolver_dependencies: True
@@ -141,7 +141,7 @@ tools:
 - name: ncbi_blast_plus
   owner: devteam
   revisions:
-    - 6f386c5dc4fb
+    - e25d3acf6e68
   tool_panel_section_label: Metavisitor
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
   install_resolver_dependencies: True
@@ -157,7 +157,7 @@ tools:
 - name: sra_tools
   owner: iuc
   revisions:
-    - 8c00bc7fd8de
+    - 1790dcf3c32d
   tool_panel_section_label: Metavisitor
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
   install_resolver_dependencies: True
@@ -166,25 +166,16 @@ tools:
 - name: trinity
   owner: iuc
   revisions:
-    - d3b1249af60c
+    - c9cfec002f71
   tool_panel_section_label: Metavisitor
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
   install_resolver_dependencies: True
   install_tool_dependencies: False
 
-- name: trinityrnaseq
-  owner: anmoljh
-  revisions:
-    - 0a576a57a9eb
-  tool_panel_section_label: Metavisitor
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
-  install_resolver_dependencies: True
-  install_tool_dependencies: True
-
 - name: spades
   owner: nml
   revisions:
-    - 9006e5836729
+    - b8d633fbf5f5
   tool_panel_section_label: Metavisitor
   install_resolver_dependencies: True
   install_tool_dependencies: False
@@ -192,14 +183,14 @@ tools:
 - name: yac_clipper
   owner: artbio
   revisions:
-    - 7c913274e22a
+    - 94d67b195acd
   tool_panel_section_label: Metavisitor
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
 
 - name: vsearch
   owner: iuc
   revisions:
-    - 576963db5f1b
+    - b3c7199d8786
   tool_panel_section_label: Metavisitor
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
   install_resolver_dependencies: True
