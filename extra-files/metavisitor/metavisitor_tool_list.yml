@@ -23,9 +23,9 @@ tools:
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
 
 - name: concatenate_multiple_datasets
-  owner: mvdbeek
+  owner: artbio
   revisions:
-    - 201c568972c3
+    - 3a4694d4354f
   tool_panel_section_label: Metavisitor
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
 
