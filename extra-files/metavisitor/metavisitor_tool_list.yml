@@ -9,7 +9,7 @@ tools:
 - name: bowtie2
   owner: devteam
   revisions:
-    - 17062a0decb7
+    - 017aba02828d
   tool_panel_section_label: Metavisitor
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
   install_resolver_dependencies: True
