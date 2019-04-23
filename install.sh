@@ -23,6 +23,7 @@ mv inventory_files/metavisitor inventory_files/test GalaxyKickStart/inventory_fi
 cd GalaxyKickStart/
 echo "Editing group_vars/all"
 sed -i -e 's/galaxy_manage_trackster: true/galaxy_manage_trackster: false/' group_vars/all
+ansible-galaxy install -r requirements_roles.yml -p roles
 ansible-playbook -i inventory_files/metavisitor galaxy.yml
 echo "Sleeping 15 sec before restarting Metavisitor Test Galaxy server"
 echo "zzzz zzzz..."
