@@ -14,6 +14,7 @@ mv extra-files/metavisitor extra-files/test GalaxyKickStart/extra-files/
 rm -rf GalaxyKickStart/inventory_files/*
 mv inventory_files/metavisitor inventory_files/test GalaxyKickStart/inventory_files/
 # ansible-galaxy is required to prepare both the ansible and  docker tracks
+cd GalaxyKickStart/
 echo "Upgrading pip";
 pip install -U pip
 pip --version
