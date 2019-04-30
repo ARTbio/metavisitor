@@ -4,8 +4,7 @@ set -e
 TRACK=$1
 
 ## Common manipulations
-wget https://github.com/ARTbio/GalaxyKickStart/releases/download/galaxy_18.05/GalaxyKickStart.tar.gz
-tar -xvzf GalaxyKickStart.tar.gz
+git clone https://github.com/ARTbio/GalaxyKickStart.git
 rm -rf GalaxyKickStart/Dockerfile GalaxyKickStart/Dockerfile.test
 mv Dockerfile Dockerfile.test GalaxyKickStart/
 rm -rf GalaxyKickStart/group_vars/metavisitor GalaxyKickStart/group_vars/test
@@ -14,12 +13,11 @@ rm -rf GalaxyKickStart/extra-files/metavisitor GalaxyKickStart/extra-files/test
 mv extra-files/metavisitor extra-files/test GalaxyKickStart/extra-files/
 rm -rf GalaxyKickStart/inventory_files/*
 mv inventory_files/metavisitor inventory_files/test GalaxyKickStart/inventory_files/
-cd GalaxyKickStart/
 # ansible-galaxy is required to prepare both the ansible and  docker tracks
 echo "Upgrading pip";
 pip install -U pip
 pip --version
-pip install ansible==2.4.0
+pip install ansible==2.7.4
 ansible --version
 echo "Editing group_vars/all"
 sed -i -e 's/galaxy_manage_trackster: true/galaxy_manage_trackster: false/' group_vars/all
