@@ -8,9 +8,7 @@ pip --version
 pip install ansible==2.7.4
 ansible --version
 
-wget https://github.com/ARTbio/GalaxyKickStart/archive/galaxy_18.05_ini.support.tar.gz
-tar -xvzf galaxy_18.05_ini.support.tar.gz
-mv GalaxyKickStart-galaxy_18.05_ini.support GalaxyKickStart
+git clone https://github.com/ARTbio/GalaxyKickStart.git
 rm -rf GalaxyKickStart/Dockerfile GalaxyKickStart/Dockerfile.test
 mv Dockerfile Dockerfile.test GalaxyKickStart/
 rm -rf GalaxyKickStart/group_vars/metavisitor GalaxyKickStart/group_vars/test
