@@ -3,7 +3,7 @@
 As for the previous Use Cases 1, 2 and 3-1, the first step is to collect all input data in an history that we will name `Input data for Use Case 3-2`. 
 
 - Create a new history
-- Rename this history `Input data for Use Case 3-1`
+- Rename this history `Input data for Use Case 3-2`
 - Using the tool `Extract reads in FASTQ/A format from NCBI SRA`, we are going to upload 42 paired end datasets. Indeed, these 42 datasets correspond to 84 fastq paired-ended sequence files. However, the `Extract reads in FASTQ/A format from NCBI SRA` directly merges two paired-end fastq datasets in a single file. In addition, some datasets derive from the same patient; in those cases we will merge those datasets using the tool `Concatenate multiple datasets tail-to-head` and delete and purge the original datasets. In all cases, we will rename the dataset with the patient id as indicated bellow, and change the datatype from fastq to fastqsanger.
 Here is a table that recapitulates the actions to perform, line by line.
 ```
