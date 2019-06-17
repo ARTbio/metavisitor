@@ -4,55 +4,27 @@ As for the previous Use Cases 1, 2 and 3-1, the first step is to collect all inp
 
 - Create a new history
 - Rename this history `Input data for Use Case 3-2`
-- Using the tool `Extract reads in FASTQ/A format from NCBI SRA`, we are going to upload 42 paired end datasets. Indeed, these 42 datasets correspond to 84 fastq paired-ended sequence files. However, the `Extract reads in FASTQ/A format from NCBI SRA` directly merges two paired-end fastq datasets in a single file. In addition, some datasets derive from the same patient; in those cases we will merge those datasets using the tool `Concatenate multiple datasets tail-to-head` and delete and purge the original datasets. In all cases, we will rename the dataset with the patient id as indicated bellow, and change the datatype from fastq to fastqsanger.
-Here is a table that recapitulates the actions to perform, line by line.
-```
-#ENA-RUN            action		                                        post-action
-SRR453487           |rename	"patient 566"	                            |change datatype to "fastqsanger"
-SRR453437	        |rename	"patient 438"	                            |change datatype to "fastqsanger"
-SRR453443,SRR453458	|concatenate, rename merge dataset	"patient 401"	|change the merged dataset to datatype to "fastqsanger", and delete and purge the original SRR datasets
-SRR453430	        |rename	"patient 382"	                            |change datatype to "fastqsanger"
-SRR453491	        |rename	"patient 377"	                            |change datatype to "fastqsanger"
-SRR453499	        |rename	"patient 375"	                            |change datatype to "fastqsanger"
-SRR453484	        |rename	"patient 350"	                            |change datatype to "fastqsanger"
-SRR453464	        |rename	"patient 349"	                            |change datatype to "fastqsanger"
-SRR453506	        |rename	"patient 345"	                            |change datatype to "fastqsanger"
-SRR453417	        |rename	"patient 344"	                            |change datatype to "fastqsanger"
-SRR453490	        |rename	"patient 335"	                            |change datatype to "fastqsanger"
-SRR453478	        |rename	"patient 331"	                            |change datatype to "fastqsanger"
-SRR453465,SRR453480	|concatenate, rename merge dataset	"patient 330"	|change the merged dataset to datatype to "fastqsanger", and delete and purge the original SRR datasets
-SRR453489,SRR453505	|concatenate, rename merge dataset	"patient 329"	|change the merged dataset to datatype to "fastqsanger", and delete and purge the original SRR datasets
-SRR453498	        |rename	"patient 322"	                            |change datatype to "fastqsanger"
-SRR453446	        |rename	"patient 321"	                            |change datatype to "fastqsanger"
-SRR453427,SRR453440	|concatenate, rename merge dataset	"patient 315"	|change the merged dataset to datatype to "fastqsanger", and delete and purge the original SRR datasets
-SRR453438	        |rename	"patient 282"	                            |change datatype to "fastqsanger"
-SRR453450	        |rename	"patient 275"	                            |change datatype to "fastqsanger"
-SRR453460	        |rename	"patient 274"	                            |change datatype to "fastqsanger"
-SRR453485	        |rename	"patient 270"	                            |change datatype to "fastqsanger"
-SRR453448	        |rename	"patient 266"	                            |change datatype to "fastqsanger"
-SRR453424,SRR453457	|concatenate, rename merge dataset	"patient 263"	|change the merged dataset to datatype to "fastqsanger", and delete and purge the original SRR datasets
-SRR453510	        |rename	"patient 193"	                            |change datatype to "fastqsanger"
-SRR453456	        |rename	"patient 187"	                            |change datatype to "fastqsanger"
-SRR453425,SRR453469	|concatenate, rename merge dataset	"patient 186"	|change the merged dataset to datatype to "fastqsanger", and delete and purge the original SRR datasets
-SRR453481	        |rename	"patient 183"	                            |change datatype to "fastqsanger"
-SRR453531	        |rename	"patient 180"	                            |change datatype to "fastqsanger"
-SRR453474	        |rename	"patient 179"	                            |change datatype to "fastqsanger"
-SRR453509	        |rename	"patient 171"	                            |change datatype to "fastqsanger"
-SRR453451	        |rename	"patient 168"	                            |change datatype to "fastqsanger"
-SRR453495,SRR453504	|concatenate, rename merge dataset	"patient 161"	|change the merged dataset to datatype to "fastqsanger", and delete and purge the original SRR datasets
-SRR453500	        |rename	"patient 159"	                            |change datatype to "fastqsanger"
-SRR453493	        |rename	"patient 156"	                            |change datatype to "fastqsanger"
-SRR453444	        |rename	"patient 131"	                            |change datatype to "fastqsanger"
-SRR453426	        |rename	"patient 78	                                |change datatype to "fastqsanger"
-```
-- Create a dataset collection of patient datasets: Click on the checked box icon in the history top menu, check the "patient... " datasets we have just generated (36 datasets) (you can use the `Select all` button), and `For all selected`, `Build a dataset list` that you name "Tractable Patient Datasets".
-- Copy the `vir1 nucleotide BLAST database` from the `References` history to the current history `Input data for Use Case 3-2`.
+- Using the tool `Extract reads in FASTQ/A format from NCBI SRA`, we are going to upload 43 paired end datasets. Indeed, these 43 datasets correspond to 86 fastq paired-ended sequence files. In addition, some datasets derive from the same patient; in those cases we will merge those datasets using the tool `Concatenate multiple datasets tail-to-head` and delete and purge the original datasets.
+- Open the "Upload datasets" menu. Click on the `Choose FTP file` button, select the "Use-Case_3-2_SRR.txt" file and click the `Start` button.
+- Select the `Cut columns from a table` tool and set the "Cut columns" parameter to "c1" and select "Use-Case_3-2_SRR.txt" as input file in the "From" list. Execute the tool and rename the new dataset collection "Use_Case_3-2_accessions".
+- Select the tool `Download and Extract Reads in FASTA/Q format from NCBI SRA`and select "List of SRA accession, one per line" in "select input type" and "Use_Case_3-2_accessions" in "sra accession list". Execute the tool. The data downloading step might take 40 minutes to 1h. Delete "Single-end data (fastq-dump)".
+- Select the `Concatenate multiple datasets tail-to-head` tool and set "Paired collection" in "What type of data do you wish to concatenate?" and "Pair-end data (fastq-dump)" as "Input paired collection to concatenate". In "What type of concatenation do you wish to perform?" select "Concatenate pairs of datasets (outputs an unpaired collection of datasets)". Execute the tool.
+- Select `Tag elements from file` tool and set "Concatenation by pairs" as "Input Collection" and "Use-Case_3-2_SRR.txt" as "Tag collection elements according to this file". Execute the tool.
+- Select `Apply Rule to Collection` tool and set "data 1, data 144, and others (Tagged)" as "Input Collection" and click the "Edit" button.
+    - Click the "Column" button and select "Add Column from Metadata" from the list.
+    - Select "Tags" from the "For" list and click the "Apply" button.
+    - Click the "Rules" button and select "Add / Modify Column Definitions".
+    - Click "Add Definitions" button and select "List identifier(s)" from the list.
+    - Select "B" from the "Select a column" list.
+    - Click "*... Assign Another Column*" and select "A" from the "Select column" list. Click the "Apply" button and the "Save" button. Execute the tool.
+    - Rename the "... (re-organized)" dataset collection into "Tractable Patient Datasets".
+- Copy the `vir2 nucleotide BLAST database` from the `References` history to the current history `Input data for Use Case 3-2`.
 
 ## History for Use Case 3-2
 1. Stay in the history `Input data for Use Case 3-2`
 - pick the workflow `Metavisitor: Workflow for Use Case 3-2` in the workflows menu, and select the `run` option.
 - For Step 1 (Fever Patient Sequences collection), select `Tractable Patient Datasets` (this should be already selected).
-- For Step 2, select the `nucleotide vir1 blast database` (this should also be already selected)
+- For Step 2, select the `nucleotide vir2 blast database` (this should also be already selected)
 - As usual, check the box `Send results to a new history`, edit the name of the new history to `History for Use Case 3-2`, and `Execute` the workflow ! Note, that for complex workflows with dataset collections in input, the actual warning that the workflow is started make take time to show up; you can even have a "504 Gateway Time-out" warning. This is not a serious issue: just go in your `User` -> `Saved history` menu, you will see you `History for Use Case 3-2` running and you will be able to access it.
 
 As a last note, the workflow for Use Case 3-2 may take a long time. Be patient.
