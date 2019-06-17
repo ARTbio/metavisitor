@@ -8,70 +8,25 @@ As for the previous Use Cases 1 and 2, the first step is to collect all the inpu
 1. Create a new history
 - Rename this history `Input data for Use Case 3-1`
 - We are going to upload 40 datasets form the EBI ENA SRP068722 :
-    - Go to the upload files menu and select `Paste/Fetch data`. Copy the list of SRR identifiers underneath and paste it in the text area. You can name the file `3-1_Use-Case_SRR.txt`.
-    ```
-    SRR3111582
-    SRR3111583
-    SRR3111584
-    SRR3111585
-    SRR3111586
-    SRR3111587
-    SRR3111588
-    SRR3111589
-    SRR3111590
-    SRR3111591
-    SRR3111592
-    SRR3111593
-    SRR3111594
-    SRR3111595
-    SRR3111596
-    SRR3111597
-    SRR3111598
-    SRR3111599
-    SRR3111600
-    SRR3111601
-    SRR3111602
-    SRR3111603
-    SRR3111604
-    SRR3111605
-    SRR3111606
-    SRR3111607
-    SRR3111608
-    SRR3111609
-    SRR3111610
-    SRR3111611
-    SRR3111612
-    SRR3111613
-    SRR3111614
-    SRR3111616
-    SRR3111617
-    SRR3111618
-    SRR3111619
-    SRR3111620
-    SRR3111621
-    SRR3111622
-    ```
-    - Use the tool `Extract reads in FASTQ/A format from NCBI SRA`, select `List of SRA accession, one per line`from `select input type`. Click the `Execute` button.
+    - Go to the upload files menu and select `Choose FTP file`. Select file `3-1_Use-Case_SRR.txt` from the list then click the "Start" button.
+    - Use the tool `Cut columns from table`. In the "Cut columns field" write `c1` and make sure you select "3-1_Use-Case_SRR.txt" file in the "From" field before executing. Rename the output "Use-Case_3-1_accessions.txt".
+    - Use the tool `Extract reads in FASTQ/A format from NCBI SRA`, select `List of SRA accession, one per line`from `select input type` and "Use-Case_3-1_accessions.txt" in sra accession list. Click the `Execute` button.
     - When the tool is finished running you should have 2 new dataset collections in your history, one of them is empty. Delete the empty collection and verify that you have 40 pairs in the second collection.
     - If you are missing some sequences you just have to re-do the steps above with only the missing identifiers. Once done, merge the collections using the tool `Merge Collections`.
     - Rename the collection to `SRP068722`.
 2. Copy the `vir2 nucleotide BLAST database` from the `References` history to the current history `Input data for Use Case 3-1`.
-3. Now we still have to associate sequencing dataset coming from the same patient. We are going to use the tool `Concatenate multiple datasets` to merge multiple datasets in a fastq file.
-    - For patient 0450-318, use `Concatenate multiple datasets` and select the datasets SRR3111582 to SRR3111587. Run the tool and rename the dataset "patient 0450-318"
-    - For patient 0387-272, use `Concatenate multiple datasets` and select the datasets SRR3111588 to SRR3111593. Run the tool and rename the dataset "patient 0387-272"
-    - For patient 0629-453, use `Concatenate multiple datasets` and select the datasets SRR3111594 to SRR3111599. Run the tool and rename the dataset "patient 0629-453"
-    - For patient 0444-312, use `Concatenate multiple datasets` and select the datasets SRR3111600 to SRR3111603. Run the tool and rename the dataset "patient 0444-312"
-    - For patient 0500-355neg, use `Concatenate multiple datasets` and select the datasets SRR3111604 and SRR3111605. Run the tool and rename the dataset "patient 0500-355neg"
-    - For patient 0292-xxxneg, use `Concatenate multiple datasets` and select the datasets SRR3111606 and SRR3111607. Run the tool and rename the dataset "patient 0292-xxxneg"
-    - For patient 0394-274, use `Concatenate multiple datasets` and select the datasets SRR3111608 and SRR3111609. Run the tool and rename the dataset "patient 0394-274"
-     - For patient 0218-162neg, use `Concatenate multiple datasets` and select the datasets SRR3111610 and SRR3111611. Run the tool and rename the dataset "patient 0218-162neg"
-     - For patient 0311-217HIVneg, use `Concatenate multiple datasets` and select the datasets SRR3111612 and SRR3111613. Run the tool and rename the dataset "patient 0311-217HIVneg"
-     - For patient 0440-307neg, use `Concatenate multiple datasets` and select the datasets SRR3111614 and SRR3111616. Run the tool and rename the dataset "patient 0440-307neg"
-     - For patient 0518-370neg, use `Concatenate multiple datasets` and select the datasets SRR3111617 and SRR3111618. Run the tool and rename the dataset "patient 0518-370neg"
-     - For patient 0560-420neg, use `Concatenate multiple datasets` and select the datasets SRR3111619 and SRR3111620. Run the tool and rename the dataset "patient 0560-420neg"
-     - For patient 0575-419neg, use `Concatenate multiple datasets` and select the datasets SRR3111621 and SRR3111622. Run the tool and rename the dataset "patient 0575-419neg"
-4. The last action to perform in this history is to create a dataset collection of patient datasets: Click on the checked box icon in the history's top menu, check the "patient... " datasets we have just generated by concatenation (13 datasets), and `For all selected`, `Build a dataset list` that you name "patient collection".
-5. We are done.
+3. Now we still have to associate sequencing dataset coming from the same patient. We are going to use the tool `Tag elements from file` to add the patient information as metadata.
+    - Click on the `Tag elements from file` tool and select the collection "SRP068722" in "Input Collection" and "3-1_Use-Case_SRR.txt" in "Tag collection elements according to this file". Execute the tool. Rename the new dataset collection `SRP068722_with_patient_information`.
+    - Select the `Apply Rule to Collection` and set "SRP068722_with_patient_information" as "Input Collection". Click on the "Edit" button at the right of the form.
+        - Click the "Column" button and select `Add Column from Metadata` from the list.
+        - In the "From" list select "Tags". Then click the "Apply" button.
+        - Click the "Rules" button and select `Add / Modify Colmn Definitions` from the list.
+        - Click the "Add Definition" button and select the `List identifier(s)` from the list.
+        - In the "Select a column" list select "B" then click on `... Assign Another Column` and select "A". Click the "Apply" button.
+        - Click the "Save" and execute the tool.
+        - Select the `Concatenate multiple datasets tail-to head` tool. In "What type of data do you wish to concatenate?" select "Nested collection". In "Input nested collection" select "SRP068722_with_patient_information (re-organized)". Execute the tool.
+        - Rename the resulting collection patient collection.
+4. We are done.
 
 ## History for Use Case 3-1
 1. Stay in the history `Input data for Use Case 3-1`
