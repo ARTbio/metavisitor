@@ -32,5 +32,5 @@ As for the previous Use Cases 1 and 2, the first step is to collect all the inpu
 1. Stay in the history `Input data for Use Case 3-1`
 - pick the workflow `Metavisitor: Workflow for Use Case 3-1` in the workflows menu, and select the `run` option.
 - For Step 1 (Fever Patient Sequences collection), select `patient collection` (this should be already selected).
-- For Step 2, select the `nucleotide vir1 blast database` (this should also be already selected)
+- For Step 2, select the `nucleotide vir2 blast database` (this should also be already selected)
 - As usual, check the box `Send results to a new history`, edit the name of the new history to `History for Use Case 3-1`, and `Execute` the workflow ! Note, that for complex workflows with dataset collections in input, the actual warning that the workflow is started may take time to show up.
