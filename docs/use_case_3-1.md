@@ -55,7 +55,7 @@ As for the previous Use Cases 1 and 2, the first step is to collect all the inpu
     - When the tool is finished running you should have 2 new dataset collections in your history, one of them is empty. Delete the empty collection and verify that you have 40 pairs in the second collection.
     - If you are missing some sequences you just have to re-do the steps above with only the missing identifiers. Once done, merge the collections using the tool `Merge Collections`.
     - Rename the collection to `SRP068722`.
-2. Copy the `vir1 nucleotide BLAST database` from the `References` history to the current history `Input data for Use Case 3-1`.
+2. Copy the `vir2 nucleotide BLAST database` from the `References` history to the current history `Input data for Use Case 3-1`.
 3. Now we still have to associate sequencing dataset coming from the same patient. We are going to use the tool `Concatenate multiple datasets` to merge multiple datasets in a fastq file.
     - For patient 0450-318, use `Concatenate multiple datasets` and select the datasets SRR3111582 to SRR3111587. Run the tool and rename the dataset "patient 0450-318"
     - For patient 0387-272, use `Concatenate multiple datasets` and select the datasets SRR3111588 to SRR3111593. Run the tool and rename the dataset "patient 0387-272"
