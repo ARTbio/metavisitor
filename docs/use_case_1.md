@@ -26,7 +26,7 @@ You now see a page with all the workflow steps, whose top part looks like:
 
 - You have to select an Input dataset collection for Step 1 (second red arrow). However, as there is only one dataset collection in the input history (the one we have prepared in the [previous chapter](use_cases_input_data/#history-with-input-data-for-use-cases-1-1-1-2-1-3-and-1-4)), there is no other option in the menu than "**SRP013822**".
 
-- You have to select the viral nucleotide Blast database for Step 2. Here again there is indeed nothing else to select than the "**nucleotide vir1 blast database**", just because there is only one dataset in the input history with the "blast database" type.
+- You have to select the viral nucleotide Blast database for Step 2. Here again there is indeed nothing else to select than the "**nucleotide vir2 blast database**", just because there is only one dataset in the input history with the "blast database" type.
 
 - You can review the other steps of the workflow. But there is no other selection to perform before running the workflow.
 
