@@ -25,7 +25,7 @@ tools:
 - name: concatenate_multiple_datasets
   owner: artbio
   revisions:
-    - 3a4694d4354f
+    - 7afc0515a307
   tool_panel_section_label: Metavisitor
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
 
@@ -132,7 +132,7 @@ tools:
 - name: small_rna_maps
   owner: artbio
   revisions:
-    - e75a10eba0a6
+    - 14adf24603b6
   tool_panel_section_label: Metavisitor
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
   install_resolver_dependencies: True
