@@ -8,11 +8,11 @@ As for the previous Use Cases 1 and 2, the first step is to collect all the inpu
 1. Create a new history
 - Rename this history `Input data for Use Case 3-1`
 - We are going to upload 40 datasets form the EBI ENA SRP068722 :
-    - Go to the upload files menu and select `Choose FTP file`. Select file `3-1_Use-Case_SRR.txt` from the list then click the "Start" button.
-    - Use the tool `Cut columns from table`. In the "Cut columns field" write `c1` and make sure you select "3-1_Use-Case_SRR.txt" file in the "From" field before executing. Rename the output "Use-Case_3-1_accessions.txt".
-    - Use the tool `Extract reads in FASTQ/A format from NCBI SRA`, select `List of SRA accession, one per line`from `select input type` and "Use-Case_3-1_accessions.txt" in sra accession list. Click the `Execute` button.
-    - When the tool is finished running you should have 2 new dataset collections in your history, one of them is empty. Delete the empty collection and verify that you have 40 pairs in the second collection.
-    - If you are missing some sequences you just have to re-do the steps above with only the missing identifiers. Once done, merge the collections using the tool `Merge Collections`.
+    - Go to the upload files menu and select `Choose FTP file`. Select file `use_case_3-1_SRR.txt` from the list then click the "Start" button.
+    - Use the tool `Cut columns from table`. In the "Cut columns field" write `c1` and make sure you select "use_case_3-1_SRR.txt" file in the "From" field before executing. Rename the output "Use-Case_3-1_accessions".
+    - Use the tool `Extract reads in FASTQ/A format from NCBI SRA`, select `List of SRA accession, one per line`from `select input type` and "Use-Case_3-1_accessions" in sra accession list. Click the `Execute` button.
+    - When the tool is finished running you should have 2 new dataset collections in your history, one of them is empty. Delete the empty collection and verify that you have 40 pairs of datasets in the second collection.
+    - If you are missing some sequences you'll have to re-do the steps above with only the missing identifiers. Once done, merge the collections using the tool `Merge Collections`.
     - Rename the collection to `SRP068722`.
 2. Copy the `vir2 nucleotide BLAST database` from the `References` history to the current history `Input data for Use Case 3-1`.
 3. Now we still have to associate sequencing dataset coming from the same patient. We are going to use the tool `Tag elements from file` to add the patient information as metadata.
