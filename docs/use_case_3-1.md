@@ -13,7 +13,8 @@ As for the previous Use Cases 1 and 2, the first step is to collect all the inpu
     - Use the tool `Extract reads in FASTQ/A format from NCBI SRA`, select `List of SRA accession, one per line`from `select input type` and "Use-Case_3-1_accessions" in sra accession list. Click the `Execute` button.
     - When the tool is finished running you should have 2 new dataset collections in your history, one of them is empty. Delete the empty collection and verify that you have 40 pairs of datasets in the second collection.
     - If you are missing some sequences you'll have to re-do the steps above with only the missing identifiers. Once done, merge the collections using the tool `Merge Collections`.
-    - Rename the collection to `SRP068722`.
+    - Use the `Concatenate multiple datasets tail-to-head` tool and select "Paired collection" as type of data. Set the paired collection as input and select "Concatenate pairs of datasets" as type of concatenation. Execute the tool.
+    - Rename the outputed collection to `SRP068722` and delete the previous one by clicking the `X` button and selecting "Permanently Delete Datasets".
 2. Copy the `vir2 nucleotide BLAST database` from the `References` history to the current history `Input data for Use Case 3-1`.
 3. Now we still have to associate sequencing dataset coming from the same patient. We are going to use the tool `Tag elements from file` to add the patient information as metadata.
     - Click on the `Tag elements from file` tool and select the collection "SRP068722" in "Input Collection" and "3-1_Use-Case_SRR.txt" in "Tag collection elements according to this file". Execute the tool. Rename the new dataset collection `SRP068722_with_patient_information`.
