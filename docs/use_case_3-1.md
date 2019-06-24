@@ -26,8 +26,8 @@ As for the previous Use Cases 1 and 2, the first step is to collect all the inpu
         - In the "Select a column" list select "B" then click on `... Assign Another Column` and select "A". Click the "Apply" button.
         - Click the "Save" and execute the tool.
         - Select the `Concatenate multiple datasets tail-to head` tool. In "What type of data do you wish to concatenate?" select "Nested collection". In "Input nested collection" select "SRP068722_with_patient_information (re-organized)". Execute the tool.
-        - Rename the resulting collection patient collection.
-4. We are done.
+        - Rename the resulting collection "patient collection".
+4. We are done. You can now permanently delete "SRP068722_with_patient_information",  "SRP068722_with_patient_information (re-organized)" and "SRP068722". This will save you some disk space.
 
 ## History for Use Case 3-1
 1. Stay in the history `Input data for Use Case 3-1`
