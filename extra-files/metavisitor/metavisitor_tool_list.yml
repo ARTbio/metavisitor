@@ -25,7 +25,7 @@ tools:
 - name: concatenate_multiple_datasets
   owner: artbio
   revisions:
-    - 4554fa330d3d
+    - 55cf9d9defd1
   tool_panel_section_label: Metavisitor
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
 
