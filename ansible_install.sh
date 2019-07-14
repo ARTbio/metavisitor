@@ -5,7 +5,7 @@ apt-get install -y python-pip python-dev python-setuptools git htop
 echo "Upgrading pip"
 pip install -U pip
 pip --version
-/usr/local/bin/pip install ansible==2.4
+/usr/local/bin/pip install ansible==2.7
 ansible --version
 
 wget https://github.com/ARTbio/GalaxyKickStart/releases/download/galaxy_18.05/GalaxyKickStart.tar.gz

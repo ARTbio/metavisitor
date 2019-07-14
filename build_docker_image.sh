@@ -4,7 +4,7 @@ apt-get install -y python-pip python-dev python-setuptools git htop
 echo "Upgrading pip"
 pip install -U pip
 pip --version
-/usr/local/bin/pip install ansible==2.4.0
+/usr/local/bin/pip install ansible==2.7
 ansible --version
 apt-key adv --recv-keys --keyserver hkp://p80.pool.sks-keyservers.net:80 58118E89F3A912897C070ADBF76221572C52609D
 add-apt-repository "deb https://apt.dockerproject.org/repo ubuntu-trusty main"
