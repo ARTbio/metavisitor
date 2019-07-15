@@ -88,10 +88,10 @@ tools:
   install_resolver_dependencies: True
   install_tool_dependencies: False
 
-- name: msp_blastparser_and_hits
-  owner: drosofff
+- name: blastparser_and_hits
+  owner: artbio
   revisions:
-    - 1991c830504a
+    - b4c9c085d709
   tool_panel_section_label: Metavisitor
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
 
