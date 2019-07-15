@@ -17,7 +17,8 @@ As for the previous Use Cases 1, 2 and 3-1, the first step is to collect all inp
     - Click "Add Definitions" button and select "List identifier(s)" from the list.
     - Select "B" from the "Select a column" list.
     - Click "*... Assign Another Column*" and select "A" from the "Select column" list. Click the "Apply" button and the "Save" button. Execute the tool.
-    - Rename the "... (re-organized)" dataset collection into "Tractable Patient Datasets".
+- Select the `Conatenate multiple datasets tail-to-head` tool ans set "Nested collection" in "What type of data do you wish to concatenate?" and select the "... (re-organized)" dataset collection in "Input nested collection". Click the "Execute" button.
+- Rename the output collection as "Tractable Patient Datasets".
 - Copy the `vir2 nucleotide BLAST database` from the `References` history to the current history `Input data for Use Case 3-2`.
 
 ## History for Use Case 3-2
@@ -28,19 +29,3 @@ As for the previous Use Cases 1, 2 and 3-1, the first step is to collect all inp
 - As usual, check the box `Send results to a new history`, edit the name of the new history to `History for Use Case 3-2`, and `Execute` the workflow ! Note, that for complex workflows with dataset collections in input, the actual warning that the workflow is started make take time to show up; you can even have a "504 Gateway Time-out" warning. This is not a serious issue: just go in your `User` -> `Saved history` menu, you will see you `History for Use Case 3-2` running and you will be able to access it.
 
 As a last note, the workflow for Use Case 3-2 may take a long time. Be patient.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
