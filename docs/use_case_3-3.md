@@ -8,17 +8,85 @@ As for the previous Use Cases, the first step is to collect all input data in an
 
 ##### For Ebola virus samples:
 
-- Select the `upload File` tool and click on the "Choose FTP file" button. Select "use_case_3-3_SRR_ebola.txt" from the list and click the "Start" button.
-- Use the `Download and Extract Reads in FASTA/Q format from NCBI SRA` tool. Set "List of SRA accession" in "select input type" and enter "use_case_3-3_SRR_ebola.txt" as input. Execute the tool.
+- Select the `upload File` tool and click on the `Paste/Fetch data` button. Name the file "Ebola_accessions" and copy-paste the following text:
+```
+SRR1613381
+SRR1613377
+SRR1613382
+SRR1613378
+SRR1613383
+SRR1613379
+SRR1613384
+SRR1613380
+```
+- Click the "Start" button.
+- Use the `Download and Extract Reads in FASTA/Q format from NCBI SRA` tool. Set "List of SRA accession" in "select input type" and enter "Ebola_accessions" as input. Execute the tool.
 - Select `Concatenate multiple datasets tail-to-head`. Change "What type of data do you wish to concatenate?" to "Paired collection", set the collection as input and "Concatenation by pairs" in "What type of concatenation do you wish to perform?".
 
-When you have finishid with the 8 datasets, make sure to change their datatype from `fastq`to `fastqsanger`, and create a dataset collection (as explained in the previous chapter) of these 8 datasets that you will name `Ebola virus`.
+When you are finished, you'll have 8 datasets. Make sure to verify their datatype is `fastqsanger` or `fastqsanger.gz`, and create a dataset collection (as explained in the previous chapter) of these 8 datasets that you will name `Ebola virus`.
 
 ##### For Lassa virus samples:
 
-- Upload, Download and Concatenate the Lassa virus datasets the same way as above, but this time use "use_case_3-3_SRR_ebola.txt" as accission list.
+- Upload, Download and Concatenate the Lassa virus datasets the same way as above, but this time name the file "Lassa_accessions" and copy-paste this text:
+```
+SRR1595772
+SRR1595696
+SRR1595665
+SRR1595500
+SRR1594619
+SRR1595943
+SRR1595673
+SRR1595797
+SRR1595763
+SRR1595558
+SRR1594664
+SRR1595909
+SRR1594651
+SRR1595835
+SRR1594698
+SRR1613388
+SRR1613389
+SRR1613390
+SRR1613391
+SRR1613392
+SRR1613393
+SRR1613394
+SRR1613395
+SRR1613396
+SRR1613397
+SRR1613398
+SRR1613399
+SRR1595853
+SRR1606288
+SRR1613412
+SRR1613403
+SRR1606277
+SRR1613386
+SRR1613387
+SRR1606267
+SRR1614275
+SRR1610580
+SRR1595846
+SRR1594606
+SRR1606236
+SRR1594723
+SRR1594671
+SRR1613414
+SRR1613400
+SRR1613401
+SRR1613404
+SRR1613402
+SRR1613405
+SRR1613407
+SRR1613408
+SRR1613409
+SRR1613410
+SRR1613406
+SRR1613411
+SRR1613413
+```
 
-When you have finished with the 55 datasets, make sure to change their datatype from `fastq`to `fastqsanger`, and create a dataset collection (as explained in the previous chapter) of these 8 datasets that you will name `Lassa virus`.
+When you are finished you'll have 55 datasets. Make sure their datatype is `fastqsanger` or `fastqsanger.gz`, and create a dataset collection (as explained in the previous chapter) of these 55 datasets that you will name `Lassa virus`.
 
 - Copy the `vir2 nucleotide BLAST database` from the `References` history to the current history `Input data for Use Case 3-3`.
 
