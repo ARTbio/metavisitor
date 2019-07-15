@@ -5,11 +5,10 @@ apt-get install -y python-pip python-dev python-setuptools git htop
 echo "Upgrading pip"
 pip install -U pip
 pip --version
-/usr/local/bin/pip install ansible==2.4
+pip install ansible==2.7.4
 ansible --version
 
-wget https://github.com/ARTbio/GalaxyKickStart/releases/download/galaxy_18.05/GalaxyKickStart.tar.gz
-tar -xvzf GalaxyKickStart.tar.gz
+git clone https://github.com/ARTbio/GalaxyKickStart.git
 rm -rf GalaxyKickStart/Dockerfile GalaxyKickStart/Dockerfile.test
 mv Dockerfile Dockerfile.test GalaxyKickStart/
 rm -rf GalaxyKickStart/group_vars/metavisitor GalaxyKickStart/group_vars/test
@@ -22,6 +21,7 @@ mv inventory_files/metavisitor inventory_files/test GalaxyKickStart/inventory_fi
 cd GalaxyKickStart/
 echo "Editing group_vars/all"
 sed -i -e 's/galaxy_manage_trackster: true/galaxy_manage_trackster: false/' group_vars/all
+ansible-galaxy install -r requirements_roles.yml -p roles
 ansible-playbook -i inventory_files/metavisitor galaxy.yml
 echo "Sleeping 15 sec before restarting Metavisitor Test Galaxy server"
 echo "zzzz zzzz..."

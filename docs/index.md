@@ -25,30 +25,30 @@ Metavisitor has been developed at the [ARTbio platform](http://artbio.fr). Its t
 - [`msp_oases`](https://github.com/ARTbio/tools-artbio/tree/master/tools/msp_oases)
 - [`blast_to_scaffold`](https://github.com/ARTbio/tools-artbio/tree/master/tools/blast_to_scaffold)
 - [`blastx_to_scaffold`](https://github.com/ARTbio/tools-artbio/tree/master/tools/blastx_to_scaffold)
-- [`msp_sr_readmap_and_size_histograms`](https://github.com/ARTbio/tools-artbio/tree/master/tools/msp_sr_readmap_and_size_histograms).
-    
-Other tools from other developers are included the suite_metavisitor_1_2. Of course, these tools are not available on our GitHub repository, but are available from the [main Galaxy toolshed](https://toolshed.g2.bx.psu.edu/):
-    
+- [`small_rna_maps`](https://github.com/ARTbio/tools-artbio/tree/master/tools/small_rna_maps).
+
+Other tools from other developers are included the suite_metavisitor_2. Of course, these tools are not available on our GitHub repository, but are available from the [main Galaxy toolshed](https://toolshed.g2.bx.psu.edu/):
+
      name="sra_tools" owner="iuc"
-     name="get_orfs_or_cdss" owner="peterjc" 
-     name="trinityrnaseq" owner="anmoljh" 
-     name="bowtie2" owner="devteam" 
-     name="fastx_trimmer" owner="devteam" 
-     name="fastq_to_fasta" owner="devteam" 
-     name="fasta_filter_by_length" owner="devteam" 
+     name="get_orfs_or_cdss" owner="peterjc"
+     name="trinityrnaseq" owner="anmoljh"
+     name="bowtie2" owner="devteam"
+     name="fastx_trimmer" owner="devteam"
+     name="fastq_to_fasta" owner="devteam"
+     name="fasta_filter_by_length" owner="devteam"
      name="regex_find_replace" owner="jjohnson" 
-     name="khmer_normalize_by_median" owner="iuc" 
+     name="khmer_normalize_by_median" owner="iuc"
 
 
 #### Availability of Metavisitor tools and workflows for **Galaxy instance administrators**
 
-All metavisitor tools are available in the [suite_metavisitor_1_2](https://toolshed.g2.bx.psu.edu/repository/browse_repositories?sort=name&operation=view_or_manage_repository&f-free-text-search=metavisitor&id=ca18473f5a7e691a)
-Galaxy Admin can just install this suite of tools by using the `Search Tool Shed` menu in their Admin panel, searching for "metavisitor", and installing the `suite_metavisitor_1_2` tool suite.
+All metavisitor tools are available in the [suite_metavisitor_2](https://toolshed.g2.bx.psu.edu/repository/browse_repositories?sort=name&operation=view_or_manage_repository&f-free-text-search=metavisitor&id=ca18473f5a7e691a#TODO: Change this link when the suite is published)
+Galaxy Admin can just install this suite of tools by using the `Install new tools` menu in their Admin panel, searching for "metavisitor", and installing the `suite_metavisitor_2` tool suite.
 
 Admins can also install the tools from the `metavisitor_workflows` repository, which will provide in addition the metavisitors workflows.
 
 #### Availability of Metavisitors workflows for any Galaxy instance user.
-We have deposited the Metavisitors workflows in the [myexperiment server](http://www.myexperiment.org/workflows), where they are searchable with "metavisitor" keyword and can be downloaded and reuploaded to the Galaxy instance.
+We have deposited the Metavisitors workflows in the [myexperiment server](http://www.myexperiment.org/workflows #TODO: this will need to be updated too), where they are searchable with "metavisitor" keyword and can be downloaded and reuploaded to the Galaxy instance.
 
 ## Starting a Metavisitor Galaxy server from scratch
 
