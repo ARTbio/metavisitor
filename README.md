@@ -1,4 +1,4 @@
-# metavisitor
+![metavisitor_logo](extra-files/metavisitor/logo.png)
 
 This is the repository for the automated deployment of a [Metavisitor](https://doi.org/10.1371/journal.pone.0168397) Galaxy server
 
@@ -6,7 +6,7 @@ This is the repository for the automated deployment of a [Metavisitor](https://d
 
 ## Quick Start
 
-Tested on Ubuntu 14.04 - You must have root access (be sudoer)
+Tested on Ubuntu 14.04 & 16.04 - You must have root access (be sudoer)
 
 - Install git
 ```
