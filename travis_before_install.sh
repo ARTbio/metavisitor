@@ -46,8 +46,8 @@ if [ "$TRACK" = "docker" ]; then
                  metavisitor`
 
 
-    echo "wait for export data of container"
-    sleep 180s
+    echo "long wait for export heavy tool data of container"
+    sleep 300s
     docker logs $CID1
     docker exec -it $CID1 supervisorctl status
     docker exec -it $CID1 service --status-all
