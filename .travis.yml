@@ -23,14 +23,14 @@ env:
 
 jobs:
   include:
+    - stage: docker
+      env:
+        - TRAVIS_JOB=docker
+        - BIOBLEND_GALAXY_URL="http://localhost:80/subdir/"
     - stage: ansible
       env:
         - TRAVIS_JOB=ansible
         - BIOBLEND_GALAXY_URL="http://localhost:80"
-#    - stage: docker
-#      env:
-#        - TRAVIS_JOB=docker
-#        - BIOBLEND_GALAXY_URL="http://localhost:80/subdir/"
 #    - stage: build-docker
 #      env:
 #        - TRAVIS_JOB=build-docker
@@ -39,6 +39,7 @@ jobs:
 before_install:
   - sudo apt-get update -y
   - pip --version
+  - docker --version
   - pip install ansible==2.7.4
   - ansible --version
   - sh $TRAVIS_BUILD_DIR/travis_before_install.sh $TRAVIS_JOB

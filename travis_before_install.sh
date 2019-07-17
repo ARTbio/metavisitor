@@ -26,7 +26,6 @@ if [ "$TRACK" = "ansible" ]; then
 fi
 
 if [ "$TRACK" = "docker" ]; then
-    docker --version
     docker info
     sudo groupadd -r $GALAXY_TRAVIS_USER -g $GALAXY_GID
     sudo useradd -u $GALAXY_UID -r -g $GALAXY_TRAVIS_USER -d $GALAXY_HOME -p travis_testing\
