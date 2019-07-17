@@ -10,13 +10,6 @@ cp group_vars/metavisitor galaxykickstart/group_vars/
 cp -a extra-files/metavisitor galaxykickstart/extra-files/
 cp inventory_files/metavisitor galaxykickstart/inventory_files/
 
-# ansible-galaxy is required to prepare both the ansible and  docker tracks
-echo "Upgrading pip";
-pip install --user -U pip
-pip --version
-pip install ansible==2.7.4
-ansible --version
-
 cd GalaxyKickStart/
 
 if [ "$TRACK" = "ansible" ]; then

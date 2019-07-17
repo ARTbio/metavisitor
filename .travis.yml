@@ -38,6 +38,9 @@ jobs:
 
 before_install:
   - sudo apt-get update -y
+  - pip --version
+  - pip install -U pip
+  - pip install ansible==2.7.4
   - sh $TRAVIS_BUILD_DIR/travis_before_install.sh $TRAVIS_JOB
 
 install:
