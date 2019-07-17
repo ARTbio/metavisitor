@@ -51,4 +51,4 @@ script:
   - . $TRAVIS_BUILD_DIR/travis_test.sh
 
 after_success:
-  - . $TRAVIS_BUILD_DIR/travis_push_docker.sh && . $TRAVIS_BUILD_DIR/deploy_doc.sh
+  - . $TRAVIS_BUILD_DIR/deploy_doc.sh

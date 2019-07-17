@@ -4,7 +4,7 @@ apt-get install -y python-pip python-dev python-setuptools git htop
 echo "Upgrading pip to v 1.9"
 pip install -U pip
 pip --version
-/usr/local/bin/pip install ansible==2.2
+/usr/local/bin/pip install ansible==2.7.4
 ansible --version
 export GALAXY_TRAVIS_USER="galaxy"
 export GALAXY_UID="1450"
