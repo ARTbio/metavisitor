@@ -13,10 +13,10 @@ cp inventory_files/metavisitor galaxykickstart/inventory_files/
 cd galaxykickstart/
 
 if [ "$TRACK" = "ansible" ]; then
-    # sudo /etc/init.d/postgresql stop
-    # sudo apt-get -y --purge remove postgresql libpq-dev libpq5 postgresql-client-common postgresql-common
-    # sudo rm -rf /var/lib/postgresql
-    # sudo apt-get update -qq
+    sudo /etc/init.d/postgresql stop
+    sudo apt-get -y --purge remove postgresql libpq-dev libpq5 postgresql-client-common postgresql-common
+    sudo rm -rf /var/lib/postgresql
+    sudo apt-get update -qq
     ansible-galaxy install -r requirements_roles.yml -p roles/
     ansible-playbook -i inventory_files/metavisitor galaxy.yml
     echo "Sleeping 15 sec before display status"
