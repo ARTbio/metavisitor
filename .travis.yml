@@ -1,7 +1,7 @@
-sudo: required
+language: python
 python: 2.7
 dist: xenial
-cache: pip
+sudo: required
 
 env:
   global:
@@ -39,8 +39,8 @@ jobs:
 before_install:
   - sudo apt-get update -y
   - pip --version
-  - pip install -U pip
   - pip install ansible==2.7.4
+  - ansible --version
   - sh $TRAVIS_BUILD_DIR/travis_before_install.sh $TRAVIS_JOB
 
 install:
