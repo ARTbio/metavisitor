@@ -4,11 +4,11 @@ set -e
 TRACK=$1
 
 ## Common manipulations
-git clone https://github.com/ARTbio/GalaxyKickStart.git
-mv Dockerfile Dockerfile.test GalaxyKickStart/
-mv group_vars/metavisitor group_vars/test GalaxyKickStart/group_vars/
-mv extra-files/metavisitor extra-files/test GalaxyKickStart/extra-files/
-mv inventory_files/metavisitor inventory_files/test GalaxyKickStart/inventory_files/
+git clone https://github.com/artbio/galaxykickstart.git
+mv Dockerfile Dockerfile.test galaxykickstart/
+mv group_vars/metavisitor galaxykickstart/group_vars/
+mv extra-files/metavisitor galaxykickstart/extra-files/
+mv inventory_files/metavisitor inventory_files/test galaxykickstart/inventory_files/
 
 # ansible-galaxy is required to prepare both the ansible and  docker tracks
 echo "Upgrading pip";
