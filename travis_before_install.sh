@@ -19,6 +19,7 @@ if [ "$TRACK" = "ansible" ]; then
     sudo apt-get update -qq
     ansible-galaxy install -r requirements_roles.yml -p roles/
     ansible-playbook -i inventory_files/metavisitor galaxy.yml
+    ansible-playbook -i inventory_files/metavisitor --tags=install_tools galaxy.yml # ensure all tools installed
     echo "Sleeping 15 sec before display status"
     sleep 15
     sudo supervisorctl status
