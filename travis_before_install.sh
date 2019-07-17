@@ -7,7 +7,7 @@ TRACK=$1
 git clone https://github.com/artbio/galaxykickstart.git
 cp Dockerfile galaxykickstart/
 cp group_vars/metavisitor galaxykickstart/group_vars/
-cp extra-files/metavisitor galaxykickstart/extra-files/
+cp -a extra-files/metavisitor galaxykickstart/extra-files/
 cp inventory_files/metavisitor galaxykickstart/inventory_files/
 
 # ansible-galaxy is required to prepare both the ansible and  docker tracks
