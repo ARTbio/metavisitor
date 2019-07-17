@@ -17,6 +17,7 @@ if [ "$TRACK" = "ansible" ]; then
     # sudo apt-get -y --purge remove postgresql libpq-dev libpq5 postgresql-client-common postgresql-common
     # sudo rm -rf /var/lib/postgresql
     # sudo apt-get update -qq
+    ansible-galaxy install -r requirements_roles.yml -p roles/
     ansible-playbook -i inventory_files/metavisitor galaxy.yml
     echo "Sleeping 15 sec before display status"
     sleep 15
