@@ -10,7 +10,7 @@ cp group_vars/metavisitor galaxykickstart/group_vars/
 cp -a extra-files/metavisitor galaxykickstart/extra-files/
 cp inventory_files/metavisitor galaxykickstart/inventory_files/
 
-cd GalaxyKickStart/
+cd galaxykickstart/
 
 if [ "$TRACK" = "ansible" ]; then
     # sudo /etc/init.d/postgresql stop
