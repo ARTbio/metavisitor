@@ -5,31 +5,26 @@ TRACK=$1
 
 ## Common manipulations
 git clone https://github.com/ARTbio/GalaxyKickStart.git
-rm -rf GalaxyKickStart/Dockerfile GalaxyKickStart/Dockerfile.test
 mv Dockerfile Dockerfile.test GalaxyKickStart/
-rm -rf GalaxyKickStart/group_vars/metavisitor GalaxyKickStart/group_vars/test
 mv group_vars/metavisitor group_vars/test GalaxyKickStart/group_vars/
-rm -rf GalaxyKickStart/extra-files/metavisitor GalaxyKickStart/extra-files/test
 mv extra-files/metavisitor extra-files/test GalaxyKickStart/extra-files/
-rm -rf GalaxyKickStart/inventory_files/*
 mv inventory_files/metavisitor inventory_files/test GalaxyKickStart/inventory_files/
+
 # ansible-galaxy is required to prepare both the ansible and  docker tracks
-cd GalaxyKickStart/
 echo "Upgrading pip";
 pip install -U pip
 pip --version
 pip install ansible==2.7.4
 ansible --version
-echo "Editing group_vars/all"
-sed -i -e 's/galaxy_manage_trackster: true/galaxy_manage_trackster: false/' group_vars/all
 
+cd GalaxyKickStart/
 
 if [ "$TRACK" = "ansible" ]; then
-    sudo /etc/init.d/postgresql stop
-    sudo apt-get -y --purge remove postgresql libpq-dev libpq5 postgresql-client-common postgresql-common
-    sudo rm -rf /var/lib/postgresql
-    sudo apt-get update -qq
-    ansible-playbook -i inventory_files/test galaxy.yml
+    # sudo /etc/init.d/postgresql stop
+    # sudo apt-get -y --purge remove postgresql libpq-dev libpq5 postgresql-client-common postgresql-common
+    # sudo rm -rf /var/lib/postgresql
+    # sudo apt-get update -qq
+    ansible-playbook -i inventory_files/metavisitor galaxy.yml
     echo "Sleeping 15 sec before display status"
     sleep 15
     sudo supervisorctl status
