@@ -52,3 +52,4 @@ script:
 
 after_success:
   - . $TRAVIS_BUILD_DIR/deploy_doc.sh
+  - . $TRAVIS_BUILD_DIR/push_to_docker_registry.sh
