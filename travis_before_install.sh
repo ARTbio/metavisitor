@@ -43,7 +43,7 @@ if [ "$TRACK" = "docker" ]; then
                  -e NGINX_GALAXY_LOCATION=/subdir \
                  -v /tmp/:/tmp/ \
                  -v /export:/export \
-                 metavisitor`
+                 artbio/metavisitor-2`
 
 
     echo "long wait for export heavy tool data of container"
