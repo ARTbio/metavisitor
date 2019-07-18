@@ -4,46 +4,35 @@ set -e
 TRACK=$1
 
 ## Common manipulations
-git clone https://github.com/ARTbio/GalaxyKickStart.git
-rm -rf GalaxyKickStart/Dockerfile GalaxyKickStart/Dockerfile.test
-mv Dockerfile Dockerfile.test GalaxyKickStart/
-rm -rf GalaxyKickStart/group_vars/metavisitor GalaxyKickStart/group_vars/test
-mv group_vars/metavisitor group_vars/test GalaxyKickStart/group_vars/
-rm -rf GalaxyKickStart/extra-files/metavisitor GalaxyKickStart/extra-files/test
-mv extra-files/metavisitor extra-files/test GalaxyKickStart/extra-files/
-rm -rf GalaxyKickStart/inventory_files/*
-mv inventory_files/metavisitor inventory_files/test GalaxyKickStart/inventory_files/
-# ansible-galaxy is required to prepare both the ansible and  docker tracks
-cd GalaxyKickStart/
-echo "Upgrading pip";
-pip install -U pip
-pip --version
-pip install ansible==2.7.4
-ansible --version
-echo "Editing group_vars/all"
-sed -i -e 's/galaxy_manage_trackster: true/galaxy_manage_trackster: false/' group_vars/all
+git clone https://github.com/artbio/galaxykickstart.git
+cp Dockerfile galaxykickstart/
+cp group_vars/metavisitor galaxykickstart/group_vars/
+cp -a extra-files/metavisitor galaxykickstart/extra-files/
+cp inventory_files/metavisitor galaxykickstart/inventory_files/
 
+cd galaxykickstart/
 
 if [ "$TRACK" = "ansible" ]; then
     sudo /etc/init.d/postgresql stop
     sudo apt-get -y --purge remove postgresql libpq-dev libpq5 postgresql-client-common postgresql-common
     sudo rm -rf /var/lib/postgresql
     sudo apt-get update -qq
-    ansible-playbook -i inventory_files/test galaxy.yml
+    ansible-galaxy install -r requirements_roles.yml -p roles/
+    ansible-playbook -i inventory_files/metavisitor galaxy.yml
+    ansible-playbook -i inventory_files/metavisitor --tags=install_tools galaxy.yml # ensure all tools installed
     echo "Sleeping 15 sec before display status"
     sleep 15
     sudo supervisorctl status
 fi
 
 if [ "$TRACK" = "docker" ]; then
-    docker --version
     docker info
     sudo groupadd -r $GALAXY_TRAVIS_USER -g $GALAXY_GID
     sudo useradd -u $GALAXY_UID -r -g $GALAXY_TRAVIS_USER -d $GALAXY_HOME -p travis_testing\
         -c "Galaxy user" $GALAXY_TRAVIS_USER
     sudo mkdir $GALAXY_HOME
     sudo chown -R $GALAXY_TRAVIS_USER:$GALAXY_TRAVIS_USER $GALAXY_HOME
-    docker build -t metavisitor -f Dockerfile.test .
+    docker build -t metavisitor . # the Dockerfile was copied from the root dir of metavisitor repo
     sudo mkdir /export && sudo chown $GALAXY_UID:$GALAXY_GID /export
     export CID1=`docker run -d -p 80:80 -p 21:21 -p 8800:8800 \
                  --privileged=true \
@@ -57,27 +46,10 @@ if [ "$TRACK" = "docker" ]; then
                  metavisitor`
 
 
-    echo "wait for export data of container"
-    sleep 180s
+    echo "long wait for export heavy tool data of container"
+    sleep 300s
     docker logs $CID1
     docker exec -it $CID1 supervisorctl status
     docker exec -it $CID1 service --status-all
     echo "Going to test docker container CID1 $CID1"
 fi
-
-if [ "$TRACK" = "build-docker" ]; then
-    docker --version
-    docker info
-    sudo groupadd -r $GALAXY_TRAVIS_USER -g $GALAXY_GID
-    sudo useradd -u $GALAXY_UID -r -g $GALAXY_TRAVIS_USER -d $GALAXY_HOME -p travis_testing\
-        -c "Galaxy user" $GALAXY_TRAVIS_USER
-    sudo mkdir $GALAXY_HOME
-    sudo chown -R $GALAXY_TRAVIS_USER:$GALAXY_TRAVIS_USER $GALAXY_HOME
-fi
-
-if [ "$TRACK" = "build-docker" ] && [ "${TRAVIS_EVENT_TYPE}" = "pull_request" ]; then
-    docker build -t metavisitor .
-    docker tag metavisitor artbio/metavisitor-2:$TRAVIS_COMMIT
-    docker tag metavisitor artbio/metavisitor-2:latest
-fi
-

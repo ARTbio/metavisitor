@@ -19,8 +19,3 @@ if [[ $TRAVIS_JOB = "ansible" ]]; then
         cd $GALAXY_HOME &&
         bioblend-galaxy-tests -v $GALAXY_HOME/.local/lib/python2.7/site-packages/bioblend/_tests/TestGalaxy*.py"
 fi
-
-
-if [ $TRAVIS_JOB = "build-docker" ] && [ "${TRAVIS_EVENT_TYPE}" = "pull_request" ]; then
-    echo "skipping Bioblend testing, metavisitor image is going to be uploaded to docker hub"
-fi
