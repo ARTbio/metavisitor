@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Prepare input data histories - Metavisitor-2</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Prepare input data histories";
+    var mkdocs_page_input_path = "use_cases_input_data.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Metavisitor-2</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Metavisitor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../metavisitor_configure_references/">Prepare Metavisitor Galaxy instance for analyses</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Prepare input data histories</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#history-with-input-data-for-use-cases-1-1-1-2-1-3-and-1-4">History with input data for Use Cases 1-1, 1-2, 1-3 and 1-4</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_1/">Use Cases 1-1 to 1-4</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_2/">Use Cases 2-1 and 2-2</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_3-1/">Use Case 3-1</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_3-2/">Use Case 3-2</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_3-3/">Use Case 3-3</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Install_Metavisitor</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../install_metavisitor/">Intro</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../metavisitor_ansible/">GalaxyKickStart</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../metavisitor_docker/">Docker</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../metavisitor_access_control/">Access and Control Metavisitor Galaxy instance</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Metavisitor-2</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Prepare input data histories</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>We are now entering into real analyses using Metavisitor.
+These analyses as well as their biological context are presented as <strong>Use Cases</strong> in the <a href="http://dx.doi.org/10.1101/048983">metavisitor article</a>. We invite readers of this manual to refer to this article if they need to better understand the biological context of the described procedures.</p>
+<p>In this section, we are going to create step by step a Galaxy history that contains the input data required to run the workflows for Use Cases 1-1, 1-2, 1-3 and 1-4</p>
+<h1 id="history-with-input-data-for-use-cases-1-1-1-2-1-3-and-1-4">History with input data for Use Cases 1-1, 1-2, 1-3 and 1-4</h1>
+<ol>
+<li>Create a new history and rename it "Input data for Use Cases 1-1, 1-2, 1-3 and 1-4"</li>
+<li>Get SRP013822 datasets list<ul>
+<li>Use the the tool <code>Upload File</code> and click on the <code>Paste/Fetch data</code> button</li>
+<li>Copy - Paste the following text:
+<code>SRR515090
+SRR513993
+SRR513992
+SRR513990
+SRR513989
+SRR513981
+SRR513901</code></li>
+<li>Edit the file name by clicking the "Name" section and writing "use_case_1_accessions" or by selecting the <code>Start</code> button and changing the file name.</li>
+</ul>
+</li>
+<li>Import SRP013822 datasets<ul>
+<li>Use the tool <code>Extract reads in FASTQ/A format from NCBI SRA</code> and select in the <code>select input type</code> list <code>List of SRA accession, one per line</code>.</li>
+<li>Select in the <code>sra accession list</code> the <code>use_case_1_accessions</code> file and run the tool.</li>
+</ul>
+</li>
+<li>
+<p>Rename a dataset collection <strong>SRP013822</strong></p>
+<ul>
+<li>Click on the <code>Single-end data (fastqdump)</code> collection</li>
+<li>Click on the title "Single-end data (fastqdump)" and rename it "SRP013822"</li>
+<li>You can delete the <code>Pair-end data (fastq-dump)</code> collection by clicking the <code>X</code> button and selecting "Collection Only".</li>
+</ul>
+</li>
+<li>
+<p>Copy the vir2 blast nucleotide database that we prepared earlier in the <a href="../metavisitor_configure_references/#3-prepare-blast-databases">Reference</a> history.</p>
+<ul>
+<li>To do so, click on the little wheel icon in the history top menu (in the history right bar).</li>
+</ul>
+<p><img alt="copydataset" src="../images/copydataset.png" /></p>
+<ul>
+<li>Select "Copy Datasets"</li>
+<li>In the open page, select "References" in the Source History menu, check the "nucleotide vir2 blast database" dataset; select "Input data for Use Case 1_1, ..."; and click the "Copy History Items".</li>
+<li>If you refresh the history, you will see the "nucleotide vir2 blast database" dataset showing up.</li>
+</ul>
+</li>
+</ol>
+<p>That is all for the moment. We will latter add datasets in the history <code>Input data for Use Cases 1-1, 1-2, 1-3 and 1-4</code>. However, these datasets do no exist yet: this will be produced by the Use Cases 1-1, 1-2, 1-3 workflows !</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../use_case_1/" class="btn btn-neutral float-right" title="Use Cases 1-1 to 1-4">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../metavisitor_configure_references/" class="btn btn-neutral" title="Prepare Metavisitor Galaxy instance for analyses"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../metavisitor_configure_references/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../use_case_1/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

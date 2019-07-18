@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Access and Control Metavisitor Galaxy instance - Metavisitor-2</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Access and Control Metavisitor Galaxy instance";
+    var mkdocs_page_input_path = "metavisitor_access_control.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Metavisitor-2</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Metavisitor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../metavisitor_configure_references/">Prepare Metavisitor Galaxy instance for analyses</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_cases_input_data/">Prepare input data histories</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_1/">Use Cases 1-1 to 1-4</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_2/">Use Cases 2-1 and 2-2</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_3-1/">Use Case 3-1</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_3-2/">Use Case 3-2</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_3-3/">Use Case 3-3</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Install_Metavisitor</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../install_metavisitor/">Intro</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../metavisitor_ansible/">GalaxyKickStart</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../metavisitor_docker/">Docker</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Access and Control Metavisitor Galaxy instance</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#1-connect-web-frontpage-of-your-metavisitor-galaxy">1. Connect web frontpage of your Metavisitor Galaxy</a></li>
+    
+
+    <li class="toctree-l3"><a href="#2-log-to-the-galaxy-server-using-the-admin-credentials">2. Log to the Galaxy server using the admin credentials:</a></li>
+    
+
+    <li class="toctree-l3"><a href="#basic-admin-operation-restart-the-metavisitor-galaxy-instance">Basic admin operation: restart the Metavisitor Galaxy instance</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#restart-metavisitor-galaxy-instance-deployed-with-galaxykickstart">restart Metavisitor Galaxy instance deployed with GalaxyKickStart</a></li>
+        
+            <li><a class="toctree-l4" href="#restart-metavisitor-galaxy-instance-deployed-with-docker">restart Metavisitor Galaxy instance deployed with docker</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Metavisitor-2</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Install_Metavisitor &raquo;</li>
+        
+      
+    
+    <li>Access and Control Metavisitor Galaxy instance</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>When you are done with the installation of your own Metavisitor Galaxy instance installation using either <a href="../metavisitor_ansible/">GalaxyKickStart</a> or <a href="metavisitor_docker">docker</a>, there are a few basic things to know for web access and basic server admin operations</p>
+<h2 id="1-connect-web-frontpage-of-your-metavisitor-galaxy">1. Connect web frontpage of your Metavisitor Galaxy</h2>
+<p>We assume that you know the IP address to reach the Metavisitor Galaxy webserver:</p>
+<ul>
+<li>if you used <a href="../metavisitor_ansible/#adapt-the-ansible-inventory-file">GalaxyKickStart</a>, you had to indicate this host IP in your hosts inventory file.</li>
+<li>if you used <a href="metavisitor_docker">docker</a>, you had to connect to the host machine with the appropriate IP address.</li>
+</ul>
+<p>Thus, to access Metavisitor Galaxy webserver, just type this IP address in your web browser.</p>
+<p>If you did not installed yourself the Metavisitor Galaxy instance, ask the IP address to the person who did it.</p>
+<p>In case you decided to get the Metavisitor Galaxy served on a subdirectory do not forget to append this <code>/subdirectory</code> in your url which then looks like <code>http://&lt;IP&gt;/subdirectory</code></p>
+<h2 id="2-log-to-the-galaxy-server-using-the-admin-credentials">2. Log to the Galaxy server using the admin credentials:</h2>
+<p>If everything goes well, you should now see the Galaxy Metavisitor home page in your web browser.</p>
+<ul>
+<li>You have to log as the admin.</li>
+</ul>
+<p>To do that, go to the User menu and click <code>login</code></p>
+<p><img alt="login panel" src="../images/login.png" /></p>
+<p>This is your first login, thus the admin login is <code>admin@galaxy.org</code> and your admin password is <code>admin</code></p>
+<p><strong>However</strong> for security, immediately change the admin password. To do this, go again in the Users menu, <code>Preferences</code></p>
+<p><img alt="preference panel" src="../images/preferences.png" /></p>
+<p>And click the <code>Change your password</code> item in the User preferences.</p>
+<h2 id="basic-admin-operation-restart-the-metavisitor-galaxy-instance">Basic admin operation: restart the Metavisitor Galaxy instance</h2>
+<p>As we will see in the <a href="../metavisitor_configure_references/">next chapter</a>, installations of reference genomes or additional tools in the Galaxy Metavisitor instance imply a Galaxy restart for completion. Here is how to do it.</p>
+<h4 id="restart-metavisitor-galaxy-instance-deployed-with-galaxykickstart">restart Metavisitor Galaxy instance deployed with <a href="../metavisitor_ansible/">GalaxyKickStart</a></h4>
+<ul>
+<li>
+<p>Connect to the server where the Galaxy instance has been installed either through the ssh connection you have used with <a href="../metavisitor_ansible/">GalaxyKickStart</a></p>
+</li>
+<li>
+<p>in your terminal, type <code>sudo supervisorctl restart galaxy:</code></p>
+</li>
+</ul>
+<p>If everything went fine you should see in your terminal</p>
+<pre><code># supervisorctl restart galaxy:
+galaxy_web: stopped
+handler0: stopped
+handler1: stopped
+handler0: started
+handler1: started
+galaxy_web: started
+</code></pre>
+
+<p>That's it, the Galaxy instance has restarted.</p>
+<h4 id="restart-metavisitor-galaxy-instance-deployed-with-docker">restart Metavisitor Galaxy instance deployed with <a href="metavisitor_docker">docker</a></h4>
+<ul>
+<li>
+<p>Connect to the server where the Galaxy instance has been installed either through the ssh connection you have used with <a href="../metavisitor_ansible/">GalaxyKickStart</a></p>
+</li>
+<li>
+<p>connect to you docker host using ssh</p>
+</li>
+<li>type <code>docker ps</code>. You should see your Metavisitor docker container running and the name of the container in the NAMES column</li>
+<li>enter into your container by typing:</li>
+</ul>
+<p><code>docker exec -it &lt;name_of_the_container&gt; bash</code>
+- in the docker session you can now type <code>sudo supervisorctl restart galaxy:</code></p>
+<p>and see also, within the container:</p>
+<pre><code># supervisorctl restart galaxy:
+galaxy_web: stopped
+handler0: stopped
+handler1: stopped
+handler0: started
+handler1: started
+galaxy_web: started
+</code></pre>
+
+<p>That's it, the Galaxy instance has restarted. you can leave the container by typing <code>exit</code></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../metavisitor_docker/" class="btn btn-neutral" title="Docker"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../metavisitor_docker/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

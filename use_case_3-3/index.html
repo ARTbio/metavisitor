@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Use Case 3-3 - Metavisitor-2</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Use Case 3-3";
+    var mkdocs_page_input_path = "use_case_3-3.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Metavisitor-2</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Metavisitor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../metavisitor_configure_references/">Prepare Metavisitor Galaxy instance for analyses</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_cases_input_data/">Prepare input data histories</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_1/">Use Cases 1-1 to 1-4</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_2/">Use Cases 2-1 and 2-2</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_3-1/">Use Case 3-1</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_3-2/">Use Case 3-2</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Use Case 3-3</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#input-data-for-use-case-3-3">Input data for Use Case 3-3</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#for-ebola-virus-samples">For Ebola virus samples:</a></li>
+        
+            <li><a class="toctree-l3" href="#for-lassa-virus-samples">For Lassa virus samples:</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#history-for-use-case-3-3-ebola-virus">History for Use Case 3-3 / Ebola virus</a></li>
+    
+
+    <li class="toctree-l2"><a href="#history-for-use-case-3-3-lassa-virus-segment-l">History for Use Case 3-3 / Lassa virus, segment L</a></li>
+    
+
+    <li class="toctree-l2"><a href="#history-for-use-case-3-3-lassa-virus-segment-s">History for Use Case 3-3 / Lassa virus, segment S</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Install_Metavisitor</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../install_metavisitor/">Intro</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../metavisitor_ansible/">GalaxyKickStart</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../metavisitor_docker/">Docker</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../metavisitor_access_control/">Access and Control Metavisitor Galaxy instance</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Metavisitor-2</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Use Case 3-3</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="input-data-for-use-case-3-3">Input data for Use Case 3-3</h2>
+<p>As for the previous Use Cases, the first step is to collect all input data in an history that we will name <code>Input data for Use Case 3-3</code>. </p>
+<ul>
+<li>Create a new history</li>
+<li>Rename this history <code>Input data for Use Case 3-3</code></li>
+<li>Using the tool <code>Extract reads in FASTA/Q format from NCBI SRA</code>, we are going to upload 63 paired end datasets.</li>
+</ul>
+<h5 id="for-ebola-virus-samples">For Ebola virus samples:</h5>
+<ul>
+<li>Select the <code>upload File</code> tool and click on the <code>Paste/Fetch data</code> button. Name the file "Ebola_accessions" and copy-paste the following text:</li>
+</ul>
+<pre><code>SRR1613381
+SRR1613377
+SRR1613382
+SRR1613378
+SRR1613383
+SRR1613379
+SRR1613384
+SRR1613380
+</code></pre>
+
+<ul>
+<li>Click the "Start" button.</li>
+<li>Use the <code>Download and Extract Reads in FASTA/Q format from NCBI SRA</code> tool. Set "List of SRA accession" in "select input type" and enter "Ebola_accessions" as input. Execute the tool.</li>
+<li>Select <code>Concatenate multiple datasets tail-to-head</code>. Change "What type of data do you wish to concatenate?" to "Paired collection", set the collection as input and "Concatenation by pairs" in "What type of concatenation do you wish to perform?".</li>
+</ul>
+<p>When you are finished, you'll have 8 datasets. Make sure to verify their datatype is <code>fastqsanger</code> or <code>fastqsanger.gz</code>, and create a dataset collection (as explained in the previous chapter) of these 8 datasets that you will name <code>Ebola virus</code>.</p>
+<h5 id="for-lassa-virus-samples">For Lassa virus samples:</h5>
+<ul>
+<li>Upload, Download and Concatenate the Lassa virus datasets the same way as above, but this time name the file "Lassa_accessions" and copy-paste this text:</li>
+</ul>
+<pre><code>SRR1595772
+SRR1595696
+SRR1595665
+SRR1595500
+SRR1594619
+SRR1595943
+SRR1595673
+SRR1595797
+SRR1595763
+SRR1595558
+SRR1594664
+SRR1595909
+SRR1594651
+SRR1595835
+SRR1594698
+SRR1613388
+SRR1613389
+SRR1613390
+SRR1613391
+SRR1613392
+SRR1613393
+SRR1613394
+SRR1613395
+SRR1613396
+SRR1613397
+SRR1613398
+SRR1613399
+SRR1595853
+SRR1606288
+SRR1613412
+SRR1613403
+SRR1606277
+SRR1613386
+SRR1613387
+SRR1606267
+SRR1614275
+SRR1610580
+SRR1595846
+SRR1594606
+SRR1606236
+SRR1594723
+SRR1594671
+SRR1613414
+SRR1613400
+SRR1613401
+SRR1613404
+SRR1613402
+SRR1613405
+SRR1613407
+SRR1613408
+SRR1613409
+SRR1613410
+SRR1613406
+SRR1613411
+SRR1613413
+</code></pre>
+
+<p>When you are finished you'll have 55 datasets. Make sure their datatype is <code>fastqsanger</code> or <code>fastqsanger.gz</code>, and create a dataset collection (as explained in the previous chapter) of these 55 datasets that you will name <code>Lassa virus</code>.</p>
+<ul>
+<li>Copy the <code>vir2 nucleotide BLAST database</code> from the <code>References</code> history to the current history <code>Input data for Use Case 3-3</code>.</li>
+</ul>
+<h2 id="history-for-use-case-3-3-ebola-virus">History for Use Case 3-3 / Ebola virus</h2>
+<ol>
+<li>Stay in the history <code>Input data for Use Case 3-3</code></li>
+<li>pick the workflow <code>Metavisitor: Workflow for Use Case 3-3</code> in the workflows menu. Save the workflow and select the <code>run</code> option.</li>
+<li>Before Step 1, you have to specify some parameters at run time. For Ebola virus, the field <code>reference_virus</code> has to be filled with <code>NC_002549.1</code> (as a guide for reconstruction of the Ebola virus genome) and the field <code>target_virus</code> has to be filled with <code>Ebola</code>.</li>
+<li>For Step 1, select <code>Ebola virus</code>.</li>
+<li>For Step 2, select the <code>nucleotide vir2 blast database</code> (this should also be already selected)</li>
+<li>As usual, check the box <code>Send results to a new history</code>, edit the name of the new history to <code>Use Case 3-3 Ebola virus</code>, and <code>Execute</code> the workflow ! Note, that for complex workflows with dataset collections in input, the actual warning that the workflow is started make take time to show up; you can even have a "504 Gateway Time-out" warning. This is not a serious issue: just go in your <code>User</code> -&gt; <code>Saved history</code> menu, you will see your <code>Use Case 3-3 Ebola virus</code> history running and you will be able to access it.</li>
+</ol>
+<p>The workflow for Use Case 3-3 may take a long time. Be patient.</p>
+<h2 id="history-for-use-case-3-3-lassa-virus-segment-l">History for Use Case 3-3 / Lassa virus, segment L</h2>
+<ol>
+<li>Stay in the history <code>Input data for Use Case 3-3</code></li>
+<li>pick the workflow <code>Metavisitor: Workflow for Use Case 3-3</code> in the workflows menu. Save the workflow and select the <code>run</code> option.</li>
+<li>Before Step 1, you have to specify some parameters at run time. For Lassa virus, the field <code>reference_virus</code> has to be filled with <code>NC_004297.1</code> (as a guide for reconstruction of the segment L of the Lassa virus genome) and the field <code>target_virus</code> has to be filled with <code>Lassa</code>.</li>
+<li>For Step 1, select <code>Lassa virus</code>.</li>
+<li>For Step 2, select the <code>nucleotide vir2 blast database</code> (this should also be already selected)</li>
+<li>As usual, check the box <code>Send results to a new history</code>, edit the name of the new history to <code>Use Case 3-3 Lassa virus segment L</code>, and <code>Execute</code> the workflow ! Note, that for complex workflows with dataset collections in input, the actual warning that the workflow is started make take time to show up; you can even have a "504 Gateway Time-out" warning. This is not a serious issue: just go in your <code>User</code> -&gt; <code>Saved history</code> menu, you will see your <code>Use Case 3-3 Lassa virus segment L</code> history running and you will be able to access it.</li>
+</ol>
+<p>The workflow for Use Case 3-3 may take a long time. Be patient.</p>
+<h2 id="history-for-use-case-3-3-lassa-virus-segment-s">History for Use Case 3-3 / Lassa virus, segment S</h2>
+<ol>
+<li>Stay in the history <code>Input data for Use Case 3-3</code></li>
+<li>pick the workflow <code>Metavisitor: Workflow for Use Case 3-3</code> in the workflows menu. Save the workflow and select the <code>run</code> option.</li>
+<li>Before Step 1, you have to specify some parameters at run time. For Lassa virus, the field <code>reference_virus</code> has to be filled with <code>NC_004296.1</code> (as a guide for reconstruction of the segment S of the Lassa virus genome) and the field <code>target_virus</code> has to be filled with <code>Lassa</code>.</li>
+<li>For Step 1, select <code>Lassa virus</code> (this should be already selected).</li>
+<li>For Step 2, select the <code>nucleotide vir2 blast database</code> (this should also be already selected)</li>
+<li>As usual, check the box <code>Send results to a new history</code>, edit the name of the new history to <code>Use Case 3-3 Lassa virus segment S</code>, and <code>Execute</code> the workflow ! Note, that for complex workflows with dataset collections in input, the actual warning that the workflow is started make take time to show up; you can even have a "504 Gateway Time-out" warning. This is not a serious issue: just go in your <code>User</code> -&gt; <code>Saved history</code> menu, you will see your <code>Use Case 3-3 Lassa virus segment S</code> history running and you will be able to access it.</li>
+</ol>
+<p>The workflow for Use Case 3-3 may take a long time. Be patient.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../install_metavisitor/" class="btn btn-neutral float-right" title="Intro">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../use_case_3-2/" class="btn btn-neutral" title="Use Case 3-2"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../use_case_3-2/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../install_metavisitor/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Use Cases 2-1 and 2-2 - Metavisitor-2</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Use Cases 2-1 and 2-2";
+    var mkdocs_page_input_path = "use_case_2.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Metavisitor-2</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Metavisitor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../metavisitor_configure_references/">Prepare Metavisitor Galaxy instance for analyses</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_cases_input_data/">Prepare input data histories</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_1/">Use Cases 1-1 to 1-4</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Use Cases 2-1 and 2-2</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#histories-for-use-cases-2-1-2-2">Histories for Use Cases 2-1, 2-2</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#input-data-for-use-cases-2-1-and-2-2">Input data for Use Cases 2-1 and 2-2</a></li>
+        
+            <li><a class="toctree-l3" href="#history-for-use-case-2-1">History for Use Case 2-1</a></li>
+        
+            <li><a class="toctree-l3" href="#history-for-use-case-2-2">History for Use Case 2-2</a></li>
+        
+            <li><a class="toctree-l3" href="#re-mapping-of-the-small-rna-reads-erp012577-to-the-ancv-genome-ku169878">Re-mapping of the small RNA reads (ERP012577) to the AnCV genome (KU169878).</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_3-1/">Use Case 3-1</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_3-2/">Use Case 3-2</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_3-3/">Use Case 3-3</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Install_Metavisitor</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../install_metavisitor/">Intro</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../metavisitor_ansible/">GalaxyKickStart</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../metavisitor_docker/">Docker</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../metavisitor_access_control/">Access and Control Metavisitor Galaxy instance</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Metavisitor-2</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Use Cases 2-1 and 2-2</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="histories-for-use-cases-2-1-2-2">Histories for Use Cases 2-1, 2-2</h1>
+<p>Now that are more familiar with manipulations in Galaxy with the Use Cases 1-1 to 1-4 described in details in the previous chapters, we will describe the other Use Case analyses more concisely. If you experience lack of skills in basic Galaxy operations (tool usage, copy of datasets, etc), do not hesitate to go back and examine the previous chapters step by step.</p>
+<h2 id="input-data-for-use-cases-2-1-and-2-2">Input data for Use Cases 2-1 and 2-2</h2>
+<p>As for the previous Use Case 1, the first step is to collect all input data in an history that we will name <code>Input data for Use Cases 2-1 and 2-2</code></p>
+<ol>
+<li>Create a new history</li>
+<li>Rename this history <code>Input data for Use Cases 2-1 and 2-2</code></li>
+<li>For the small RNA sequence datasets (ERP012577) in this study, we are going to use another tool to upload to the Galaxy Metavisitor server: the <code>EBI SRA ENA SRA</code>tool which in the "Get data" section of the left tool bar.<ul>
+<li>Click on this tool and enter ERP012577 in the search field that shows up in the European Nucleotide Archive web page, and search. Click on the <code>ERP012577</code> link. In the column "Submitted files (galaxy)" of the table, click on the first "fastq file 1". This action should send you back to your Galaxy page automatically and you see the fastq dataset loading (yellow dataset in the history bar).</li>
+<li>Repeat the exact same operation, for the three other "fastq file 1".</li>
+<li>At final you should have uploaded four fastq datasets corresponding to the sequencing runs "post_infected_rep1.fastq", "post_infected_rep2.fastq", "post_non-infected_rep1.fastq" and "post_non-infected_rep2.fastq"</li>
+<li>Select a dataset to make sure its datatype is <code>fastqsanger.gz</code>. If not click on the crayon button of any one of these four datasets and select the <code>Datatypes</code> tab and set it to <code>fastqsanger.gz</code>.</li>
+<li>Repeat this operation for the other 3 datasets.</li>
+</ul>
+</li>
+<li>Create a dataset collection as <a href="use_cases_input_data/#history-with-input-data-for-use-cases-1-1-1-2-1-3-and-1-4">previously explained</a> and name it <code>Small RNA reads ERP012577</code></li>
+<li>For the RNA sequence datasets (ERS977505) that will be used in Use Case 2-2, use again the <code>EBI SRA ENA SRA</code>tool which in the "Get data" section of the left tool bar.<ul>
+<li>Click on this tool and enter ERS977505 in the search field that shows up in the European Nucleotide Archive web page, and search. Click on the <code>ERS977505</code> link (Sample 1 result found). In the column "Submitted files (galaxy)" of the table, click on the first "fastq file 1". This action should send you back to your Galaxy page automatically and you see the fastq dataset loading (yellow dataset in the history bar).</li>
+<li>Repeat the exact same operation for the other "fastq file 1" and the two other "fastq file 2"</li>
+<li>In the end you should have uploaded four additional fastq datasets corresponding to the sequencing runs "IP-isoT-1_AGTCAA_L001_R_1.fastq", "IP-isoT-1_AGTCAA_L001_R_2.fastq", "IP-isoT-2_ATGTCA_L002_R_1.fastq" and "IP-isoT-2_ATGTCA_L002_R_2.fastq"</li>
+</ul>
+</li>
+<li>Create a dataset collection as explained in the previous chapter and name it <code>long read RNAseq datasets</code>.</li>
+<li>Use the <code>Retrieve FASTA from NCBI</code>, paste <code>phix174[title]</code> in the "Query to NCBI in entrez format" field and select <code>Nucleotide</code> for the NCBI database. This will upload 154 fasta sequences from phix174.</li>
+<li>Use the wheel icon at the top of the history bar to copy <code>nucleotide vir2 blast database</code>, <code>protein vir2 blast database</code> and <code>P. berghei</code> <strong>from</strong> the history <code>References</code> <strong>to</strong> the current history <code>Input data for Use Cases 2-1 and 2-2</code>. If you don't remember well how to copy datasets between histories, you may read again the explanation <a href="use_cases_input_data/#history-with-input-data-for-use-cases-1-1-1-2-1-3-and-1-4">here</a> (step 4.)</li>
+</ol>
+<p><strong><em>Your are now ready for generating Uses Cases 2-1 and 2-2</em></strong></p>
+<h2 id="history-for-use-case-2-1">History for Use Case 2-1</h2>
+<ol>
+<li>Stay in the current history <code>Input data for Use Cases 2-1 and 2-2</code> !</li>
+<li>In the <code>Workflow</code> menu, select the workflow <code>Metavisitor: Workflow for Use Case 2-1</code> and directly select <code>Run</code> (you may also look at the workflow using the <code>edit</code> option).</li>
+<li>Be careful at selecting <code>Small RNA reads ERP012577</code> for the step 1 (Input Dataset Collection).</li>
+<li><strong>Be careful</strong> at selecting <code>P. berghei</code> for <strong>step 2</strong>.</li>
+<li><strong>Be careful</strong> at selecting</li>
+</ol>
+<pre><code>Retrieve FASTA from NCBI (Nucleotide) with queryString 'phix174[title]'
+</code></pre>
+
+<p>for <strong>step 3</strong>.
+6. For the step 4, the option <code>protein vir2 blast database</code> is forced, because the workflow is expecting of protein blast database for this step and only one dataset with this datatype is available in the history
+7. Click the <code>Send results to a new history</code> checkbox and rename the history to "History for Use Case 2-1".
+8. Run Workflow !</p>
+<p>You may follow the link to the new history when the workflow has started.</p>
+<h2 id="history-for-use-case-2-2">History for Use Case 2-2</h2>
+<ol>
+<li>If you are not already in, go back to the history <code>Input data for Use Cases 2-1 and 2-2</code></li>
+<li>In the <code>Workflow</code> menu, select the workflow <code>Metavisitor: Workflow for Use Case 2-2</code> and directly select <code>Run</code> (you may also look at the workflow using the <code>edit</code> option)</li>
+<li>Be careful at selecting <code>long read RNAseq datasets</code> for the step 1 (Input Dataset Collection)</li>
+<li>For the step 2, the option <code>protein vir2 blast database</code> is forced, because the workflow is expecting of protein blast database for this step and only one dataset with this datatype is available in the history</li>
+<li>Click the <code>Send results to a new history</code> checkbox and rename the history to "History for Use Case 2-2".</li>
+<li>Run Workflow.</li>
+</ol>
+<h2 id="re-mapping-of-the-small-rna-reads-erp012577-to-the-ancv-genome-ku169878">Re-mapping of the small RNA reads (ERP012577) to the AnCV genome (KU169878).</h2>
+<p>The previous workflow allowed to assemble a large contig of 8919 nt which significantly matched structural and non-structural polyproteins of Drosophila C Virus and Cricket Paralysis Virus in blastx alignments (see the dataset <code>blast analysis, by subjects</code> of the history). This large contig corresponds to the genome of a new Anopheles C Virus deposited to the NCBI nucleotide database under accession number KU169878 (see the <a href="http://dx.doi.org/10.1101/048983">companion Metavisitor article</a> and <a href="http://dx.doi.org/10.1371/journal.pone.0153881">Carissimo et al</a>).</p>
+<p>Here, we are going to perform manually a few steps, before using another workflow in the history 2-2 to remap the ERP012577 small RNA reads to the AnCV genome.</p>
+<ol>
+<li>Look at the <code>blast analysis, by subjects</code> dataset and copy the name of the 8919 nt contigs that aligned to DCV and CrPV sequences. It is noteworthy that the names may vary from one Oases run to another because the Oases algorithm is not totally deterministic. In the <a href="http://dx.doi.org/10.1101/048983">companion Metavisitor article</a>, this name was Locus_69_Transcript_1/1_Confidence_0.000_Length_8919.<ul>
+<li>Copy this names, find the tool <code>Pick Fasta sequences with header satisfying a query string</code> in the Galaxy tool bar, and paste a name in the field <code>Select sequences with this string in their header</code> of the tool form. Select the dataset <code>Oases_optimiser on data 21: Denovo assembled transcripts</code> as a source file, and run the tool again for each name.</li>
+</ul>
+</li>
+<li>Use the tool <code>Concatenate multiple datasets tail-to-head</code> and select the output files of the previous step as inputs. Run the tool.</li>
+<li>
+<p>Now, we are going to change the header of the previously extracted fasta sequences using the tool <code>Regex Find And Replace</code>.</p>
+<ul>
+<li>Select the previous dataset <code>Concatenated datasets</code> as input dataset for this tool. Click on <code>+ Insert Check</code>. Use <code>&gt;.*Confidence(.*)_Length_8919</code> (or the equivalent you extracted) as <em>Find Regex</em> and <code>Anopheles_C_Virus|KU169878_confidence\1</code> as <em>Replacement</em>.</li>
+</ul>
+</li>
+<li>
+<p>Copy the dataset collection <code>Small RNA reads ERP012577</code> from the history <code>Input data for Use Cases 2-1 and 2-2</code> into the <em>current</em> history <code>Use Case 2-2</code>. You may have to refresh the history bar to see this collection and the attached datasets popping up.</p>
+</li>
+</ol>
+<p>We are now ready to run the workflow.</p>
+<hr />
+<ol>
+<li>In the workflow menu, pick up the workflow <code>Metavisitor: Workflow for remapping in Use Cases 2-1,2</code> and select the <code>run</code> option.</li>
+<li>In the workflow form, ensure that <code>Small RNA reads ERP012577</code> are selected for the Step 1 and <code>Regex Find And Replace on data 28</code> is selected for the step 2 (this should be the case if you followed the instructions).</li>
+<li>This time, <em>do not</em> check the box <code>Send results to a new history</code> and directly click the <code>Run workflow</code>button.</li>
+</ol>
+<p>This workflow will provide you with a graphical view of ERP012577 small RNA mapping to the AnCV genome.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../use_case_3-1/" class="btn btn-neutral float-right" title="Use Case 3-1">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../use_case_1/" class="btn btn-neutral" title="Use Cases 1-1 to 1-4"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../use_case_1/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../use_case_3-1/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

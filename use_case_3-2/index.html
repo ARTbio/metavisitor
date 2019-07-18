@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Use Case 3-2 - Metavisitor-2</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Use Case 3-2";
+    var mkdocs_page_input_path = "use_case_3-2.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Metavisitor-2</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Metavisitor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../metavisitor_configure_references/">Prepare Metavisitor Galaxy instance for analyses</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_cases_input_data/">Prepare input data histories</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_1/">Use Cases 1-1 to 1-4</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_2/">Use Cases 2-1 and 2-2</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_3-1/">Use Case 3-1</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Use Case 3-2</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#input-data-for-use-case-3-2">Input data for Use Case 3-2</a></li>
+    
+
+    <li class="toctree-l2"><a href="#history-for-use-case-3-2">History for Use Case 3-2</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_3-3/">Use Case 3-3</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Install_Metavisitor</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../install_metavisitor/">Intro</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../metavisitor_ansible/">GalaxyKickStart</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../metavisitor_docker/">Docker</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../metavisitor_access_control/">Access and Control Metavisitor Galaxy instance</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Metavisitor-2</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Use Case 3-2</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="input-data-for-use-case-3-2">Input data for Use Case 3-2</h2>
+<p>As for the previous Use Cases 1, 2 and 3-1, the first step is to collect all input data in an history that we will name <code>Input data for Use Case 3-2</code>. </p>
+<ul>
+<li>Create a new history</li>
+<li>Rename this history <code>Input data for Use Case 3-2</code></li>
+<li>Using the tool <code>Extract reads in FASTQ/A format from NCBI SRA</code>, we are going to upload 43 paired end datasets. Indeed, these 43 datasets correspond to 86 fastq paired-ended sequence files. In addition, some datasets derive from the same patient; in those cases we will merge those datasets using the tool <code>Concatenate multiple datasets tail-to-head</code> and delete and purge the original datasets.</li>
+<li>Open the "Upload datasets" menu. Click on the <code>Paste/Fetch data</code> button, name the file "Use-Case_3-2_SRR_information" and copy-paste the following text:</li>
+</ul>
+<pre><code>SRR453487   patient 566
+SRR453437   patient 438
+SRR453443   patient 401
+SRR453458   patient 401
+SRR453430   patient 382
+SRR453491   patient 377
+SRR453499   patient 375
+SRR453484   patient 350
+SRR453464   patient 349
+SRR453506   patient 345
+SRR453417   patient 344
+SRR453490   patient 335
+SRR453478   patient 331
+SRR453465   patient 330
+SRR453480   patient 330
+SRR453489   patient 329
+SRR453505   patient 329
+SRR453498   patient 322
+SRR453446   patient 321
+SRR453427   patient 315
+SRR453440   patient 315
+SRR453438   patient 282
+SRR453450   patient 275
+SRR453460   patient 274
+SRR453485   patient 270
+SRR453448   patient 266
+SRR453424   patient 263
+SRR453457   patient 263
+SRR453510   patient 193
+SRR453456   patient 187
+SRR453425   patient 186
+SRR453469   patient 186
+SRR453481   patient 183
+SRR453531   patient 180
+SRR453474   patient 179
+SRR453509   patient 171
+SRR453451   patient 168
+SRR453495   patient 161
+SRR453504   patient 161
+SRR453500   patient 159
+SRR453493   patient 156
+SRR453444   patient 131
+SRR453426   patient 78
+</code></pre>
+
+<ul>
+<li>Click the <code>Start</code> button.</li>
+<li>Select the <code>Cut columns from a table</code> tool and set the "Cut columns" parameter to "c1" and select "Use-Case_3-2_SRR_information" as input file in the "From" list. Execute the tool and rename the new dataset collection "Use_Case_3-2_accessions".</li>
+<li>Select the tool <code>Download and Extract Reads in FASTA/Q format from NCBI SRA</code>and select "List of SRA accession, one per line" in "select input type" and "Use_Case_3-2_accessions" in "sra accession list". Execute the tool. The data downloading step might take 40 minutes to 1h. Delete "Single-end data (fastq-dump)".</li>
+<li>Select the <code>Concatenate multiple datasets tail-to-head</code> tool and set "Paired collection" in "What type of data do you wish to concatenate?" and "Pair-end data (fastq-dump)" as "Input paired collection to concatenate". In "What type of concatenation do you wish to perform?" select "Concatenate pairs of datasets (outputs an unpaired collection of datasets)". Execute the tool.</li>
+<li>Select <code>Tag elements from file</code> tool and set "Concatenation by pairs" as "Input Collection" and "Use-Case_3-2_SRR_information" as "Tag collection elements according to this file". Execute the tool.</li>
+<li>Select <code>Apply Rule to Collection</code> tool and set "data 1, data 144, and others (Tagged)" as "Input Collection" and click the "Edit" button.<ul>
+<li>Click the "Column" button and select "Add Column from Metadata" from the list.</li>
+<li>Select "Tags" from the "For" list and click the "Apply" button.</li>
+<li>Click the "Rules" button and select "Add / Modify Column Definitions".</li>
+<li>Click "Add Definitions" button and select "List identifier(s)" from the list.</li>
+<li>Select "B" from the "Select a column" list.</li>
+<li>Click "<em>... Assign Another Column</em>" and select "A" from the "Select column" list. Click the "Apply" button and the "Save" button. Execute the tool.</li>
+</ul>
+</li>
+<li>Select the <code>Conatenate multiple datasets tail-to-head</code> tool ans set "Nested collection" in "What type of data do you wish to concatenate?" and select the "... (re-organized)" dataset collection in "Input nested collection". Click the "Execute" button.</li>
+<li>Rename the output collection as "Tractable Patient Datasets".</li>
+<li>Copy the <code>vir2 nucleotide BLAST database</code> from the <code>References</code> history to the current history <code>Input data for Use Case 3-2</code>.</li>
+</ul>
+<h2 id="history-for-use-case-3-2">History for Use Case 3-2</h2>
+<ol>
+<li>Stay in the history <code>Input data for Use Case 3-2</code></li>
+<li>pick the workflow <code>Metavisitor: Workflow for Use Case 3-2</code> in the workflows menu, and select the <code>run</code> option.</li>
+<li>For Step 1 (Fever Patient Sequences collection), select <code>Tractable Patient Datasets</code> (this should be already selected).</li>
+<li>For Step 2, select the <code>nucleotide vir2 blast database</code> (this should also be already selected)</li>
+<li>As usual, check the box <code>Send results to a new history</code>, edit the name of the new history to <code>History for Use Case 3-2</code>, and <code>Execute</code> the workflow ! Note, that for complex workflows with dataset collections in input, the actual warning that the workflow is started make take time to show up; you can even have a "504 Gateway Time-out" warning. This is not a serious issue: just go in your <code>User</code> -&gt; <code>Saved history</code> menu, you will see you <code>History for Use Case 3-2</code> running and you will be able to access it.</li>
+</ol>
+<p>As a last note, the workflow for Use Case 3-2 may take a long time. Be patient.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../use_case_3-3/" class="btn btn-neutral float-right" title="Use Case 3-3">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../use_case_3-1/" class="btn btn-neutral" title="Use Case 3-1"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../use_case_3-1/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../use_case_3-3/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

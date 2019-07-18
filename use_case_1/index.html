@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Use Cases 1-1 to 1-4 - Metavisitor-2</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Use Cases 1-1 to 1-4";
+    var mkdocs_page_input_path = "use_case_1.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Metavisitor-2</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Metavisitor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../metavisitor_configure_references/">Prepare Metavisitor Galaxy instance for analyses</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_cases_input_data/">Prepare input data histories</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Use Cases 1-1 to 1-4</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#histories-for-use-cases-1-1-1-2-1-3-and-1-4">Histories for Use Cases 1-1, 1-2, 1-3 and 1-4</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#history-for-use-case-1-1">History for Use Case 1-1.</a></li>
+        
+            <li><a class="toctree-l3" href="#histories-for-use-cases-1-2-and-1-3">Histories for Use Cases 1-2 and 1-3</a></li>
+        
+            <li><a class="toctree-l3" href="#history-for-remapping-in-use-cases-1-123">History for remapping in Use Cases 1-1,2,3</a></li>
+        
+            <li><a class="toctree-l3" href="#history-for-remapping-in-use-case-1-4">History for remapping in Use Case 1-4</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_2/">Use Cases 2-1 and 2-2</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_3-1/">Use Case 3-1</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_3-2/">Use Case 3-2</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_3-3/">Use Case 3-3</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Install_Metavisitor</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../install_metavisitor/">Intro</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../metavisitor_ansible/">GalaxyKickStart</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../metavisitor_docker/">Docker</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../metavisitor_access_control/">Access and Control Metavisitor Galaxy instance</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Metavisitor-2</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Use Cases 1-1 to 1-4</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="histories-for-use-cases-1-1-1-2-1-3-and-1-4">Histories for Use Cases 1-1, 1-2, 1-3 and 1-4</h1>
+<p>As you will see, Histories 1-1, 1-2 and 1-3 are generated in the same way, using their corresponding workflows. These workflows are available in your Galaxy top menu. An important thing to remember is that you will always start <strong>from</strong> the <code>Input data for Use Cases 1-1, 1-2, 1-3 and 1-4</code> history, run the appropriate workflow, <strong>sending the outputs of the workflow in a new history</strong> named accordingly.</p>
+<h2 id="history-for-use-case-1-1">History for Use Case 1-1.</h2>
+<h4 id="1-as-aforementioned-ensure-that-you-are-in-the-input-data-for-use-cases-1-1-1-2-1-3-and-1-4-history">1. As aforementioned, ensure that you are in the <code>Input data for Use Cases 1-1, 1-2, 1-3 and 1-4</code> history.</h4>
+<p>You can always control this by using the top menu <strong>Users</strong> --&gt; <strong>Saved History</strong> and selecting the desired history. If you don't see the History right bar, just click in addition the top menu <strong>Analyze Data</strong></p>
+<h4 id="2-select-the-appropriate-workflow">2. Select the appropriate workflow</h4>
+<ul>
+<li>Click now on the <strong>Workflow</strong> top menu</li>
+<li>Select the workflow <strong>"Metavisitor: Workflow for Use Case 1-1"</strong> and to see the workflow, select the submenu <strong>"Edit"</strong></li>
+<li>
+<p>Now that you see the workflow, you can directly execute it by clicking the top right wheel icon and selecting <strong>"Run"</strong></p>
+<p><img alt="copydataset" src="../images/runworkflow.png" /></p>
+</li>
+</ul>
+<h4 id="3-select-the-appropriate-parameters-before-running-the-workflow">3. Select the appropriate parameters before running the workflow</h4>
+<p>You now see a page with all the workflow steps, whose top part looks like:</p>
+<p><img alt="copydataset" src="../images/workflow1-1.png" /></p>
+<ul>
+<li>
+<p>As pointed by the first red arrow, a parameter has to be provided at runtime of the workflow: the <strong>ncbi_guide_ID</strong>. In this Use Case as in the other 1-2 and 1-3 Use Cases, you will paste in the <strong>ncbi_guide_ID</strong> field the <code>NC_007919.3_</code>value. This is the NCBI identifier for the Nora virus genome sequence which will be retrieved from Genbank during the workflow and used as a guide for the final reconstruction of the Nora virus genome sequence that is "present" in the analyzed small RNA sequencing datasets.</p>
+</li>
+<li>
+<p>You have to select an Input dataset collection for Step 1 (second red arrow). However, as there is only one dataset collection in the input history (the one we have prepared in the <a href="use_cases_input_data/#history-with-input-data-for-use-cases-1-1-1-2-1-3-and-1-4">previous chapter</a>), there is no other option in the menu than "<strong>SRP013822</strong>".</p>
+</li>
+<li>
+<p>You have to select the viral nucleotide Blast database for Step 2. Here again there is indeed nothing else to select than the "<strong>nucleotide vir2 blast database</strong>", just because there is only one dataset in the input history with the "blast database" type.</p>
+</li>
+<li>
+<p>You can review the other steps of the workflow. But there is no other selection to perform before running the workflow.</p>
+</li>
+</ul>
+<h4 id="4-running-the-workflow-sending-the-outputs-in-a-new-history">4. Running the workflow <strong><em>sending the outputs in a new history</em></strong></h4>
+<p>We are almost ready, but before clicking the "<strong>Run Workflow</strong>" button there is an important thing to do:
+- Check the "<strong>Send results to a new history</strong>" checkbox as shown Here</p>
+<p><img alt="sendtonewhistory" src="../images/new_workflow_history.png" /></p>
+<ul>
+<li>And edit the field to "History for Use Case 1-1"</li>
+<li><strong>You can now click the "Run workflow" button.</strong>
+This trigger the workflow run. After a few seconds (may be take a while for complex workflows), you will see an alert that the workflow is started, and a link to navigate to the newly created history.</li>
+</ul>
+<p>When the workflow has finished, if you navigate to the created "History for Use Case 1-1", you should see:</p>
+<p><img alt="history1_1" src="../images/final_history_1_1.png" /></p>
+<p>Note that 30 datasets have been hidden by the workflow for clarity. You just have to click on the "hidden" link to unhide these datasets</p>
+<h2 id="histories-for-use-cases-1-2-and-1-3">Histories for Use Cases 1-2 and 1-3</h2>
+<p>Histories for Uses Cases 1-2 and 1-3 are produced in almost the same way as History for Use Case 1-1.</p>
+<p>Do exactly as described for Use Case 1-1 and
+- Remember to go back to the <code>Input data for Use Cases 1-1, 1-2, 1-3 and 1-4</code> history and be sure you are going to run the workflow from that history.
+- <strong>Select the appropriate workflow</strong> !
+- Remember to Check the "<strong>Send results to a new history</strong>" checkbox, rename the new history appropriately before pressing the "<strong>Run workflow</strong>" button</p>
+<h2 id="history-for-remapping-in-use-cases-1-123">History for remapping in Use Cases 1-1,2,3</h2>
+<p>Before running the workflow for remapping in Use Cases 1-1,2,3, we need to collect datasets generated in the histories for Use Case 1-1, 1-2 and 1-3 and send them in our <code>Input data for Use Cases 1-1, 1-2, 1-3 and 1-4</code> history.</p>
+<h4 id="update-the-input-data-for-use-cases-1-1-1-2-1-3-and-1-4-history">Update the <code>Input data for Use Cases 1-1, 1-2, 1-3 and 1-4</code> history</h4>
+<p>This is because the purpose of the workflow for Use Case 1-4 is to remap the raw read sequencing datasets to the viral genomes generated in the previous histories as well as to 2 different Nora virus genomes deposited in Genbank (NC_007919.3 and JX220408).</p>
+<p>Thus, go back to the <code>Input data for Use Cases 1-1, 1-2, 1-3 and 1-4</code> history and</p>
+<ol>
+<li>Use the <code>Retrieve FASTA from NCBI</code> Metavisitor tool to retrieve the NC_007919.3 sequence.</li>
+<li>Use the <code>Regex Find And Replace</code> tool on the <em>Retrieve FASTA from NCBI (Nucleotide) with queryString 'NC_007919.3'</em> dataset as an input, and put <code>&gt;.+</code> as Find Regex parameter and <code>&gt;NC_007919.3</code> as Replacement parameter. This is just to change the header of the FASTA file and make it more readable. Rename the generated dataset NC_007919.3 for clarity.</li>
+<li>Use the <code>Retrieve FASTA from NCBI</code> Metavisitor tool to retrieve the JX220408 sequence.</li>
+<li>Use the <code>Regex Find And Replace</code> tool on the <em>Retrieve FASTA from NCBI (Nucleotide) with queryString 'JX220408'</em> dataset as an input, and put <code>&gt;.+</code> as Find Regex parameter and <code>&gt;JX220408.1</code> as Replacement parameter. Rename the generated dataset JX220408.1 for clarity.</li>
+<li>Click on the top wheel history icon, select <code>Copy Datasets</code>; select "History for Use Case 1-1" as a Source History, click on the last dataset of the history (Nora_MV_NC_007919.3_guided), select "Input data for Use Cases 1-1, 1-2..." as Destination History, and click "Copy History Items".</li>
+<li>Repeat the previous operation for History for Use Case 1-2, selecting the last "Nora_raw_reads_NC_007919.3_guided" dataset.</li>
+<li>And Repeat the previous operation for History for Use Case 1-3, selecting the last "Nora_Median-Norm-reads_NC_007919.3_guided" dataset.</li>
+<li>You may have to refresh your <code>Input data for Use Cases 1-1, 1-2, 1-3 and 1-4</code> history to reveal the three copied datasets</li>
+<li>The last step is to create a dataset collection with the 5 Nora virus genomes that you have now in your input data history: just click on the checkbox icon at the top of the history bar, select the 5 corresponding data sets (NC_007919.3, JX220408.1, Nora_MV_NC_007919.3_guided, Nora_raw_reads_NC_007919.3_guided and Nora_Median-Norm-reads_NC_007919.3_guided), click on the <code>For all selected...</code> button, select <code>Build Dataset List</code>, name this list "Nora virus genomes", and press the <code>Create list</code> button.</li>
+</ol>
+<p>We are done with the input data history update !</p>
+<h4 id="generate-the-history-for-remapping-in-use-cases-1-123">Generate the History for remapping in Use Cases 1-1,2,3</h4>
+<ol>
+<li>In the workflow top menu of Galaxy, select the <code>Metavisitor: Workflow for remapping in Use Cases 1-1,2,3</code> workflow and directly select the <code>run</code>option (you may also look at the workflow before by selection the <code>edit</code> option).</li>
+<li>Specify "SRP013822" for the step 1 option</li>
+<li>Specify "Nora virus genomes" for the step 2 option (you see now why we had to create a dataset collection)</li>
+<li>Click at the bottom the checkbox <code>Send results to a new history</code></li>
+<li>Edit the field that shows up by typing in it: "<strong>History for remapping in Use Cases 1-1,2,3</strong>"</li>
+<li>Execute the workflow by clicking the <code>Run workflow</code> button.</li>
+<li>After few seconds, you may follow the link to the new history running !</li>
+</ol>
+<h2 id="history-for-remapping-in-use-case-1-4">History for remapping in Use Case 1-4</h2>
+<p>This is a simple history to generate because basically, it is similar to the History for Use Case 1-1, but with a slightly modified (and simplified workflow).</p>
+<h4 id="navigate-back-again-to-your-base-history-input-data-for-use-cases-1-1-1-2-1-3-and-1-4">Navigate back again to your "base" history <code>Input data for Use Cases 1-1, 1-2, 1-3 and 1-4</code></h4>
+<p>Now the sequence of operations to be performed should be more familiar to you:</p>
+<ol>
+<li>Top menu <code>Workflow</code></li>
+<li>Select <code>Metavisitor: Workflow for Use Case 1-4</code> and the <code>run</code> option</li>
+<li>Step 1 (Input Dataset Collection), select the <code>SRP013822</code> option</li>
+<li>Step 2 (viral nucleotide BLAST database), select <code>nucleotide vir2 blast database</code> (forced option if everything went well - only one blast database is available in this input history)</li>
+<li>Click at the bottom the checkbox <code>Send results to a new history</code></li>
+<li>Edit the field that shows up by typing in it: "<strong>History for Use Case 1-4</strong>"</li>
+<li>Execute the workflow by clicking the <code>Run workflow</code> button.</li>
+<li>After few seconds, you may follow the link to the new "<strong>History for Use Case 1-4</strong>" running !</li>
+</ol>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../use_case_2/" class="btn btn-neutral float-right" title="Use Cases 2-1 and 2-2">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../use_cases_input_data/" class="btn btn-neutral" title="Prepare input data histories"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../use_cases_input_data/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../use_case_2/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>GalaxyKickStart - Metavisitor-2</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "GalaxyKickStart";
+    var mkdocs_page_input_path = "metavisitor_ansible.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Metavisitor-2</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Metavisitor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../metavisitor_configure_references/">Prepare Metavisitor Galaxy instance for analyses</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_cases_input_data/">Prepare input data histories</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_1/">Use Cases 1-1 to 1-4</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_2/">Use Cases 2-1 and 2-2</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_3-1/">Use Case 3-1</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_3-2/">Use Case 3-2</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../use_case_3-3/">Use Case 3-3</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Install_Metavisitor</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../install_metavisitor/">Intro</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">GalaxyKickStart</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#installing-metavisitor-with-galaxykickstart-and-ansible">Installing Metavisitor with GalaxyKickStart and Ansible</a></li>
+    
+
+    <li class="toctree-l3"><a href="#requirements">Requirements</a></li>
+    
+
+    <li class="toctree-l3"><a href="#getting-the-ansible-playbook">Getting the ansible playbook</a></li>
+    
+
+    <li class="toctree-l3"><a href="#adapting-the-galaxykickstart-folder-to-your-deployment">Adapting the GalaxyKickStart folder to your deployment</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#adapt-the-ansible-inventory-file">Adapt the ansible inventory file</a></li>
+        
+            <li><a class="toctree-l4" href="#adapt-the-group_varsall-file-for-persisting-data-if-needed">Adapt the group_vars/all file for persisting data, if needed.</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l3"><a href="#deploying-metavisitor-galaxy-on-the-target-machine">Deploying Metavisitor Galaxy on the Target Machine</a></li>
+    
+
+    <li class="toctree-l3"><a href="#re-deploying-metavisitor-galaxy-on-the-target-machine">Re-deploying Metavisitor Galaxy on the Target Machine</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../metavisitor_docker/">Docker</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../metavisitor_access_control/">Access and Control Metavisitor Galaxy instance</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Metavisitor-2</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Install_Metavisitor &raquo;</li>
+        
+      
+    
+    <li>GalaxyKickStart</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="installing-metavisitor-with-galaxykickstart-and-ansible">Installing Metavisitor with GalaxyKickStart and Ansible</h1>
+<hr />
+<p>Here, a <code>Deployment Machine</code> will install a Metavisitor Galaxy server on <code>Target Machine</code>. Note that <code>Deployment Machine</code> and <code>Target Machine</code> can both be local or remote machines, and that they can be the same machine.</p>
+<h1 id="requirements">Requirements</h1>
+<hr />
+<ul>
+<li>On the <code>Deployment Machine</code>, <a href="https://git-scm.com/downloads">git</a> and <a href="https://docs.ansible.com/ansible/intro_installation.html">ansible</a> need to be installed.</li>
+<li>The <code>Target Machine</code> has to be accessible through ssh connection by the user (you) with <code>root</code> privileges. This implies that a correct ssh private key file is available on your <code>Deployment Machine</code>, for instance <code>~/.ssh/id_rsa</code>. This key will be used for secure transactions managed by ansible between the <code>Deployment Machine</code> and the <code>Target Machine</code>.</li>
+<li>see the <a href="https://artbio.github.io/GalaxyKickStart/getting_started/">GalaxyKickStart manual</a> for more detailed informations on how to install appropriate version of Ansible.</li>
+</ul>
+<h1 id="getting-the-ansible-playbook">Getting the ansible playbook</h1>
+<hr />
+<p>This is done on the <code>Deployment Machine</code> by cloning the <a href="https://github.com/ARTbio/GalaxyKickStart.git">GalaxyKickStart (GalaxyKickStart) repository</a> hosted by <a href="https://github.com/ARTbio">the ARTbio organization</a>:</p>
+<p>In your terminal, type:</p>
+<pre><code>git clone https://github.com/ARTbio/GalaxyKickStart.git
+</code></pre>
+
+<p>and navigate in the GalaxyKickStart folder:</p>
+<pre><code>cd GalaxyKickStart
+</code></pre>
+
+<p>GalaxyKickStart makes use of other Ansible roles -- referenced in the <code>requirements_roles.yml file</code> -- that need to be downloaded as part of the installation step:</p>
+<pre><code>ansible-galaxy install -r requirements_roles.yml -p roles
+</code></pre>
+
+<p>This command installs additional roles in the <code>roles</code> folder.</p>
+<h1 id="adapting-the-galaxykickstart-folder-to-your-deployment">Adapting the GalaxyKickStart folder to your deployment</h1>
+<hr />
+<p>There are only few things to change in the <code>GalaxyKickStart</code> folder before running ansible.</p>
+<h2 id="adapt-the-ansible-inventory-file">Adapt the ansible inventory file</h2>
+<p>In the GalaxyKickStart/inventory_files folder, there is a file called the <code>metavisitor</code>.
+For deploying Metavisitor, you need to edit this file so that it just contains</p>
+<pre><code>
+[metavisitor]
+
+&lt;ip address&gt; ansible_ssh_user=&quot;root&quot; ansible_ssh_private_key_file=&quot;&lt;path/to/the/ssh/private/key&gt;&quot;
+
+</code></pre>
+
+<p>The <code>&lt;ip address&gt;</code> is the address of the <code>Target Machine</code>. The <code>&lt;path/to/the/ssh/private/key&gt;</code> is the path <em>on the <code>Deployment Machine</code></em> to your ssh key, to be recognized by the <code>Target Machine</code>.</p>
+<p>Thus, a practical exemple of the final content on the inventory file <code>metavisitor</code> is:</p>
+<pre><code>
+[metavisitor]
+
+192.54.201.126 ansible_ssh_user=&quot;root&quot; ansible_ssh_private_key_file=&quot;~/.ssh/id_rsa&quot;
+
+</code></pre>
+
+<p>where <code>192.54.201.126</code> is the ip address of the <code>Target machine</code> and <code>~/.ssh/id_rsa</code> the path to the private ssh key.</p>
+<h4 id="note-that-you-can-also-install-locally-metavisitor-by-letting-the-metavisitor-inventory-file-as-is">Note that you can also install locally Metavisitor by letting the <code>metavisitor</code> inventory file as is:</h4>
+<pre><code>
+[metavisitor]
+
+localhost ansible_connection=local
+
+</code></pre>
+
+<h3 id="adapt-the-ansible-inventory-file-to-an-amazon-web-service-aws-virtual-machine">Adapt the ansible inventory file to an Amazon Web Service (AWS) virtual machine</h3>
+<p>In this specific case, add in the hosts inventory file:</p>
+<pre><code>[metavisitor]
+192.54.201.126 ansible_ssh_user=&quot;ubuntu&quot; ansible_ssh_private_key_file=&quot;~/.ssh/aws_private_key.pem&quot;
+
+[aws]
+192.54.201.126
+</code></pre>
+
+<p>In that case <code>aws_private_key.pem</code> is the private ssh key for interacting with aws instances, and the [aws] section will trigger additional actions for accessing the Metavisitor Galaxy instance in the Amazon cloud.</p>
+<p>Note that in addition the settings of the security group associated to the AWS instance should be as follows:</p>
+<pre><code>Type            |Protocole|   Port Range  |  Source   | #comment
+__________________________________________________________________________________________
+HTTP            |   TCP   |      80       | 0.0.0.0/0 | for Galaxy web access
+SSH             |   TCP   |      22       | 0.0.0.0/0 | for ssh access to the AWS instance
+Custom TCP Rule |   TCP   |      21       | 0.0.0.0/0 | for FTP upload to Galaxy
+Custom TCP Rule |   TCP   | 49152 - 65534 | 0.0.0.0/0 | for FTP upload to Galaxy
+</code></pre>
+
+<p>The ports 21 and  49152 - 65534 should be open for FTP uploads to the AWS instance, and port 80 should be open for accessing galaxy.</p>
+<h2 id="adapt-the-group_varsall-file-for-persisting-data-if-needed">Adapt the group_vars/all file for persisting data, if needed.</h2>
+<p>In cases where your <code>Target machine</code> has volumes where you wish the Galaxy data to be persisted in, you have to edit the <code>GalaxyKickStart/group_vars/all</code> file, to indicate the path to this volume on the <code>Target machine</code>.</p>
+<p>If you don't understand the previous statement, no worries, just don't do anything and skip this step.</p>
+<p>For others, find the lines</p>
+<pre><code>#persistent data
+galaxy_persistent_directory: /export # for IFB it's /root/mydisk, by default, /export
+</code></pre>
+
+<p>in the <code>GalaxyKickStart/group_vars/all</code> file, and change /export to the path of your persistent volume.</p>
+<p>Note that if <code>/export</code> is not changed, nothing will happen and the deployed galaxy server and all associated data files will be in the <code>/home/galaxy/galaxy</code> folder of the <code>Target Machine</code>.</p>
+<h1 id="deploying-metavisitor-galaxy-on-the-target-machine">Deploying Metavisitor Galaxy on the <code>Target Machine</code></h1>
+<hr />
+<p>You are almost done.</p>
+<p>Navigate with your terminal to your <code>GalaxyKickStart</code> folder and type the following command to run the ansible playbook for deploying metavisitor Galaxy on the <code>Target Machine</code>:</p>
+<pre><code>ansible-playbook --inventory-file=hosts galaxy.yml
+</code></pre>
+
+<p>If everything is ok, you may be asked to authorize the access to the <code>Target Machine</code> by typing yes in the terminal, and you will see ansible orchestrating the serveur deployment on the <code>Target Machine</code> in this terminal.</p>
+<p>When the process is finished, you should be able to access the <code>Target Machine</code> by typing its IP address in your web browser.</p>
+<p>By default the admin login/password is <code>admin@galaxy.org</code> / <code>admin</code>. You should change the password for safety.</p>
+<h1 id="re-deploying-metavisitor-galaxy-on-the-target-machine">Re-deploying Metavisitor Galaxy on the <code>Target Machine</code></h1>
+<hr />
+<p>If you are experimented in using ansible, you may customize your Metavisitor Galaxy instance deployed with GalaxyKickStart by editing the content of <code>GalaxyKickStart</code>.</p>
+<p>In that case, when your changes are done, just run again the command</p>
+<pre><code>ansible-playbook --inventory-file=hosts galaxy.yml
+</code></pre>
+
+<p>When you run the playbook a second time, the process will be much faster, since steps that have already been executed are skipped.
+Whenever you change a variable (see <a href="https://artbio.github.io/GalaxyKickStart/customizations/">customizations</a>), you need to run the playbook again.</p>
+<p>You can put multiple machines in your inventory: a simple way to do this is just copying the line the required number of times with the appropriate ip addresses:</p>
+<pre><code>[metavisitor]
+192.54.201.126 ansible_ssh_user=&quot;root&quot; ansible_ssh_private_key_file=&quot;~/.ssh/id_rsa&quot;
+192.54.201.127 ansible_ssh_user=&quot;root&quot; ansible_ssh_private_key_file=&quot;~/.ssh/id_rsa&quot;
+192.54.201.128 ansible_ssh_user=&quot;root&quot; ansible_ssh_private_key_file=&quot;~/.ssh/id_rsa&quot;
+
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../metavisitor_docker/" class="btn btn-neutral float-right" title="Docker">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../install_metavisitor/" class="btn btn-neutral" title="Intro"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../install_metavisitor/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../metavisitor_docker/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
