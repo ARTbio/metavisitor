@@ -32,7 +32,7 @@ if [ "$TRACK" = "docker" ]; then
         -c "Galaxy user" $GALAXY_TRAVIS_USER
     sudo mkdir $GALAXY_HOME
     sudo chown -R $GALAXY_TRAVIS_USER:$GALAXY_TRAVIS_USER $GALAXY_HOME
-    docker build -t metavisitor . # the Dockerfile was copied from the root dir of metavisitor repo
+    docker build -t artbio/metavisitor-2 . # the Dockerfile was copied from the root dir of metavisitor repo
     sudo mkdir /export && sudo chown $GALAXY_UID:$GALAXY_GID /export
     export CID1=`docker run -d -p 80:80 -p 21:21 -p 8800:8800 \
                  --privileged=true \
