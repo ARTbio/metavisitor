@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 set -e
-
+apt-get update
 apt-get install -y python-pip python-dev htop
 apt-get remove docker docker-engine docker.io containerd runc
 apt update
 echo "Installing docker-ce"
-sudo apt-get install \
+sudo apt-get install -y \
      apt-transport-https \
      ca-certificates \
      curl \
@@ -17,12 +17,12 @@ sudo add-apt-repository \
      $(lsb_release -cs) \
      stable"
 apt-get update
-apt-get install docker-ce docker-ce-cli containerd.io
+apt-get install -y docker-ce docker-ce-cli containerd.io
 docker run hello-world
 
 
 echo "Upgrading pip"
-pip install -U pip
+python -m pip install -U pip
 pip --version
 
 echo "Installing ansible"

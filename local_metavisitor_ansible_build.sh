@@ -3,7 +3,7 @@ set -e
 apt-get update -y
 apt-get install -y python-pip python-dev htop
 echo "Upgrading pip"
-pip install -U pip
+python -m pip install -U pip
 pip --version
 /usr/local/bin/pip install ansible==2.7.4
 ansible --version
