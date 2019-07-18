@@ -53,20 +53,3 @@ if [ "$TRACK" = "docker" ]; then
     docker exec -it $CID1 service --status-all
     echo "Going to test docker container CID1 $CID1"
 fi
-
-if [ "$TRACK" = "build-docker" ]; then
-    docker --version
-    docker info
-    sudo groupadd -r $GALAXY_TRAVIS_USER -g $GALAXY_GID
-    sudo useradd -u $GALAXY_UID -r -g $GALAXY_TRAVIS_USER -d $GALAXY_HOME -p travis_testing\
-        -c "Galaxy user" $GALAXY_TRAVIS_USER
-    sudo mkdir $GALAXY_HOME
-    sudo chown -R $GALAXY_TRAVIS_USER:$GALAXY_TRAVIS_USER $GALAXY_HOME
-fi
-
-if [ "$TRACK" = "build-docker" ] && [ "${TRAVIS_EVENT_TYPE}" = "pull_request" ]; then
-    docker build -t metavisitor .
-    docker tag metavisitor artbio/metavisitor-2:$TRAVIS_COMMIT
-    docker tag metavisitor artbio/metavisitor-2:latest
-fi
-
