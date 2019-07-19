@@ -57,7 +57,6 @@ tools:
     - 547e8d00f11c
   tool_panel_section_label: Metavisitor
 
-
 - name: fetch_fasta_from_ncbi
   owner: artbio
   revisions:
