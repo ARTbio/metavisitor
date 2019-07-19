@@ -1,14 +1,14 @@
-sudo: required
 language: python
-dist: trusty
-cache: pip
+python: 2.7
+dist: xenial
+sudo: required
 
 env:
   global:
   - SITE_URL="https://artbio.github.io/GalaxyKickStart/"
   - GH_USER_NAME="Christophe Antoniewski"
   - GH_USER_EMAIL="drosofff@gmail.com"
-  - GH_REF="github.com/ARTbio/GalaxyKickStart.git"
+  - GH_REF="github.com/ARTbio/metavisitor.git"
   - GALAXY_TRAVIS_USER="galaxy"
   - GALAXY_UID="1450"
   - GALAXY_GID="1450"
@@ -16,28 +16,33 @@ env:
   - GALAXY_USER="admin@galaxy.org"
   - GALAXY_USER_EMAIL="admin@galaxy.org"
   - GALAXY_USER_PASSWD="admin"
+  - GALAXY_VERSION=release_19.01
   - BIOBLEND_GALAXY_API_KEY="admin"
   - BIOBLEND_TEST_JOB_TIMEOUT="120"
   - secure: tZsnvT9RPFldJ06Wkqqsr4TTHoqjmMo4q7RXiFiMNBU5BeFaF1ERQ99ILterd9SvMLcL2GGqpwj0m6tG4hNZQ//+APh2eatMBMRVNhva2w4WVVeRfhiPUHe8jtPazhHvHaXeb6y3fEHZVxzoXfqaiHMzsYI1aAhpQeREaLPgCfT7CGjE71AOATXdCjPnkyQ7X8Vp2s27LZ+m1YVhEJA/WnYYlkE/8weoVDnhMVSOxTS8GMdWomzelhgNXTDShaCU6+USWIeo3hWZHMmevDcALYHa27tXw+GyZbZJ2KfCAZwPruz+0zsHH2FWmRUa+INvD9TpipNMPS0wEOdOH8UZcvePnL15T/B3KvVI1wwbYSvcgj+sXoxbmOA80vi6HNKM9kkufbCcax9szR4lDMPk71oC9myyriHamQgT5Dj5oLlZ+XkWupzmsNvQ0YUEw88wGWVvPAw5ayUfo+UXSKl4YZukqODYDL2+1a8GsSE/SqpqdPl5+ciICmYIN1Q1pZFEbao25jxifqJfVBe8w66xTNGhz62Sypu8W34+A6Kec/sfjh8w5zGKgj3PVCSvj912KjvlyxhEXjSej0R9tQYVrESALxQL/wqpZO88+ujSOa7W88TxW4vLn+Pomx0I94c2WUhmUIICKk+UYlpuodpCPvcAUS8BW/eckWVVr3NR5yk=
 
-matrix:
+jobs:
   include:
-    - python: 2.7
-      env:
-        - TRAVIS_JOB=ansible
-        - BIOBLEND_GALAXY_URL="http://localhost:80"
-    - python: 2.7
+    - stage: docker
       env:
         - TRAVIS_JOB=docker
         - BIOBLEND_GALAXY_URL="http://localhost:80/subdir/"
-    - python: 2.7
+    - stage: ansible
       env:
-        - TRAVIS_JOB=build-docker
-        - BIOBLEND_GALAXY_URL="useless"
+        - TRAVIS_JOB=ansible
+        - BIOBLEND_GALAXY_URL="http://localhost:80"
+#    - stage: build-docker
+#      env:
+#        - TRAVIS_JOB=build-docker
+#        - BIOBLEND_GALAXY_URL="useless"
 
 before_install:
   - sudo apt-get update -y
-  - . $TRAVIS_BUILD_DIR/travis_before_install.sh $TRAVIS_JOB
+  - pip --version
+  - docker --version
+  - pip install ansible==2.7.4
+  - ansible --version
+  - sh $TRAVIS_BUILD_DIR/travis_before_install.sh $TRAVIS_JOB
 
 install:
   - sudo su $GALAXY_TRAVIS_USER -c 'pip install --ignore-installed --user https://github.com/galaxyproject/bioblend/archive/master.zip pytest' fi
@@ -46,4 +51,5 @@ script:
   - . $TRAVIS_BUILD_DIR/travis_test.sh
 
 after_success:
-  - . $TRAVIS_BUILD_DIR/travis_push_docker.sh && . $TRAVIS_BUILD_DIR/deploy_doc.sh
+  - . $TRAVIS_BUILD_DIR/deploy_doc.sh
+  - . $TRAVIS_BUILD_DIR/push_to_docker_registry.sh
