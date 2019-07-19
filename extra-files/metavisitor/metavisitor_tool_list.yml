@@ -4,14 +4,12 @@ tools:
   revisions:
     - 7d96b28eec49
   tool_panel_section_label: Metavisitor
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
 
 - name: bowtie2
   owner: devteam
   revisions:
     - 017aba02828d
   tool_panel_section_label: Metavisitor
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
   install_resolver_dependencies: True
   install_tool_dependencies: False
 
@@ -20,21 +18,18 @@ tools:
   revisions:
     - e3aee4ba49c6
   tool_panel_section_label: Metavisitor
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
 
 - name: concatenate_multiple_datasets
   owner: artbio
   revisions:
     - 55cf9d9defd1
   tool_panel_section_label: Metavisitor
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
 
 - name: data_manager_bowtie2_index_builder
   owner: devteam
   revisions:
     - d1d5feb31804
   tool_panel_section_label: null
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
   install_resolver_dependencies: True
   install_tool_dependencies: False
 
@@ -43,7 +38,6 @@ tools:
   revisions:
     - 86e9af693a33
   tool_panel_section_label: null
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
   install_resolver_dependencies: True
   install_tool_dependencies: False
 
@@ -52,7 +46,6 @@ tools:
   revisions:
     - b1bc53e9bbc5
   tool_panel_section_label: null
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
   install_resolver_dependencies: True
   install_tool_dependencies: False
 
@@ -61,14 +54,12 @@ tools:
   revisions:
     - 2fd6033d0e9c
   tool_panel_section_label: Metavisitor
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
 
 - name: fastx_trimmer
   owner: devteam
   revisions:
     - 547e8d00f11c
   tool_panel_section_label: Metavisitor
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
   install_resolver_dependencies: True
 
 
@@ -77,14 +68,12 @@ tools:
   revisions:
     - c667d0ee39f5
   tool_panel_section_label: Metavisitor
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
 
 - name: khmer_normalize_by_median
   owner: iuc
   revisions:
     - bfd859f04a89
   tool_panel_section_label: Metavisitor
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
   install_resolver_dependencies: True
   install_tool_dependencies: False
 
@@ -93,14 +82,12 @@ tools:
   revisions:
     - b4c9c085d709
   tool_panel_section_label: Metavisitor
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
 
 - name: cap3
   owner: artbio
   revisions:
     - d76a0d8a9eac
   tool_panel_section_label: Metavisitor
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
   install_resolver_dependencies: True
   install_tool_dependencies: False
 
@@ -109,14 +96,12 @@ tools:
   revisions:
     - f1d59113125a
   tool_panel_section_label: Metavisitor
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
 
 - name: oases
   owner: artbio
   revisions:
     - f7dd852c8f4c
   tool_panel_section_label: Metavisitor
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
   install_resolver_dependencies: True
   install_tool_dependencies: False
 
@@ -125,7 +110,6 @@ tools:
   revisions:
     - 0281bb245635
   tool_panel_section_label: Metavisitor
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
   install_resolver_dependencies: True
   install_tool_dependencies: False
 
@@ -134,7 +118,6 @@ tools:
   revisions:
     - 14adf24603b6
   tool_panel_section_label: Metavisitor
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
   install_resolver_dependencies: True
   install_tool_dependencies: False
 
@@ -143,7 +126,6 @@ tools:
   revisions:
     - e25d3acf6e68
   tool_panel_section_label: Metavisitor
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
   install_resolver_dependencies: True
   install_tool_dependencies: False
 
@@ -152,14 +134,12 @@ tools:
   revisions:
     - 209b7c5ee9d7
   tool_panel_section_label: Metavisitor
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
 
 - name: sra_tools
   owner: iuc
   revisions:
     - 1790dcf3c32d
   tool_panel_section_label: Metavisitor
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
   install_resolver_dependencies: True
   install_tool_dependencies: False
 
@@ -168,7 +148,6 @@ tools:
   revisions:
     - c9cfec002f71
   tool_panel_section_label: Metavisitor
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
   install_resolver_dependencies: True
   install_tool_dependencies: False
 
@@ -185,14 +164,12 @@ tools:
   revisions:
     - f7947c5a18b8
   tool_panel_section_label: Metavisitor
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
 
 - name: vsearch
   owner: iuc
   revisions:
     - b3c7199d8786
   tool_panel_section_label: Metavisitor
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
   install_resolver_dependencies: True
   install_tool_dependencies: False
 
@@ -201,7 +178,6 @@ tools:
   revisions:
     - fffdb903f2d1
   tool_panel_section_label: Metavisitor
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
   install_resolver_dependencies: True
   install_tool_dependencies: False
 
@@ -210,6 +186,5 @@ tools:
   revisions:
     - de2db1bdfbf8
   tool_panel_section_label: Metavisitor
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
   install_resolver_dependencies: True
   install_tool_dependencies: False
