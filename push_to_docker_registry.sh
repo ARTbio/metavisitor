@@ -4,7 +4,7 @@ set -e
 # we have to push the docker image because the galaxykickstart context for the Dockerfile
 # is buit dynamically
 
-if [ $TRAVIS_JOB = "docker" ] && [ "${TRAVIS_BRANCH}" = "master" ]; then
+if [ $TRAVIS_JOB = "docker" ] && [ "$TRAVIS_PULL_REQUEST" == "false" -a "$TRAVIS_BRANCH" == "master" ]; then
     echo "pushing docker image to https://cloud.docker.com/u/artbio/repository/docker/artbio/metavisitor-2"
     docker images
     docker tag metavisitor artbio/metavisitor-2:latest
