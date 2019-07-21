@@ -6,12 +6,11 @@ The Metavisitor [Documentation](https://artbio.github.io/metavisitor/) is availa
 
 The viral **Vir2** database used in Metavisitor is available for [download in figshare](https://figshare.com/articles/vir2_NCBI_21-03-2018/6106892).
 
-## Quick Start
+## Quick Start - Deploy Galaxy Metavisitor instance on a target Ubuntu machine
 
 Tested on Ubuntu 16.04
-  - You must have root access (be sudoer)
+  - You need root access (be sudoer)
   - You need git install (`sudo apt install git -y`)
-
 
 - Clone locally this repository
 ```
@@ -22,7 +21,7 @@ git clone https://github.com/ARTbio/metavisitor.git
 cd metavisitor
 ```
 
-#### Deploy Metavisitor with ansible:
+### Deploy Metavisitor with ansible:
 ```
 sh local_metavisitor_ansible_build.sh
 ```
