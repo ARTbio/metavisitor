@@ -1,15 +1,16 @@
 ![metavisitor_logo](extra-files/metavisitor/logo.png)
 
-This is the repository for the automated deployment of a [Metavisitor](https://doi.org/10.1371/journal.pone.0168397) Galaxy server
+This is the repository for the automated deployment of a [Metavisitor](https://doi.org/10.1371/journal.pone.0168397) Galaxy server.
 
-**Vir2** the viral database used in Metavisitor is available for [download in figshare](https://figshare.com/articles/vir2_NCBI_21-03-2018/6106892).
+The Metavisitor [Documentation](https://artbio.github.io/metavisitor/) is available on https://artbio.github.io/metavisitor/
 
-## Quick Start
+The viral **Vir2** database used in Metavisitor is available for [download in figshare](https://figshare.com/articles/vir2_NCBI_21-03-2018/6106892).
+
+## Quick Start - Deploy Galaxy Metavisitor instance on a target Ubuntu machine
 
 Tested on Ubuntu 16.04
-  - You must have root access (be sudoer)
+  - You need root access (be sudoer)
   - You need git install (`sudo apt install git -y`)
-
 
 - Clone locally this repository
 ```
@@ -20,7 +21,7 @@ git clone https://github.com/ARTbio/metavisitor.git
 cd metavisitor
 ```
 
-#### Deploy Metavisitor with ansible:
+### Deploy Metavisitor with ansible:
 ```
 sh local_metavisitor_ansible_build.sh
 ```
@@ -30,7 +31,7 @@ sh local_metavisitor_ansible_build.sh
 sh local_metavisitor_docker_build.sh
 ```
 
-### Docker image available at https://cloud.docker.com
+### Docker image `artbio/metavisitor-2` available at https://cloud.docker.com
 Run example:
 ```
 docker run -d -p 80:80 -p 21:21 -p 8800:8800 \
