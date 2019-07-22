@@ -158,47 +158,75 @@
             <div class="section">
               
                 <p><img alt="metavisitor_logo" src="images/metavisitor_logo.png" /></p>
-<p><a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0168397">Metavisitor</a> is a user-friendly and adaptable software to provide biologists, clinical researchers and possibly diagnostic clinicians with the ability to robustly detect and reconstruct viral genomes from complex deep sequence datasets. A set of modular bioinformatic tools and workflows was implemented as the Metavisitor package in the Galaxy framework. Using the graphical Galaxy workflow editor, users with minimal computational skills can use existing Metavisitor workflows or adapt them to suit specific needs by adding or modifying analysis modules.</p>
+<p><a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0168397">Metavisitor</a> is
+a user-friendly and adaptable software to provide biologists, clinical researchers and
+possibly diagnostic clinicians with the ability to robustly detect and reconstruct viral
+genomes from complex deep sequence datasets. A set of modular bioinformatic tools and
+workflows was implemented as the Metavisitor package in the Galaxy framework. Using the
+graphical Galaxy workflow editor, users with minimal computational skills can use existing
+Metavisitor workflows or adapt them to suit specific needs by adding or modifying analysis
+modules.</p>
 <h1 id="quick-start">Quick Start</h1>
-<p>Users who want to use Metavisitor on the <a href="https://mississippi.snv.jussieu.fr">Galaxy Mississippi Server</a>, or got already the Metavisitor suite of tools installed in their own Galaxy server, can jump to the next chapter <a href="use_cases_input_data">Prepare input data histories</a>.</p>
+<p>Users who want to use Metavisitor on the <a href="https://mississippi.snv.jussieu.fr">Galaxy Mississippi Server</a>,
+or got already the Metavisitor suite of tools installed in their own Galaxy server, can
+jump to the next chapter <a href="use_cases_input_data">Prepare input data histories</a>.</p>
 <h2 id="availability-of-metavisitor-tools-and-workflows">Availability of Metavisitor tools and workflows</h2>
-<p>Metavisitor has been developed at the <a href="http://artbio.fr">ARTbio platform</a>. Its tools and workflows are primarily available in [GitHub] (https://github.com/ARTbio/tools-artbio).</p>
+<p>Metavisitor has been developed at the <a href="http://artbio.fr">ARTbio platform</a>. Its tools are
+primarily available in [GitHub] (https://github.com/ARTbio/tools-artbio). Its workflows are
+primarily available in this
+<a href="https://github.com/ARTbio/metavisitor/tree/master/extra-files/metavisitor">metavisitor repository</a>
+as well as in the <a href="https://github.com/ARTbio/GalaxyKickStart/tree/master/extra-files/metavisitor">GalaxyKickStart repository</a></p>
 <h4 id="metavisitor-tools-developed-by-artbio-in-the-artbio-github">Metavisitor tools developed by ARTbio in the <a href="https://github.com/ARTbio/tools-artbio">ARTbio GitHub</a></h4>
 <ul>
-<li><a href="https://github.com/ARTbio/tools-artbio/tree/master/tools/yac_clipper"><code>yac_clipper</code></a></li>
-<li><a href="https://github.com/ARTbio/tools-artbio/tree/master/tools/concatenate_multiple_datasets"><code>concatenate_multiple_datasets</code></a></li>
-<li><a href="https://github.com/ARTbio/tools-artbio/tree/master/tools/msp_sr_bowtie"><code>msp_sr_bowtie</code></a></li>
-<li><a href="https://github.com/ARTbio/tools-artbio/tree/master/tools/msp_fasta_tabular_converter"><code>msp_fasta_tabular_converter</code></a></li>
-<li><a href="https://github.com/ARTbio/tools-artbio/tree/master/tools/fetch_fasta_from_ncbi"><code>fetch_fasta_from_ncbi</code></a></li>
-<li><a href="https://github.com/ARTbio/tools-artbio/tree/master/tools/msp_cap3"><code>msp_cap3</code></a></li>
-<li><a href="https://github.com/ARTbio/tools-artbio/tree/master/tools/cherry_pick_fasta"><code>cherry_pick_fasta</code></a></li>
-<li><a href="https://github.com/ARTbio/tools-artbio/tree/master/tools/msp_blastparser_and_hits"><code>msp_blastparser_and_hits</code></a></li>
-<li><a href="https://github.com/ARTbio/tools-artbio/tree/master/tools/msp_oases"><code>msp_oases</code></a></li>
 <li><a href="https://github.com/ARTbio/tools-artbio/tree/master/tools/blast_to_scaffold"><code>blast_to_scaffold</code></a></li>
 <li><a href="https://github.com/ARTbio/tools-artbio/tree/master/tools/blastx_to_scaffold"><code>blastx_to_scaffold</code></a></li>
+<li><a href="https://github.com/ARTbio/tools-artbio/tree/master/tools/cherry_pick_fasta"><code>cherry_pick_fasta</code></a></li>
+<li><a href="https://github.com/ARTbio/tools-artbio/tree/master/tools/concatenate_multiple_datasets"><code>concatenate_multiple_datasets</code></a></li>
+<li><a href="https://github.com/ARTbio/tools-artbio/tree/master/tools/fetch_fasta_from_ncbi"><code>fetch_fasta_from_ncbi</code></a></li>
+<li><a href="https://github.com/ARTbio/tools-artbio/tree/master/tools/msp_blastparser_and_hits"><code>msp_blastparser_and_hits</code></a></li>
+<li><a href="https://github.com/ARTbio/tools-artbio/tree/master/tools/msp_cap3"><code>msp_cap3</code></a></li>
+<li><a href="https://github.com/ARTbio/tools-artbio/tree/master/tools/msp_fasta_tabular_converter"><code>msp_fasta_tabular_converter</code></a></li>
+<li><a href="https://github.com/ARTbio/tools-artbio/tree/master/tools/msp_sr_bowtie"><code>msp_sr_bowtie</code></a></li>
+<li><a href="https://github.com/ARTbio/tools-artbio/tree/master/tools/msp_oases"><code>msp_oases</code></a></li>
 <li><a href="https://github.com/ARTbio/tools-artbio/tree/master/tools/small_rna_maps"><code>small_rna_maps</code></a>.</li>
+<li><a href="https://github.com/ARTbio/tools-artbio/tree/master/tools/yac_clipper"><code>yac_clipper</code></a></li>
 </ul>
-<p>Other tools from other developers are included the suite_metavisitor_2. Of course, these tools are not available on our GitHub repository, but are available from the <a href="https://toolshed.g2.bx.psu.edu/">main Galaxy toolshed</a>:</p>
-<pre><code> name="sra_tools" owner="iuc"
- name="get_orfs_or_cdss" owner="peterjc"
- name="trinityrnaseq" owner="anmoljh"
- name="bowtie2" owner="devteam"
- name="fastx_trimmer" owner="devteam"
- name="fastq_to_fasta" owner="devteam"
+<p>Other tools from other developers are used in the suite_metavisitor_2. These tools are
+available from the <a href="https://toolshed.g2.bx.psu.edu/">main Galaxy toolshed</a>:</p>
+<pre><code> name="bowtie2" owner="devteam"
+ name="data_manager_bowtie2_index_builder" owner="devteam"
+ name="data_manager_fetch_genome_dbkeys_all_fasta" owner="devteam"
+ name="fasta_compute_length" owner="devteam"
  name="fasta_filter_by_length" owner="devteam"
- name="regex_find_replace" owner="jjohnson" 
+ name="fastx_trimmer" owner="devteam"
+ name="ncbi_blast_plus" owner="devteam"
+ name="data_manager_bowtie_index_builder" owner="iuc"
  name="khmer_normalize_by_median" owner="iuc"
+ name="sra_tools" owner="iuc"
+ name="trinity" owner="iuc"
+ name="vsearch" owner="iuc"
+ name="regex_find_replace" owner="galaxyp"
+ name="spades" owner="nml"
 </code></pre>
 <h4 id="availability-of-metavisitor-tools-and-workflows-for-galaxy-instance-administrators">Availability of Metavisitor tools and workflows for <strong>Galaxy instance administrators</strong></h4>
-<p>All metavisitor tools are available in the <a href="https://toolshed.g2.bx.psu.edu/repository/browse_repositories?sort=name&amp;operation=view_or_manage_repository&amp;f-free-text-search=metavisitor&amp;id=ca18473f5a7e691a#TODO: Change this link when the suite is published">suite_metavisitor_2</a>
-Galaxy Admin can just install this suite of tools by using the <code>Install new tools</code> menu in their Admin panel, searching for "metavisitor", and installing the <code>suite_metavisitor_2</code> tool suite.</p>
-<p>Admins can also install the tools from the <code>metavisitor_workflows</code> repository, which will provide in addition the metavisitors workflows.</p>
+<p>All metavisitor tools are available in the
+<a href="https://toolshed.g2.bx.psu.edu/repository/browse_repositories?sort=name&amp;operation=view_or_manage_repository&amp;f-free-text-search=metavisitor&amp;id=ca18473f5a7e691a#TODO: Change this link when the suite is published">suite_metavisitor_2</a>
+Galaxy Admin can just install this suite of tools by using the <code>Install new tools</code> menu in
+their Admin panel, searching for "metavisitor", and installing the <code>suite_metavisitor_2</code>
+tool suite.</p>
+<p>Admins can also install the tools from the <code>metavisitor_workflows</code> repository, which will
+provide in addition the metavisitors workflows.</p>
 <h4 id="availability-of-metavisitors-workflows-for-any-galaxy-instance-user">Availability of Metavisitors workflows for any Galaxy instance user.</h4>
-<p>We have deposited the Metavisitors workflows in the <a href="http://www.myexperiment.org/workflows #TODO: this will need to be updated too">myexperiment server</a>, where they are searchable with "metavisitor" keyword and can be downloaded and reuploaded to the Galaxy instance.</p>
+<p>We have deposited the Metavisitors workflows in the
+<a href="http://www.myexperiment.org/workflows #TODO: this will need to be updated too">myexperiment server</a>,
+where they are searchable with "metavisitor" keyword and can be downloaded and reuploaded
+to the Galaxy instance.</p>
 <h2 id="starting-a-metavisitor-galaxy-server-from-scratch">Starting a Metavisitor Galaxy server from scratch</h2>
-<p>In the next three chapters, we provide documentation on two methods to set up a Galaxy server instances <em>from scratch</em> with <em>pre-installed</em> Metavisitor tools and workflows:</p>
+<p>In the <a href="https://artbio.github.io/metavisitor/install_metavisitor/">last section</a> of this
+documentation, we provide instructions to set up Galaxy server instances <em>from scratch</em>
+with <em>pre-installed</em> Metavisitor tools and workflows:</p>
 <ul>
-<li>Based on GalaxyKickstarter: see <a href="metavisitor_ansible/">Metavisitor with GalaxyKickstarter (Ansible)</a></li>
+<li>Based on Ansible: see <a href="metavisitor_ansible/">Metavisitor with GalaxyKickstart (Ansible)</a></li>
 <li>Based on Docker: see <a href="metavisitor_docker/">Metavitor with Docker</a></li>
 </ul>
               
@@ -249,5 +277,5 @@ Galaxy Admin can just install this suite of tools by using the <code>Install new
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2019-07-21 17:18:54
+Build Date UTC : 2019-07-22 08:48:36
 -->
