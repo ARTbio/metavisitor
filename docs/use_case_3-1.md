@@ -51,6 +51,7 @@ SRR3111620	patient 0560-420neg
 SRR3111621	patient 0575-419neg
 SRR3111622	patient 0575-419neg
 ```
+
     - Name the file "Use-Case_3-1_information" and click the `Start` button.
     - Use the tool `Cut columns from table`. In the "Cut columns field" write `c1` and make sure you select "Use-Case_3-1_information" file in the "From" field before executing. Rename the output "Use-Case_3-1_accessions".
     - Use the tool `Extract reads in FASTQ/A format from NCBI SRA`, select `List of SRA accession, one per line`from `select input type` and "Use-Case_3-1_accessions" in sra accession list. Click the `Execute` button.

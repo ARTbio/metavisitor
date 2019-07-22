@@ -18,6 +18,7 @@ SRR513989
 SRR513981
 SRR513901
 ```
+
     - Edit the file name by clicking the "Name" section and writing "use_case_1_accessions" or by selecting the `Start` button and changing the file name.
 3. Import SRP013822 datasets
     - Use the tool `Extract reads in FASTQ/A format from NCBI SRA` and select in the `select input type` list `List of SRA accession, one per line`.
