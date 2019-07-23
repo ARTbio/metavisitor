@@ -51,8 +51,8 @@ if [ "$TRACK" = "docker" ]; then
 
 
     date
-    echo "5 min wait for export heavy tool data of container"
-    sleep 300s
+    echo "wait a little bit to export the 3 tools"
+    sleep 60s
     docker logs $CID1
     docker exec -it $CID1 supervisorctl status
     docker exec -it $CID1 service --status-all
