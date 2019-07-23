@@ -12,6 +12,10 @@ cp inventory_files/metavisitor galaxykickstart/inventory_files/
 
 cd galaxykickstart/
 
+# activate a short tool list for test only
+
+mv extra-files/metavisitor/metavisitor_tool_list.yml.fortestonly extra-files/metavisitor/metavisitor_tool_list.yml
+
 if [ "$TRACK" = "ansible" ]; then
     sudo /etc/init.d/postgresql stop
     sudo apt-get -y --purge remove postgresql libpq-dev libpq5 postgresql-client-common postgresql-common
@@ -47,8 +51,8 @@ if [ "$TRACK" = "docker" ]; then
 
 
     date
-    echo "5 min wait for export heavy tool data of container"
-    sleep 300s
+    echo "wait a little bit to export the 3 tools"
+    sleep 60s
     docker logs $CID1
     docker exec -it $CID1 supervisorctl status
     docker exec -it $CID1 service --status-all
