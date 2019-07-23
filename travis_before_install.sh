@@ -12,6 +12,10 @@ cp inventory_files/metavisitor galaxykickstart/inventory_files/
 
 cd galaxykickstart/
 
+# activate a short tool list for test only
+
+mv extra-files/metavisitor_tool_list.yml.fortestonly extra-files/metavisitor_tool_list.yml
+
 if [ "$TRACK" = "ansible" ]; then
     sudo /etc/init.d/postgresql stop
     sudo apt-get -y --purge remove postgresql libpq-dev libpq5 postgresql-client-common postgresql-common
