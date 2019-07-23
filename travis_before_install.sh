@@ -14,7 +14,7 @@ cd galaxykickstart/
 
 # activate a short tool list for test only
 
-mv extra-files/metavisitor_tool_list.yml.fortestonly extra-files/metavisitor_tool_list.yml
+mv extra-files/metavisitor/metavisitor_tool_list.yml.fortestonly extra-files/metavisitor/metavisitor_tool_list.yml
 
 if [ "$TRACK" = "ansible" ]; then
     sudo /etc/init.d/postgresql stop
