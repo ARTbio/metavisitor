@@ -8,15 +8,18 @@ In this section, we are going to create step by step a Galaxy history that conta
 1. Create a new history and rename it "Input data for Use Cases 1-1, 1-2, 1-3 and 1-4"
 2. Get SRP013822 datasets list
     - Use the the tool `Upload File` and click on the `Paste/Fetch data` button
-    - Copy - Paste the following text:|
-    ----------------------------------|
-    SRR515090|
-    SRR513993|
-    SRR513992|
-    SRR513990|
-    SRR513989|
-    SRR513981|
-    SRR513901|
+
+        Copy - Paste the following text (not including the header):
+
+        SRR id|
+        ------|
+        SRR515090|
+        SRR513993|
+        SRR513992|
+        SRR513990|
+        SRR513989|
+        SRR513981|
+        SRR513901|
 
     - Edit the file name by clicking the "Name" section and writing "use_case_1_accessions" or by selecting the `Start` button and changing the file name.
 3. Import SRP013822 datasets
