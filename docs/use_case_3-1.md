@@ -6,51 +6,53 @@ Now that you are familiar with manipulations in Galaxy with the Use Cases 1-1 to
 As for the previous Use Cases 1 and 2, the first step is to collect all the input data in a history that we will name `Input data for Use Case 3-1`.
 
 1. Create a new history
-- Rename this history `Input data for Use Case 3-1`
-- We are going to upload 40 datasets form the EBI ENA SRP068722 :
-    - Go to the upload files menu and select `Paste/Fetch data`. Copy-Paste the following text:
-```
-SRR3111582	patient 0450-318
-SRR3111583	patient 0450-318
-SRR3111584	patient 0450-318
-SRR3111585	patient 0450-318
-SRR3111586	patient 0450-318
-SRR3111587	patient 0450-318
-SRR3111588	patient 0387-272
-SRR3111589	patient 0387-272
-SRR3111590	patient 0387-272
-SRR3111591	patient 0387-272
-SRR3111592	patient 0387-272
-SRR3111593	patient 0387-272
-SRR3111594	patient 0629-453
-SRR3111595	patient 0629-453
-SRR3111596	patient 0629-453
-SRR3111597	patient 0629-453
-SRR3111598	patient 0629-453
-SRR3111599	patient 0629-453
-SRR3111600	patient 0444-312
-SRR3111601	patient 0444-312
-SRR3111602	patient 0444-312
-SRR3111603	patient 0444-312
-SRR3111604	patient 0500-355neg
-SRR3111605	patient 0500-355neg
-SRR3111606	patient 0292-xxxneg
-SRR3111607	patient 0292-xxxneg
-SRR3111608	patient 0394-274
-SRR3111609	patient 0394-274
-SRR3111610	patient 0218-162neg
-SRR3111611	patient 0218-162neg
-SRR3111612	patient 0311-217HIVneg
-SRR3111613	patient 0311-217HIVneg
-SRR3111614	patient 0440-307neg
-SRR3111616	patient 0440-307neg
-SRR3111617	patient 0518-370neg
-SRR3111618	patient 0518-370neg
-SRR3111619	patient 0560-420neg
-SRR3111620	patient 0560-420neg
-SRR3111621	patient 0575-419neg
-SRR3111622	patient 0575-419neg
-```
+    - Rename this history `Input data for Use Case 3-1`
+    - We are going to upload 40 datasets form the EBI ENA SRP068722 :
+
+        Go to the upload files menu and select `Paste/Fetch data`. Copy-Paste the following table (excluding the headers):
+
+        SRR id | Patient id|
+        -----------|-----------------|
+        SRR3111582 | patient 0450-318|
+        SRR3111583 | patient 0450-318|
+        SRR3111584 | patient 0450-318|
+        SRR3111585 | patient 0450-318|
+        SRR3111586 | patient 0450-318|
+        SRR3111587 | patient 0450-318|
+        SRR3111588 | patient 0387-272|
+        SRR3111589 | patient 0387-272|
+        SRR3111590 | patient 0387-272|
+        SRR3111591 | patient 0387-272|
+        SRR3111592 | patient 0387-272|
+        SRR3111593 | patient 0387-272|
+        SRR3111594 | patient 0629-453|
+        SRR3111595 | patient 0629-453|
+        SRR3111596 | patient 0629-453|
+        SRR3111597 | patient 0629-453|
+        SRR3111598 | patient 0629-453|
+        SRR3111599 | patient 0629-453|
+        SRR3111600 | patient 0444-312|
+        SRR3111601 | patient 0444-312|
+        SRR3111602 | patient 0444-312|
+        SRR3111603 | patient 0444-312|
+        SRR3111604 | patient 0500-355neg|
+        SRR3111605 | patient 0500-355neg|
+        SRR3111606 | patient 0292-xxxneg|
+        SRR3111607 | patient 0292-xxxneg|
+        SRR3111608 | patient 0394-274|
+        SRR3111609 | patient 0394-274|
+        SRR3111610 | patient 0218-162neg|
+        SRR3111611 | patient 0218-162neg|
+        SRR3111612 | patient 0311-217HIVneg|
+        SRR3111613 | patient 0311-217HIVneg|
+        SRR3111614 | patient 0440-307neg|
+        SRR3111616 | patient 0440-307neg|
+        SRR3111617 | patient 0518-370neg|
+        SRR3111618 | patient 0518-370neg|
+        SRR3111619 | patient 0560-420neg|
+        SRR3111620 | patient 0560-420neg|
+        SRR3111621 | patient 0575-419neg|
+        SRR3111622 | patient 0575-419neg|
 
     - Name the file "Use-Case_3-1_information" and click the `Start` button.
     - Use the tool `Cut columns from table`. In the "Cut columns field" write `c1` and make sure you select "Use-Case_3-1_information" file in the "From" field before executing. Rename the output "Use-Case_3-1_accessions".
@@ -59,6 +61,7 @@ SRR3111622	patient 0575-419neg
     - If you are missing some sequences you'll have to re-do the steps above with only the missing identifiers. Once done, merge the collections using the tool `Merge Collections`.
     - Use the `Concatenate multiple datasets tail-to-head` tool and select "Paired collection" as type of data. Set the paired collection as input and select "Concatenate pairs of datasets" as type of concatenation. Execute the tool.
     - Rename the outputed collection to `SRP068722` and delete the previous one by clicking the `X` button and selecting "Permanently Delete Datasets".
+
 2. Copy the `vir2 nucleotide BLAST database` from the `References` history to the current history `Input data for Use Case 3-1`.
 3. Now we still have to associate sequencing dataset coming from the same patient. We are going to use the tool `Tag elements from file` to add the patient information as metadata.
     - Click on the `Tag elements from file` tool and select the collection "SRP068722" in "Input Collection" and "Use-Case_3-1_information" in "Tag collection elements according to this file". Execute the tool. Rename the new dataset collection `SRP068722_with_patient_information`.
