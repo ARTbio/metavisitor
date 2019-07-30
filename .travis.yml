@@ -25,6 +25,7 @@ jobs:
   include:
 
     - stage: documentation
+      if: (branch =~ doc)
       before_install: skip
       install: skip
       script:
