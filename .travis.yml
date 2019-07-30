@@ -31,19 +31,19 @@ jobs:
         - . $TRAVIS_BUILD_DIR/deploy_doc.sh
 
     - stage: test
-      if: (type = push) AND (branch != master)
+      if: (type = push) AND (branch != master) AND !(branch =~ doc)
       env:
         - TRAVIS_JOB=docker
         - BIOBLEND_GALAXY_URL="http://localhost:80/subdir/"
 
     - stage: test
-      if: (type = push) AND (branch != master)
+      if: (type = push) AND (branch != master) AND !(branch =~ doc)
       env:
         - TRAVIS_JOB=ansible
         - BIOBLEND_GALAXY_URL="http://localhost:80"
 
     - stage: deploy
-      if: (type = push) AND (branch = master)
+      if: (type = push) AND (branch = master) AND !(branch =~ doc)
       before_install: skip
       install: skip
       script:
