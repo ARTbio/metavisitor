@@ -41,7 +41,7 @@ as well as in the [GalaxyKickStart repository](https://github.com/ARTbio/GalaxyK
 - [`sr_bowtie`](https://github.com/ARTbio/tools-artbio/tree/master/tools/sr_bowtie)
 - [`yac_clipper`](https://github.com/ARTbio/tools-artbio/tree/master/tools/yac_clipper)
 
-Other tools from other developers are used in the suite_metavisitor_2. These tools are
+Other tools from other developers are used in the suite metavisitor-2. These tools are
 available from the [main Galaxy toolshed](https://toolshed.g2.bx.psu.edu/):
 
      name="bowtie2" owner="devteam"
