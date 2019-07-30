@@ -11,7 +11,8 @@ cp group_vars/metavisitor galaxykickstart/group_vars/
 cp -a extra-files/metavisitor galaxykickstart/extra-files/
 cp inventory_files/metavisitor galaxykickstart/inventory_files/
 cd galaxykickstart/
-docker build -t metavisitor . # the Dockerfile was copied from the root dir of metavisitor repo
+docker pull artbio/ansible-galaxy-os:1604
+docker build --cache-from artbio/ansible-galaxy-os:1604 -t metavisitor . # the Dockerfile was copied from the root dir of metavisitor repo
 
 echo "pushing docker image to https://cloud.docker.com/u/artbio/repository/docker/artbio/metavisitor-2"
 docker images
