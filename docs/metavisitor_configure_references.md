@@ -14,36 +14,29 @@ rename the `Unnamed history` to `References`
 
 #### b. Upload nucleotide vir2 fasta file
 
-```
-Click on the small arrow icon at the top of the tool bar (left handside of the Galaxy interface)
-In the open window, click on the Paste/Fetch data button
-Paste the URL https://ndownloader.figshare.com/files/11005121
-Click the start button.
-```
-A first dataset will show up in your history, first in grey (the job is starting), then yellow (the job - upload - is running), and eventually green (job is successfully done).
-
-When finished, rename the dataset 1 `https://ndownloader.figshare.com/files/11005121` to `nucleotide vir2` for clarity (using the small pencil icon).
-
-#### c. Upload protein vir2 fasta file
-Repeat the same operation as in `b.` using the url `https://ndownloader.figshare.com/files/11005124`.
-When finished, rename the dataset 2 `https://ndownloader.figshare.com/files/11005124` to `protein vir2` for clarity.
+- Click on the ![upload_button](images/upload_button.png) button on top of the tool bar (left handside of the Galaxy interface)
+- In the open window, click on the `Rule-based` tab ![rule-based](images/rule_based_tab.png)
+- Make sure "Upload data as:" is set to datasets and "Load tabular data from:" is set to Pasted Table
+- Copy - paste the following table (not including the header)
 
 
-#### d. Upload the Drosophila melanogaster release 6 genome
-Repeat the same operation as in `b.` using the url `ftp://ftp.flybase.net/genomes/Drosophila_melanogaster/dmel_r6.10_FB2016_02/fasta/dmel-all-chromosome-r6.10.fasta.gz`.
-When finished, rename the dataset 3 `ftp://ftp.flybase.net/genomes/Drosophila_melanogaster/dmel_r6.10_FB2016_02/fasta/dmel-all-chromosome-r6.10.fasta.gz` to `dm6` for clarity.
+Name | URL
+-----|----
+`nucleotide vir2` | https://ndownloader.figshare.com/files/11005121
+`protein vir2` | https://ndownloader.figshare.com/files/11005124
+`dm6` | ftp://ftp.flybase.net/genomes/Drosophila_melanogaster/dmel_r6.10_FB2016_02/fasta/dmel-all-chromosome-r6.10.fasta.gz
+`AgamP4` | https://www.vectorbase.org/sites/default/files/ftp/downloads/Anopheles-gambiae-PEST_CHROMOSOMES_AgamP4.fa.gz
+`P. berghei` | ftp://ftp.ensemblgenomes.org/pub/release-28/protists/fasta/plasmodium_berghei/dna/Plasmodium_berghei.May_2010.28.dna_sm.genome.fa.gz
+`hg19` | ftp://ftp.ensembl.org/pub/release-84/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz
 
-#### e. Upload the Anopheles gambiae release P4
-Repeat the same operation as in `b.` using the url `https://www.vectorbase.org/sites/default/files/ftp/downloads/Anopheles-gambiae-PEST_CHROMOSOMES_AgamP4.fa.gz`.
-When finished, rename the dataset 4 `https://www.vectorbase.org/sites/default/files/ftp/downloads/Anopheles-gambiae-PEST_CHROMOSOMES_AgamP4.fa.gz` to `AgamP4` for clarity.
+- Click on the `Build` button on the bottom right
+- Click on the `+ Rules` button on the bottom left ![rules](images/rules.png)
+- Select `Add / Modify Column Definitions` from the list
+- Click the `+ Add Definition` button, then select `Name` from the list and set column "A" as Name column
+- Click the `+ Add Definition` button, select `URL` and set the "B" column as URL column
+- Click the `Apply` button. Finally click the `Upload` button in the bottom right
 
-#### f. Upload the Plasmodium berghei genome
-Repeat the same operation as in `b.` using the url `ftp://ftp.ensemblgenomes.org/pub/release-28/protists/fasta/plasmodium_berghei/dna/Plasmodium_berghei.May_2010.28.dna_sm.genome.fa.gz`.
-When finished, rename the dataset 5 `ftp://ftp.ensemblgenomes.org/pub/release-28/protists/fasta/plasmodium_berghei/dna/Plasmodium_berghei.May_2010.28.dna_sm.genome.fa.gz` to `P. berghei` for clarity.
-
-#### g. Upload the Homo sapiens release GRCh38/hg19
-Repeat the same operation as in `b.` using the url `ftp://ftp.ensembl.org/pub/release-84/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz`.
-When finished, rename the dataset 6 `ftp://ftp.ensembl.org/pub/release-84/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz` to `hg19` for clarity.
+The reference genomes should be uploaded shortly to Galaxy.
 
 ## 3. Prepare Blast databases
 #### a. Nucleotide vir2 blast database
