@@ -20,7 +20,7 @@ jump to the next chapter [Prepare input data histories](use_cases_input_data).
 ## Availability of Metavisitor tools and workflows
 
 Metavisitor has been developed at the [ARTbio platform](http://artbio.fr). Its tools are
-primarily available in [GitHub] (https://github.com/ARTbio/tools-artbio). Its workflows are
+primarily available in [GitHub](https://github.com/ARTbio/tools-artbio). Its workflows are
 primarily available in this
 [metavisitor repository](https://github.com/ARTbio/metavisitor/tree/master/extra-files/metavisitor)
 as well as in the [GalaxyKickStart repository](https://github.com/ARTbio/GalaxyKickStart/tree/master/extra-files/metavisitor)
@@ -29,15 +29,16 @@ as well as in the [GalaxyKickStart repository](https://github.com/ARTbio/GalaxyK
 
 - [`blast_to_scaffold`](https://github.com/ARTbio/tools-artbio/tree/master/tools/blast_to_scaffold)
 - [`blastx_to_scaffold`](https://github.com/ARTbio/tools-artbio/tree/master/tools/blastx_to_scaffold)
+- [`blastparser_and_hits`](https://github.com/ARTbio/tools-artbio/tree/master/tools/blastparser_and_hits)
+- [`blast_unmatched`](https://github.com/ARTbio/tools-artbio/tree/master/tools/blast_unmatched)
+- [`cap3`](https://github.com/ARTbio/tools-artbio/tree/master/tools/cap3)
 - [`cherry_pick_fasta`](https://github.com/ARTbio/tools-artbio/tree/master/tools/cherry_pick_fasta)
-- [`concatenate_multiple_datasets`](https://github.com/ARTbio/tools-artbio/tree/master/tools/concatenate_multiple_datasets)
+- [`cat_multi_datasets`](https://github.com/ARTbio/tools-artbio/tree/master/tools/concat_multi_datasets)
 - [`fetch_fasta_from_ncbi`](https://github.com/ARTbio/tools-artbio/tree/master/tools/fetch_fasta_from_ncbi)
-- [`msp_blastparser_and_hits`](https://github.com/ARTbio/tools-artbio/tree/master/tools/msp_blastparser_and_hits)
-- [`msp_cap3`](https://github.com/ARTbio/tools-artbio/tree/master/tools/msp_cap3)
-- [`msp_fasta_tabular_converter`](https://github.com/ARTbio/tools-artbio/tree/master/tools/msp_fasta_tabular_converter)
-- [`msp_sr_bowtie`](https://github.com/ARTbio/tools-artbio/tree/master/tools/msp_sr_bowtie)
-- [`msp_oases`](https://github.com/ARTbio/tools-artbio/tree/master/tools/msp_oases)
-- [`small_rna_maps`](https://github.com/ARTbio/tools-artbio/tree/master/tools/small_rna_maps).
+- [`oases`](https://github.com/ARTbio/tools-artbio/tree/master/tools/oases)
+- [`sequence_format_converter`](https://github.com/ARTbio/tools-artbio/tree/master/tools/sequence_format_converter)
+- [`small_rna_maps`](https://github.com/ARTbio/tools-artbio/tree/master/tools/small_rna_maps)
+- [`sr_bowtie`](https://github.com/ARTbio/tools-artbio/tree/master/tools/sr_bowtie)
 - [`yac_clipper`](https://github.com/ARTbio/tools-artbio/tree/master/tools/yac_clipper)
 
 Other tools from other developers are used in the suite_metavisitor_2. These tools are
