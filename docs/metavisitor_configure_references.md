@@ -82,7 +82,7 @@ Now we are going to generate the bowtie indexes using another data manager tool.
   - Repeat the previous 3 steps for "*dm6*", "*AgamP4*" and "*hg19*"
 
 ----
-#### Note that the preparation of bowtie indexes can be long ! (several hours for the vir2 bowtie index for instance)
+**Note that the preparation of bowtie indexes can be long ! (several hours for the vir2 bowtie index for instance)**
 
 ## 6. Creating Galaxy bowtie2 indexes accessible to tools for every user
 Finally, we are going to generate the bowtie2 indexes using another data manager tool.
@@ -96,4 +96,4 @@ Finally, we are going to generate the bowtie2 indexes using another data manager
 - Repeat the previous 3 steps for "*AgamP4*" and "*hg19*"
 
 ----
-#### Note that the preparation of bowtie2 indexes can be long too ! (several hours for the vir2 bowtie2 index for instance)
+**Note that the preparation of bowtie2 indexes can be long too ! (several hours for the vir2 bowtie2 index for instance)**
