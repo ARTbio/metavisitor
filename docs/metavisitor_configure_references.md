@@ -49,44 +49,24 @@ Input FASTA files(s)               | dataset 1 (nucleotide vir2) | dataset 2 (pr
 Title for BLAST database           | nucleotide vir2 blastdb     | protein vir2 blastdb
 
 - Leave the rest of the form unchanged and click the `Execute` button
-- Rename the generated datasets *nucleotide vir2 blast database* and *protein vir2 blast database* for clarity
+- Rename the generated datasets "*nucleotide vir2 blast database*" and "*protein vir2 blast database*" for clarity
 
 ## 4. Creating Galaxy dbkey and fasta references accessible to tools for every user
-Here we are going in the `admin` panel, click `Local data` in the left menu and select the `Create DBKey and Reference Genome` in the "**Run Data Manager Tools**" (last line of the top section).
 
-#### a. nucleotide vir2
-in the newly open browser window (from the last click on `Create DBKey and Reference Genome`)
-- select "New" for `Use existing dbkey or create a new one`
-- enter "vir2" in the `dbkey`field
-- leave "Display name for dbkey", `Name of sequence` and `ID for sequence` empty !
-- select `history` in the `Choose the source for the reference genome` menu
-- select "nucleotide vir2" in the `FASTA File` menu
-- let `Sort by chromosome name` selected on `As is`
-- press the `execute`button !
+Be sure that the `References` history is selected in the background, otherwise the uploaded genomes will not be available.
 
-#### b. dm6
-Repeat the operation described in a., but this time
+- Go to the `admin` panel
+- Click `Local data` in the left menu
+- Select the `Create DBKey and Reference Genome` in the "**Data Managers**" table
 
-- put "dm6" for the `dbkey` field
-- select "3: dm6" in the `FASTA File` menu
+What to set in each form field for         | nucleotide vir2 | dm6     | AgamP4  | hg19
+-------------------------------------------|-----------------|---------|---------|-----
+Use existing dbkey or create a new one     | New             | New     | New     | New
+dbkey                                      | vir2            | dm6     | AgamP4  | hg19
+Choose the source for the reference genome | History         | History | History | History
+FASTA file                                 | nucleotide vir2 | dm6     | AgamP4  | hg19
 
-Be sure that the `References` history is selected in the background, otherwise the uploaded genomes will not be available in this menu.
-
-#### c. AgamP4
-Repeat the operation described in a., but this time
-
-- put "AgamP4" for the `dbkey` field
-- select "4: AgamP4" in the `FASTA File` menu
-
-Be sure that the `References` history is selected in the background, otherwise the uploaded genomes will not be available in this menu.
-
-#### d. hg19
-Repeat the operation described in a., but this time
-
-- put "hg19" for the `dbkey` field
-- select "6: hg19" in the `FASTA File` menu
-
-Be sure that the `References` history is selected in the background, otherwise the uploaded genomes will not be available in this menu.
+- Leave the rest of the fields empty and click the `Execute` button
 
 ## 5. Creating Galaxy bowtie indexes accessible to tools for every user
 Now we are going to generate the bowtie indexes using another data manager tool.
