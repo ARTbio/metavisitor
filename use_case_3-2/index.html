@@ -153,60 +153,199 @@
             <div class="section">
               
                 <h2 id="input-data-for-use-case-3-2">Input data for Use Case 3-2</h2>
-<p>As for the previous Use Cases 1, 2 and 3-1, the first step is to collect all input data in an history that we will name <code>Input data for Use Case 3-2</code>. </p>
+<p>As for the previous Use Cases 1, 2 and 3-1, the first step is to collect all input data in an history that we will name <code>Input data for Use Case 3-2</code>.</p>
 <ul>
 <li>Create a new history</li>
 <li>Rename this history <code>Input data for Use Case 3-2</code></li>
 <li>Using the tool <code>Extract reads in FASTQ/A format from NCBI SRA</code>, we are going to upload 43 paired end datasets. Indeed, these 43 datasets correspond to 86 fastq paired-ended sequence files. In addition, some datasets derive from the same patient; in those cases we will merge those datasets using the tool <code>Concatenate multiple datasets tail-to-head</code> and delete and purge the original datasets.</li>
-<li>Open the "Upload datasets" menu. Click on the <code>Paste/Fetch data</code> button, name the file "Use-Case_3-2_SRR_information" and copy-paste the following text:</li>
-</ul>
-<pre><code>SRR453487   patient 566
-SRR453437   patient 438
-SRR453443   patient 401
-SRR453458   patient 401
-SRR453430   patient 382
-SRR453491   patient 377
-SRR453499   patient 375
-SRR453484   patient 350
-SRR453464   patient 349
-SRR453506   patient 345
-SRR453417   patient 344
-SRR453490   patient 335
-SRR453478   patient 331
-SRR453465   patient 330
-SRR453480   patient 330
-SRR453489   patient 329
-SRR453505   patient 329
-SRR453498   patient 322
-SRR453446   patient 321
-SRR453427   patient 315
-SRR453440   patient 315
-SRR453438   patient 282
-SRR453450   patient 275
-SRR453460   patient 274
-SRR453485   patient 270
-SRR453448   patient 266
-SRR453424   patient 263
-SRR453457   patient 263
-SRR453510   patient 193
-SRR453456   patient 187
-SRR453425   patient 186
-SRR453469   patient 186
-SRR453481   patient 183
-SRR453531   patient 180
-SRR453474   patient 179
-SRR453509   patient 171
-SRR453451   patient 168
-SRR453495   patient 161
-SRR453504   patient 161
-SRR453500   patient 159
-SRR453493   patient 156
-SRR453444   patient 131
-SRR453426   patient 78
-</code></pre>
-
-<ul>
-<li>Click the <code>Start</code> button.</li>
+<li>
+<p>Open the "Upload datasets" menu. Click on the <code>Paste/Fetch data</code> button, name the file "Use-Case_3-2_SRR_information" and copy-paste the following text:</p>
+<table>
+<thead>
+<tr>
+<th>SRR id</th>
+<th>Patient id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SRR453487</td>
+<td>patient 566</td>
+</tr>
+<tr>
+<td>SRR453437</td>
+<td>patient 438</td>
+</tr>
+<tr>
+<td>SRR453443</td>
+<td>patient 401</td>
+</tr>
+<tr>
+<td>SRR453458</td>
+<td>patient 401</td>
+</tr>
+<tr>
+<td>SRR453430</td>
+<td>patient 382</td>
+</tr>
+<tr>
+<td>SRR453491</td>
+<td>patient 377</td>
+</tr>
+<tr>
+<td>SRR453499</td>
+<td>patient 375</td>
+</tr>
+<tr>
+<td>SRR453484</td>
+<td>patient 350</td>
+</tr>
+<tr>
+<td>SRR453464</td>
+<td>patient 349</td>
+</tr>
+<tr>
+<td>SRR453506</td>
+<td>patient 345</td>
+</tr>
+<tr>
+<td>SRR453417</td>
+<td>patient 344</td>
+</tr>
+<tr>
+<td>SRR453490</td>
+<td>patient 335</td>
+</tr>
+<tr>
+<td>SRR453478</td>
+<td>patient 331</td>
+</tr>
+<tr>
+<td>SRR453465</td>
+<td>patient 330</td>
+</tr>
+<tr>
+<td>SRR453480</td>
+<td>patient 330</td>
+</tr>
+<tr>
+<td>SRR453489</td>
+<td>patient 329</td>
+</tr>
+<tr>
+<td>SRR453505</td>
+<td>patient 329</td>
+</tr>
+<tr>
+<td>SRR453498</td>
+<td>patient 322</td>
+</tr>
+<tr>
+<td>SRR453446</td>
+<td>patient 321</td>
+</tr>
+<tr>
+<td>SRR453427</td>
+<td>patient 315</td>
+</tr>
+<tr>
+<td>SRR453440</td>
+<td>patient 315</td>
+</tr>
+<tr>
+<td>SRR453438</td>
+<td>patient 282</td>
+</tr>
+<tr>
+<td>SRR453450</td>
+<td>patient 275</td>
+</tr>
+<tr>
+<td>SRR453460</td>
+<td>patient 274</td>
+</tr>
+<tr>
+<td>SRR453485</td>
+<td>patient 270</td>
+</tr>
+<tr>
+<td>SRR453448</td>
+<td>patient 266</td>
+</tr>
+<tr>
+<td>SRR453424</td>
+<td>patient 263</td>
+</tr>
+<tr>
+<td>SRR453457</td>
+<td>patient 263</td>
+</tr>
+<tr>
+<td>SRR453510</td>
+<td>patient 193</td>
+</tr>
+<tr>
+<td>SRR453456</td>
+<td>patient 187</td>
+</tr>
+<tr>
+<td>SRR453425</td>
+<td>patient 186</td>
+</tr>
+<tr>
+<td>SRR453469</td>
+<td>patient 186</td>
+</tr>
+<tr>
+<td>SRR453481</td>
+<td>patient 183</td>
+</tr>
+<tr>
+<td>SRR453531</td>
+<td>patient 180</td>
+</tr>
+<tr>
+<td>SRR453474</td>
+<td>patient 179</td>
+</tr>
+<tr>
+<td>SRR453509</td>
+<td>patient 171</td>
+</tr>
+<tr>
+<td>SRR453451</td>
+<td>patient 168</td>
+</tr>
+<tr>
+<td>SRR453495</td>
+<td>patient 161</td>
+</tr>
+<tr>
+<td>SRR453504</td>
+<td>patient 161</td>
+</tr>
+<tr>
+<td>SRR453500</td>
+<td>patient 159</td>
+</tr>
+<tr>
+<td>SRR453493</td>
+<td>patient 156</td>
+</tr>
+<tr>
+<td>SRR453444</td>
+<td>patient 131</td>
+</tr>
+<tr>
+<td>SRR453426</td>
+<td>patient 78</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Click the <code>Start</code> button.</p>
+</li>
 <li>Select the <code>Cut columns from a table</code> tool and set the "Cut columns" parameter to "c1" and select "Use-Case_3-2_SRR_information" as input file in the "From" list. Execute the tool and rename the new dataset collection "Use_Case_3-2_accessions".</li>
 <li>Select the tool <code>Download and Extract Reads in FASTA/Q format from NCBI SRA</code>and select "List of SRA accession, one per line" in "select input type" and "Use_Case_3-2_accessions" in "sra accession list". Execute the tool. The data downloading step might take 40 minutes to 1h. Delete "Single-end data (fastq-dump)".</li>
 <li>Select the <code>Concatenate multiple datasets tail-to-head</code> tool and set "Paired collection" in "What type of data do you wish to concatenate?" and "Pair-end data (fastq-dump)" as "Input paired collection to concatenate". In "What type of concatenation do you wish to perform?" select "Concatenate pairs of datasets (outputs an unpaired collection of datasets)". Execute the tool.</li>

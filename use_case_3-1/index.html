@@ -156,65 +156,198 @@
 <h2 id="input-data-for-use-case-3-1">Input data for Use Case 3-1</h2>
 <p>As for the previous Use Cases 1 and 2, the first step is to collect all the input data in a history that we will name <code>Input data for Use Case 3-1</code>.</p>
 <ol>
-<li>Create a new history</li>
+<li>
+<p>Create a new history</p>
+<ul>
 <li>Rename this history <code>Input data for Use Case 3-1</code></li>
-<li>We are going to upload 40 datasets form the EBI ENA SRP068722 :<ul>
-<li>Go to the upload files menu and select <code>Paste/Fetch data</code>. Copy-Paste the following text:</li>
+<li>
+<p>We are going to upload 40 datasets form the EBI ENA SRP068722 :</p>
+<p>Go to the upload files menu and select <code>Paste/Fetch data</code>. Copy-Paste the following table (excluding the headers):</p>
+<table>
+<thead>
+<tr>
+<th>SRR id</th>
+<th>Patient id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SRR3111582</td>
+<td>patient 0450-318</td>
+</tr>
+<tr>
+<td>SRR3111583</td>
+<td>patient 0450-318</td>
+</tr>
+<tr>
+<td>SRR3111584</td>
+<td>patient 0450-318</td>
+</tr>
+<tr>
+<td>SRR3111585</td>
+<td>patient 0450-318</td>
+</tr>
+<tr>
+<td>SRR3111586</td>
+<td>patient 0450-318</td>
+</tr>
+<tr>
+<td>SRR3111587</td>
+<td>patient 0450-318</td>
+</tr>
+<tr>
+<td>SRR3111588</td>
+<td>patient 0387-272</td>
+</tr>
+<tr>
+<td>SRR3111589</td>
+<td>patient 0387-272</td>
+</tr>
+<tr>
+<td>SRR3111590</td>
+<td>patient 0387-272</td>
+</tr>
+<tr>
+<td>SRR3111591</td>
+<td>patient 0387-272</td>
+</tr>
+<tr>
+<td>SRR3111592</td>
+<td>patient 0387-272</td>
+</tr>
+<tr>
+<td>SRR3111593</td>
+<td>patient 0387-272</td>
+</tr>
+<tr>
+<td>SRR3111594</td>
+<td>patient 0629-453</td>
+</tr>
+<tr>
+<td>SRR3111595</td>
+<td>patient 0629-453</td>
+</tr>
+<tr>
+<td>SRR3111596</td>
+<td>patient 0629-453</td>
+</tr>
+<tr>
+<td>SRR3111597</td>
+<td>patient 0629-453</td>
+</tr>
+<tr>
+<td>SRR3111598</td>
+<td>patient 0629-453</td>
+</tr>
+<tr>
+<td>SRR3111599</td>
+<td>patient 0629-453</td>
+</tr>
+<tr>
+<td>SRR3111600</td>
+<td>patient 0444-312</td>
+</tr>
+<tr>
+<td>SRR3111601</td>
+<td>patient 0444-312</td>
+</tr>
+<tr>
+<td>SRR3111602</td>
+<td>patient 0444-312</td>
+</tr>
+<tr>
+<td>SRR3111603</td>
+<td>patient 0444-312</td>
+</tr>
+<tr>
+<td>SRR3111604</td>
+<td>patient 0500-355neg</td>
+</tr>
+<tr>
+<td>SRR3111605</td>
+<td>patient 0500-355neg</td>
+</tr>
+<tr>
+<td>SRR3111606</td>
+<td>patient 0292-xxxneg</td>
+</tr>
+<tr>
+<td>SRR3111607</td>
+<td>patient 0292-xxxneg</td>
+</tr>
+<tr>
+<td>SRR3111608</td>
+<td>patient 0394-274</td>
+</tr>
+<tr>
+<td>SRR3111609</td>
+<td>patient 0394-274</td>
+</tr>
+<tr>
+<td>SRR3111610</td>
+<td>patient 0218-162neg</td>
+</tr>
+<tr>
+<td>SRR3111611</td>
+<td>patient 0218-162neg</td>
+</tr>
+<tr>
+<td>SRR3111612</td>
+<td>patient 0311-217HIVneg</td>
+</tr>
+<tr>
+<td>SRR3111613</td>
+<td>patient 0311-217HIVneg</td>
+</tr>
+<tr>
+<td>SRR3111614</td>
+<td>patient 0440-307neg</td>
+</tr>
+<tr>
+<td>SRR3111616</td>
+<td>patient 0440-307neg</td>
+</tr>
+<tr>
+<td>SRR3111617</td>
+<td>patient 0518-370neg</td>
+</tr>
+<tr>
+<td>SRR3111618</td>
+<td>patient 0518-370neg</td>
+</tr>
+<tr>
+<td>SRR3111619</td>
+<td>patient 0560-420neg</td>
+</tr>
+<tr>
+<td>SRR3111620</td>
+<td>patient 0560-420neg</td>
+</tr>
+<tr>
+<td>SRR3111621</td>
+<td>patient 0575-419neg</td>
+</tr>
+<tr>
+<td>SRR3111622</td>
+<td>patient 0575-419neg</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Name the file "Use-Case_3-1_information" and click the <code>Start</code> button.</p>
+</li>
+<li>Use the tool <code>Cut columns from table</code>. In the "Cut columns field" write <code>c1</code> and make sure you select "Use-Case_3-1_information" file in the "From" field before executing. Rename the output "Use-Case_3-1_accessions".</li>
+<li>Use the tool <code>Extract reads in FASTQ/A format from NCBI SRA</code>, select <code>List of SRA accession, one per line</code>from <code>select input type</code> and "Use-Case_3-1_accessions" in sra accession list. Click the <code>Execute</code> button.</li>
+<li>When the tool is finished running you should have 2 new dataset collections in your history, one of them is empty. Delete the empty collection and verify that you have 40 pairs of datasets in the second collection.</li>
+<li>If you are missing some sequences you'll have to re-do the steps above with only the missing identifiers. Once done, merge the collections using the tool <code>Merge Collections</code>.</li>
+<li>Use the <code>Concatenate multiple datasets tail-to-head</code> tool and select "Paired collection" as type of data. Set the paired collection as input and select "Concatenate pairs of datasets" as type of concatenation. Execute the tool.</li>
+<li>Rename the outputed collection to <code>SRP068722</code> and delete the previous one by clicking the <code>X</code> button and selecting "Permanently Delete Datasets".</li>
 </ul>
 </li>
-</ol>
-<pre><code>SRR3111582  patient 0450-318
-SRR3111583  patient 0450-318
-SRR3111584  patient 0450-318
-SRR3111585  patient 0450-318
-SRR3111586  patient 0450-318
-SRR3111587  patient 0450-318
-SRR3111588  patient 0387-272
-SRR3111589  patient 0387-272
-SRR3111590  patient 0387-272
-SRR3111591  patient 0387-272
-SRR3111592  patient 0387-272
-SRR3111593  patient 0387-272
-SRR3111594  patient 0629-453
-SRR3111595  patient 0629-453
-SRR3111596  patient 0629-453
-SRR3111597  patient 0629-453
-SRR3111598  patient 0629-453
-SRR3111599  patient 0629-453
-SRR3111600  patient 0444-312
-SRR3111601  patient 0444-312
-SRR3111602  patient 0444-312
-SRR3111603  patient 0444-312
-SRR3111604  patient 0500-355neg
-SRR3111605  patient 0500-355neg
-SRR3111606  patient 0292-xxxneg
-SRR3111607  patient 0292-xxxneg
-SRR3111608  patient 0394-274
-SRR3111609  patient 0394-274
-SRR3111610  patient 0218-162neg
-SRR3111611  patient 0218-162neg
-SRR3111612  patient 0311-217HIVneg
-SRR3111613  patient 0311-217HIVneg
-SRR3111614  patient 0440-307neg
-SRR3111616  patient 0440-307neg
-SRR3111617  patient 0518-370neg
-SRR3111618  patient 0518-370neg
-SRR3111619  patient 0560-420neg
-SRR3111620  patient 0560-420neg
-SRR3111621  patient 0575-419neg
-SRR3111622  patient 0575-419neg
-</code></pre>
-
-<pre><code>- Name the file "Use-Case_3-1_information" and click the `Start` button.
-- Use the tool `Cut columns from table`. In the "Cut columns field" write `c1` and make sure you select "Use-Case_3-1_information" file in the "From" field before executing. Rename the output "Use-Case_3-1_accessions".
-- Use the tool `Extract reads in FASTQ/A format from NCBI SRA`, select `List of SRA accession, one per line`from `select input type` and "Use-Case_3-1_accessions" in sra accession list. Click the `Execute` button.
-- When the tool is finished running you should have 2 new dataset collections in your history, one of them is empty. Delete the empty collection and verify that you have 40 pairs of datasets in the second collection.
-- If you are missing some sequences you'll have to re-do the steps above with only the missing identifiers. Once done, merge the collections using the tool `Merge Collections`.
-- Use the `Concatenate multiple datasets tail-to-head` tool and select "Paired collection" as type of data. Set the paired collection as input and select "Concatenate pairs of datasets" as type of concatenation. Execute the tool.
-- Rename the outputed collection to `SRP068722` and delete the previous one by clicking the `X` button and selecting "Permanently Delete Datasets".
-</code></pre>
-<ol>
-<li>Copy the <code>vir2 nucleotide BLAST database</code> from the <code>References</code> history to the current history <code>Input data for Use Case 3-1</code>.</li>
+<li>
+<p>Copy the <code>vir2 nucleotide BLAST database</code> from the <code>References</code> history to the current history <code>Input data for Use Case 3-1</code>.</p>
+</li>
 <li>Now we still have to associate sequencing dataset coming from the same patient. We are going to use the tool <code>Tag elements from file</code> to add the patient information as metadata.<ul>
 <li>Click on the <code>Tag elements from file</code> tool and select the collection "SRP068722" in "Input Collection" and "Use-Case_3-1_information" in "Tag collection elements according to this file". Execute the tool. Rename the new dataset collection <code>SRP068722_with_patient_information</code>.</li>
 <li>Select the <code>Apply Rule to Collection</code> and set "SRP068722_with_patient_information" as "Input Collection". Click on the "Edit" button at the right of the form.<ul>

@@ -69,16 +69,6 @@
         
             <li><a class="toctree-l3" href="#b-upload-nucleotide-vir2-fasta-file">b. Upload nucleotide vir2 fasta file</a></li>
         
-            <li><a class="toctree-l3" href="#c-upload-protein-vir2-fasta-file">c. Upload protein vir2 fasta file</a></li>
-        
-            <li><a class="toctree-l3" href="#d-upload-the-drosophila-melanogaster-release-6-genome">d. Upload the Drosophila melanogaster release 6 genome</a></li>
-        
-            <li><a class="toctree-l3" href="#e-upload-the-anopheles-gambiae-release-p4">e. Upload the Anopheles gambiae release P4</a></li>
-        
-            <li><a class="toctree-l3" href="#f-upload-the-plasmodium-berghei-genome">f. Upload the Plasmodium berghei genome</a></li>
-        
-            <li><a class="toctree-l3" href="#g-upload-the-homo-sapiens-release-grch38hg19">g. Upload the Homo sapiens release GRCh38/hg19</a></li>
-        
         </ul>
     
 
@@ -237,29 +227,55 @@
 <p>Click on the <code>Analyze Data</code> menu
 rename the <code>Unnamed history</code> to <code>References</code></p>
 <h4 id="b-upload-nucleotide-vir2-fasta-file">b. Upload nucleotide vir2 fasta file</h4>
-<pre><code>Click on the small arrow icon at the top of the tool bar (left handside of the Galaxy interface)
-In the open window, click on the Paste/Fetch data button
-Paste the URL https://ndownloader.figshare.com/files/11005121
-Click the start button.
-</code></pre>
-
-<p>A first dataset will show up in your history, first in grey (the job is starting), then yellow (the job - upload - is running), and eventually green (job is successfully done).</p>
-<p>When finished, rename the dataset 1 <code>https://ndownloader.figshare.com/files/11005121</code> to <code>nucleotide vir2</code> for clarity (using the small pencil icon).</p>
-<h4 id="c-upload-protein-vir2-fasta-file">c. Upload protein vir2 fasta file</h4>
-<p>Repeat the same operation as in <code>b.</code> using the url <code>https://ndownloader.figshare.com/files/11005124</code>.
-When finished, rename the dataset 2 <code>https://ndownloader.figshare.com/files/11005124</code> to <code>protein vir2</code> for clarity.</p>
-<h4 id="d-upload-the-drosophila-melanogaster-release-6-genome">d. Upload the Drosophila melanogaster release 6 genome</h4>
-<p>Repeat the same operation as in <code>b.</code> using the url <code>ftp://ftp.flybase.net/genomes/Drosophila_melanogaster/dmel_r6.10_FB2016_02/fasta/dmel-all-chromosome-r6.10.fasta.gz</code>.
-When finished, rename the dataset 3 <code>ftp://ftp.flybase.net/genomes/Drosophila_melanogaster/dmel_r6.10_FB2016_02/fasta/dmel-all-chromosome-r6.10.fasta.gz</code> to <code>dm6</code> for clarity.</p>
-<h4 id="e-upload-the-anopheles-gambiae-release-p4">e. Upload the Anopheles gambiae release P4</h4>
-<p>Repeat the same operation as in <code>b.</code> using the url <code>https://www.vectorbase.org/sites/default/files/ftp/downloads/Anopheles-gambiae-PEST_CHROMOSOMES_AgamP4.fa.gz</code>.
-When finished, rename the dataset 4 <code>https://www.vectorbase.org/sites/default/files/ftp/downloads/Anopheles-gambiae-PEST_CHROMOSOMES_AgamP4.fa.gz</code> to <code>AgamP4</code> for clarity.</p>
-<h4 id="f-upload-the-plasmodium-berghei-genome">f. Upload the Plasmodium berghei genome</h4>
-<p>Repeat the same operation as in <code>b.</code> using the url <code>ftp://ftp.ensemblgenomes.org/pub/release-28/protists/fasta/plasmodium_berghei/dna/Plasmodium_berghei.May_2010.28.dna_sm.genome.fa.gz</code>.
-When finished, rename the dataset 5 <code>ftp://ftp.ensemblgenomes.org/pub/release-28/protists/fasta/plasmodium_berghei/dna/Plasmodium_berghei.May_2010.28.dna_sm.genome.fa.gz</code> to <code>P. berghei</code> for clarity.</p>
-<h4 id="g-upload-the-homo-sapiens-release-grch38hg19">g. Upload the Homo sapiens release GRCh38/hg19</h4>
-<p>Repeat the same operation as in <code>b.</code> using the url <code>ftp://ftp.ensembl.org/pub/release-84/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz</code>.
-When finished, rename the dataset 6 <code>ftp://ftp.ensembl.org/pub/release-84/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz</code> to <code>hg19</code> for clarity.</p>
+<ul>
+<li>Click on the <img alt="upload_button" src="../images/upload_button.png" /> button on top of the tool bar (left handside of the Galaxy interface)</li>
+<li>In the open window, click on the <code>Rule-based</code> tab <img alt="rule-based" src="../images/rule_based_tab.png" /></li>
+<li>Make sure "Upload data as:" is set to datasets and "Load tabular data from:" is set to Pasted Table</li>
+<li>Copy - paste the following table (not including the header)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>nucleotide vir2</code></td>
+<td>https://ndownloader.figshare.com/files/11005121</td>
+</tr>
+<tr>
+<td><code>protein vir2</code></td>
+<td>https://ndownloader.figshare.com/files/11005124</td>
+</tr>
+<tr>
+<td><code>dm6</code></td>
+<td>ftp://ftp.flybase.net/genomes/Drosophila_melanogaster/dmel_r6.10_FB2016_02/fasta/dmel-all-chromosome-r6.10.fasta.gz</td>
+</tr>
+<tr>
+<td><code>AgamP4</code></td>
+<td>https://www.vectorbase.org/sites/default/files/ftp/downloads/Anopheles-gambiae-PEST_CHROMOSOMES_AgamP4.fa.gz</td>
+</tr>
+<tr>
+<td><code>P. berghei</code></td>
+<td>ftp://ftp.ensemblgenomes.org/pub/release-28/protists/fasta/plasmodium_berghei/dna/Plasmodium_berghei.May_2010.28.dna_sm.genome.fa.gz</td>
+</tr>
+<tr>
+<td><code>hg19</code></td>
+<td>ftp://ftp.ensembl.org/pub/release-84/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Click on the <code>Build</code> button on the bottom right</li>
+<li>Click on the <code>+ Rules</code> button on the bottom left <img alt="rules" src="../images/rules.png" /></li>
+<li>Select <code>Add / Modify Column Definitions</code> from the list</li>
+<li>Click the <code>+ Add Definition</code> button, then select <code>Name</code> from the list and set column "A" as Name column</li>
+<li>Click the <code>+ Add Definition</code> button, select <code>URL</code> and set the "B" column as URL column</li>
+<li>Click the <code>Apply</code> button. Finally click the <code>Upload</code> button in the bottom right</li>
+</ul>
+<p>The reference genomes should be uploaded shortly to Galaxy.</p>
 <h2 id="3-prepare-blast-databases">3. Prepare Blast databases</h2>
 <h4 id="a-nucleotide-vir2-blast-database">a. Nucleotide vir2 blast database</h4>
 <p>Use the tool <code>NCBI BLAST+ makeblastdb</code>, check the radio button "nucleotide", select the dataset 1 (nucleotide vir2), give "nucleotide vir2 blastdb" as a "Title for BLAST database", leave the rest of the tool form unchanged and click "Execute" button.</p>

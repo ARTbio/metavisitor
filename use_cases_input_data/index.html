@@ -155,32 +155,50 @@ These analyses as well as their biological context are presented as <strong>Use 
 <h1 id="history-with-input-data-for-use-cases-1-1-1-2-1-3-and-1-4">History with input data for Use Cases 1-1, 1-2, 1-3 and 1-4</h1>
 <ol>
 <li>Create a new history and rename it "Input data for Use Cases 1-1, 1-2, 1-3 and 1-4"</li>
-<li>Get SRP013822 datasets list<ul>
-<li>Use the the tool <code>Upload File</code> and click on the <code>Paste/Fetch data</code> button</li>
-<li>Copy - Paste the following text:</li>
-</ul>
-</li>
-</ol>
-<pre><code>SRR515090
-SRR513993
-SRR513992
-SRR513990
-SRR513989
-SRR513981
-SRR513901
-</code></pre>
-
-<pre><code>- Edit the file name by clicking the "Name" section and writing "use_case_1_accessions" or by selecting the `Start` button and changing the file name.
-</code></pre>
-<ol>
-<li>Import SRP013822 datasets<ul>
-<li>Use the tool <code>Extract reads in FASTQ/A format from NCBI SRA</code> and select in the <code>select input type</code> list <code>List of SRA accession, one per line</code>.</li>
-<li>Select in the <code>sra accession list</code> the <code>use_case_1_accessions</code> file and run the tool.</li>
-</ul>
+<li>
+<p>Get SRP013822 datasets list</p>
+<ul>
+<li>
+<p>Use the the tool <code>Upload File</code> and click on the <code>Paste/Fetch data</code> button</p>
+<p>Copy - Paste the following text (not including the header):</p>
+<table>
+<thead>
+<tr>
+<th>SRR id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SRR515090</td>
+</tr>
+<tr>
+<td>SRR513993</td>
+</tr>
+<tr>
+<td>SRR513992</td>
+</tr>
+<tr>
+<td>SRR513990</td>
+</tr>
+<tr>
+<td>SRR513989</td>
+</tr>
+<tr>
+<td>SRR513981</td>
+</tr>
+<tr>
+<td>SRR513901</td>
+</tr>
+</tbody>
+</table>
 </li>
 <li>
-<p>Rename a dataset collection <strong>SRP013822</strong></p>
-<ul>
+<p>Edit the file name by clicking the "Name" section and writing "use_case_1_accessions" or by selecting the <code>Start</code> button and changing the file name.</p>
+</li>
+<li>Import SRP013822 datasets</li>
+<li>Use the tool <code>Extract reads in FASTQ/A format from NCBI SRA</code> and select in the <code>select input type</code> list <code>List of SRA accession, one per line</code>.</li>
+<li>Select in the <code>sra accession list</code> the <code>use_case_1_accessions</code> file and run the tool.</li>
+<li>Rename a dataset collection <strong>SRP013822</strong></li>
 <li>Click on the <code>Single-end data (fastqdump)</code> collection</li>
 <li>Click on the title "Single-end data (fastqdump)" and rename it "SRP013822"</li>
 <li>You can delete the <code>Pair-end data (fastq-dump)</code> collection by clicking the <code>X</code> button and selecting "Collection Only".</li>
