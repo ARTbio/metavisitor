@@ -87,21 +87,13 @@ Now we are going to generate the bowtie indexes using another data manager tool.
 ## 6. Creating Galaxy bowtie2 indexes accessible to tools for every user
 Finally, we are going to generate the bowtie2 indexes using another data manager tool.
 
-----
-#### a. vir2 bowtie2 index
-Now, Go back to your web browser and the `admin` panel, click again `Local data` in the left menu and  select this time the `Bowtie2 index - builder` in the "**Run Data Manager Tools**" (top section).
-
-Select "vir2" in the `Source FASTA Sequence` menu of the Bowtie index builder tool form, leave the other options empty, and click execute.
-
-#### b. AgamP4 bowtie2 index
-Go back to your web browser and the `admin` panel, click again `Local data` in the left menu and  select this time the `Bowtie2 index - builder` in the "**Run Data Manager Tools**" (top section).
-
-Select "AgamP4" in the `Source FASTA Sequence` menu of the Bowtie index builder tool form, leave the other options empty, and click execute.
-
-#### c. hg19 bowtie2 index
-Go back to your web browser and the `admin` panel, click again `Local data` in the left menu and  select this time the `Bowtie2 index - builder` in the "**Run Data Manager Tools**" (top section).
-
-Select "hg19" in the `Source FASTA Sequence` menu of the Bowtie index builder tool form, leave the other options empty, and click execute.
+- Go to the `admin` panel
+- Click `Local data` in the left menu
+- Select the `Bowtie2 index builder` in the "**Data Managers**" table
+- Select "*vir2*" in the "Source FASTA Sequence"
+- Leave the other options empty and click the `Execute` button
+- Expand the "*bowtie index*" dataset that appeared in your history and click the ![redo](images/redo.png) button
+- Repeat the previous 3 steps for "*AgamP4*" and "*hg19*"
 
 ----
 #### Note that the preparation of bowtie2 indexes can be long too ! (several hours for the vir2 bowtie2 index for instance)
