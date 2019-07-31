@@ -5,11 +5,11 @@ TRACK=$1
 
 ## Common manipulations
 git clone https://github.com/artbio/galaxykickstart.git
+rm galaxykickstart/Dockerfile
 cp Dockerfile galaxykickstart/
 cp group_vars/metavisitor galaxykickstart/group_vars/
 cp -a extra-files/metavisitor galaxykickstart/extra-files/
 cp inventory_files/metavisitor galaxykickstart/inventory_files/
-
 cd galaxykickstart/
 
 # activate a short tool list for test only
