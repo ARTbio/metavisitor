@@ -20,14 +20,14 @@ rename the `Unnamed history` to `References`
 - Copy - paste the following table (not including the header)
 
 
-Name | URL
------|----
+Name              | URL
+------------------|----
 `nucleotide vir2` | https://ndownloader.figshare.com/files/11005121
-`protein vir2` | https://ndownloader.figshare.com/files/11005124
-`dm6` | ftp://ftp.flybase.net/genomes/Drosophila_melanogaster/dmel_r6.10_FB2016_02/fasta/dmel-all-chromosome-r6.10.fasta.gz
-`AgamP4` | https://www.vectorbase.org/sites/default/files/ftp/downloads/Anopheles-gambiae-PEST_CHROMOSOMES_AgamP4.fa.gz
-`P. berghei` | ftp://ftp.ensemblgenomes.org/pub/release-28/protists/fasta/plasmodium_berghei/dna/Plasmodium_berghei.May_2010.28.dna_sm.genome.fa.gz
-`hg19` | ftp://ftp.ensembl.org/pub/release-84/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz
+`protein vir2`    | https://ndownloader.figshare.com/files/11005124
+`dm6`             | ftp://ftp.flybase.net/genomes/Drosophila_melanogaster/dmel_r6.10_FB2016_02/fasta/dmel-all-chromosome-r6.10.fasta.gz
+`AgamP4`          | https://www.vectorbase.org/sites/default/files/ftp/downloads/Anopheles-gambiae-PEST_CHROMOSOMES_AgamP4.fa.gz
+`P. berghei`      | ftp://ftp.ensemblgenomes.org/pub/release-28/protists/fasta/plasmodium_berghei/dna/Plasmodium_berghei.May_2010.28.dna_sm.genome.fa.gz
+`hg19`            | ftp://ftp.ensembl.org/pub/release-84/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz
 
 - Click on the `Build` button on the bottom right
 - Click on the `+ Rules` button on the bottom left ![rules](images/rules.png)
@@ -39,15 +39,17 @@ Name | URL
 The reference genomes should be uploaded shortly to Galaxy.
 
 ## 3. Prepare Blast databases
-#### a. Nucleotide vir2 blast database
-Use the tool `NCBI BLAST+ makeblastdb`, check the radio button "nucleotide", select the dataset 1 (nucleotide vir2), give "nucleotide vir2 blastdb" as a "Title for BLAST database", leave the rest of the tool form unchanged and click "Execute" button.
 
-Rename the generated dataset 7 "nucleotide BLAST database from data 1" to "nucleotide vir2 blast database" for clarity
+- Use the tool `NCBI BLAST+ makeblastdb`
 
-#### b. Protein vir2 blast database
-Use the tool `NCBI BLAST+ makeblastdb`, check the radio button "protein", select the dataset 2 (protein vir2), give "protein vir2 blastdb" as a "Title for BLAST database", leave the rest of the tool form unchanged and click "Execute" button.
+What to set in each form field for | nucleotide vir2             | protein vir2
+-----------------------------------|-----------------------------|-------------
+Molecule type of input             | nucleotide                  | protein     
+Input FASTA files(s)               | dataset 1 (nucleotide vir2) | dataset 2 (protein vir2)
+Title for BLAST database           | nucleotide vir2 blastdb     | protein vir2 blastdb
 
-Rename the generated dataset 8 "protein BLAST database from data 2" to "protein vir2 blast database" for clarity
+- Leave the rest of the form unchanged and click the `Execute` button
+- Rename the generated datasets *nucleotide vir2 blast database* and *protein vir2 blast database* for clarity
 
 ## 4. Creating Galaxy dbkey and fasta references accessible to tools for every user
 Here we are going in the `admin` panel, click `Local data` in the left menu and select the `Create DBKey and Reference Genome` in the "**Run Data Manager Tools**" (last line of the top section).
