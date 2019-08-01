@@ -1,5 +1,13 @@
 Now that you are familiar with manipulations in Galaxy with the Use Cases 1-1 to 1-4 described in detail in the previous chapters, we will describe the other Use Case analyses more concisely. If you experience lack of skills in basic Galaxy operations (tool usage, copy of datasets, etc), do not hesitate to go back and examine the [previous chapters](use_cases_input_data) step by step.
 
+---
+#### Virus detection in human RNAseq libraries
+
+In the Use Cases 3-X we'll use Metavisitor to detect viruses in RNA sequencing dataset of human patients from 3 different studies.
+
+In Use Case 3-1 we use Metavisitor to detect and assemble HIV genomes from patients Innate lymphoid cells sequencing data EBI SRP068722.
+
+---
 
 ## Input data for Use Case 3-1
 

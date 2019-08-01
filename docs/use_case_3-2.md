@@ -1,3 +1,8 @@
+#### Use Case 3-2's aim
+
+In this Use Case, Metavisitor is used to search for the presence of viruses and identify them in RNA sequencing data of serums of children suffering from fevers of unknown origins. To compare Metavisitor's results to [Yozwiak *et al*](https://dx.doi.org/10.1371%2Fjournal.pntd.0001485).
+
+---
 ## Input data for Use Case 3-2
 
 As for the previous Use Cases 1, 2 and 3-1, the first step is to collect all input data in an history that we will name `Input data for Use Case 3-2`.
