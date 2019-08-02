@@ -20,14 +20,14 @@ rename the `Unnamed history` to `References`
 - Copy - paste the following table (not including the header)
 
 
-Name | URL
------|----
+Name              | URL
+------------------|----
 `nucleotide vir2` | https://ndownloader.figshare.com/files/11005121
-`protein vir2` | https://ndownloader.figshare.com/files/11005124
-`dm6` | ftp://ftp.flybase.net/genomes/Drosophila_melanogaster/dmel_r6.10_FB2016_02/fasta/dmel-all-chromosome-r6.10.fasta.gz
-`AgamP4` | https://www.vectorbase.org/sites/default/files/ftp/downloads/Anopheles-gambiae-PEST_CHROMOSOMES_AgamP4.fa.gz
-`P. berghei` | ftp://ftp.ensemblgenomes.org/pub/release-28/protists/fasta/plasmodium_berghei/dna/Plasmodium_berghei.May_2010.28.dna_sm.genome.fa.gz
-`hg19` | ftp://ftp.ensembl.org/pub/release-84/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz
+`protein vir2`    | https://ndownloader.figshare.com/files/11005124
+`dm6`             | ftp://ftp.flybase.net/genomes/Drosophila_melanogaster/dmel_r6.10_FB2016_02/fasta/dmel-all-chromosome-r6.10.fasta.gz
+`AgamP4`          | https://www.vectorbase.org/sites/default/files/ftp/downloads/Anopheles-gambiae-PEST_CHROMOSOMES_AgamP4.fa.gz
+`P. berghei`      | ftp://ftp.ensemblgenomes.org/pub/release-28/protists/fasta/plasmodium_berghei/dna/Plasmodium_berghei.May_2010.28.dna_sm.genome.fa.gz
+`hg19`            | ftp://ftp.ensembl.org/pub/release-84/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz
 
 - Click on the `Build` button on the bottom right
 - Click on the `+ Rules` button on the bottom left ![rules](images/rules.png)
@@ -39,97 +39,61 @@ Name | URL
 The reference genomes should be uploaded shortly to Galaxy.
 
 ## 3. Prepare Blast databases
-#### a. Nucleotide vir2 blast database
-Use the tool `NCBI BLAST+ makeblastdb`, check the radio button "nucleotide", select the dataset 1 (nucleotide vir2), give "nucleotide vir2 blastdb" as a "Title for BLAST database", leave the rest of the tool form unchanged and click "Execute" button.
 
-Rename the generated dataset 7 "nucleotide BLAST database from data 1" to "nucleotide vir2 blast database" for clarity
+- Use the tool `NCBI BLAST+ makeblastdb`
 
-#### b. Protein vir2 blast database
-Use the tool `NCBI BLAST+ makeblastdb`, check the radio button "protein", select the dataset 2 (protein vir2), give "protein vir2 blastdb" as a "Title for BLAST database", leave the rest of the tool form unchanged and click "Execute" button.
+What to set in each form field for | nucleotide vir2             | protein vir2
+-----------------------------------|-----------------------------|-------------
+Molecule type of input             | nucleotide                  | protein     
+Input FASTA files(s)               | dataset 1 (nucleotide vir2) | dataset 2 (protein vir2)
+Title for BLAST database           | nucleotide vir2 blastdb     | protein vir2 blastdb
 
-Rename the generated dataset 8 "protein BLAST database from data 2" to "protein vir2 blast database" for clarity
+- Leave the rest of the form unchanged and click the `Execute` button
+- Rename the generated datasets "*nucleotide vir2 blast database*" and "*protein vir2 blast database*" for clarity
 
 ## 4. Creating Galaxy dbkey and fasta references accessible to tools for every user
-Here we are going in the `admin` panel, click `Local data` in the left menu and select the `Create DBKey and Reference Genome` in the "**Run Data Manager Tools**" (last line of the top section).
 
-#### a. nucleotide vir2
-in the newly open browser window (from the last click on `Create DBKey and Reference Genome`)
-- select "New" for `Use existing dbkey or create a new one`
-- enter "vir2" in the `dbkey`field
-- leave "Display name for dbkey", `Name of sequence` and `ID for sequence` empty !
-- select `history` in the `Choose the source for the reference genome` menu
-- select "nucleotide vir2" in the `FASTA File` menu
-- let `Sort by chromosome name` selected on `As is`
-- press the `execute`button !
+Be sure that the `References` history is selected in the background, otherwise the uploaded genomes will not be available.
 
-#### b. dm6
-Repeat the operation described in a., but this time
+- Go to the `admin` panel
+- Click `Local data` in the left menu
+- Select the `Create DBKey and Reference Genome` in the "**Data Managers**" table
 
-- put "dm6" for the `dbkey` field
-- select "3: dm6" in the `FASTA File` menu
+What to set in each form field for         | nucleotide vir2 | dm6     | AgamP4  | hg19
+-------------------------------------------|-----------------|---------|---------|-----
+Use existing dbkey or create a new one     | New             | New     | New     | New
+dbkey                                      | vir2            | dm6     | AgamP4  | hg19
+Choose the source for the reference genome | History         | History | History | History
+FASTA file                                 | nucleotide vir2 | dm6     | AgamP4  | hg19
 
-Be sure that the `References` history is selected in the background, otherwise the uploaded genomes will not be available in this menu.
+- Leave the rest of the fields empty and click the `Execute` button
 
-#### c. AgamP4
-Repeat the operation described in a., but this time
-
-- put "AgamP4" for the `dbkey` field
-- select "4: AgamP4" in the `FASTA File` menu
-
-Be sure that the `References` history is selected in the background, otherwise the uploaded genomes will not be available in this menu.
-
-#### d. hg19
-Repeat the operation described in a., but this time
-
-- put "hg19" for the `dbkey` field
-- select "6: hg19" in the `FASTA File` menu
-
-Be sure that the `References` history is selected in the background, otherwise the uploaded genomes will not be available in this menu.
+**Tip:** *Once you have run the first job. You can expand the new dataset that appeared in your history and click on the* ![redo](images/redo.png) *button, instead of going back to the admin panel.*
 
 ## 5. Creating Galaxy bowtie indexes accessible to tools for every user
 Now we are going to generate the bowtie indexes using another data manager tool.
 
-#### a. vir2 bowtie index
-Now, go back to your web browser and the `admin` panel, click again `Local data` in the left menu and  select this time the `Bowtie index - builder` in the "**Run Data Manager Tools**" (top section).
-
-Select "vir2" in the `Source FASTA Sequence` menu of the Bowtie index builder tool form, leave the other options empty, and click execute.
-
-#### b. dm6 bowtie index
-Go back to your web browser and the `admin` panel, click again `Local data` in the left menu and  select this time the `Bowtie index - builder` in the "**Run Data Manager Tools**" (top section).
-
-Select "dm6" in the `Source FASTA Sequence` menu of the Bowtie index builder tool form, leave the other options empty, and click execute.
-
-#### c. AgamP4 bowtie index
-Go back to your web browser and the `admin` panel, click again `Local data` in the left menu and  select this time the `Bowtie index - builder` in the "**Run Data Manager Tools**" (top section).
-
-Select "AgamP4" in the `Source FASTA Sequence` menu of the Bowtie index builder tool form, leave the other options empty, and click execute.
-
-#### d. hg19 bowtie index
-Go back to your web browser and the `admin` panel, click again `Local data` in the left menu and  select this time the `Bowtie index - builder` in the "**Run Data Manager Tools**" (top section).
-
-Select "hg19" in the `Source FASTA Sequence` menu of the Bowtie index builder tool form, leave the other options empty, and click execute.
+  - Go to the `admin` panel
+  - Click `Local data` in the left menu
+  - Select the `Bowtie index builder` in the "**Data Managers**" table
+  - Select "*vir2*" in the "Source FASTA Sequence"
+  - Leave the other options empty and click the `Execute` button
+  - Expand the "*bowtie index*" dataset that appeared in your history and click the ![redo](images/redo.png) button
+  - Repeat the previous 3 steps for "*dm6*", "*AgamP4*" and "*hg19*"
 
 ----
-#### Note that the preparation of bowtie indexes can be long ! (several hours for the vir2 bowtie index for instance)
+**Note that the preparation of bowtie indexes can be long ! (several hours for the vir2 bowtie index for instance)**
 
 ## 6. Creating Galaxy bowtie2 indexes accessible to tools for every user
 Finally, we are going to generate the bowtie2 indexes using another data manager tool.
 
-----
-#### a. vir2 bowtie2 index
-Now, Go back to your web browser and the `admin` panel, click again `Local data` in the left menu and  select this time the `Bowtie2 index - builder` in the "**Run Data Manager Tools**" (top section).
-
-Select "vir2" in the `Source FASTA Sequence` menu of the Bowtie index builder tool form, leave the other options empty, and click execute.
-
-#### b. AgamP4 bowtie2 index
-Go back to your web browser and the `admin` panel, click again `Local data` in the left menu and  select this time the `Bowtie2 index - builder` in the "**Run Data Manager Tools**" (top section).
-
-Select "AgamP4" in the `Source FASTA Sequence` menu of the Bowtie index builder tool form, leave the other options empty, and click execute.
-
-#### c. hg19 bowtie2 index
-Go back to your web browser and the `admin` panel, click again `Local data` in the left menu and  select this time the `Bowtie2 index - builder` in the "**Run Data Manager Tools**" (top section).
-
-Select "hg19" in the `Source FASTA Sequence` menu of the Bowtie index builder tool form, leave the other options empty, and click execute.
+- Go to the `admin` panel
+- Click `Local data` in the left menu
+- Select the `Bowtie2 index builder` in the "**Data Managers**" table
+- Select "*vir2*" in the "Source FASTA Sequence"
+- Leave the other options empty and click the `Execute` button
+- Expand the "*bowtie index*" dataset that appeared in your history and click the ![redo](images/redo.png) button
+- Repeat the previous 3 steps for "*AgamP4*" and "*hg19*"
 
 ----
-#### Note that the preparation of bowtie2 indexes can be long too ! (several hours for the vir2 bowtie2 index for instance)
+**Note that the preparation of bowtie2 indexes can be long too ! (several hours for the vir2 bowtie2 index for instance)**

@@ -2,6 +2,19 @@
 
 Now that are more familiar with manipulations in Galaxy with the Use Cases 1-1 to 1-4 described in details in the previous chapters, we will describe the other Use Case analyses more concisely. If you experience lack of skills in basic Galaxy operations (tool usage, copy of datasets, etc), do not hesitate to go back and examine the previous chapters step by step.
 
+---
+#### Discovery of novel viruses
+
+Here we are going to use Metavisitor workflows to discover new viruses infecting a laboratory colony of *Anopheles coluzzii* mosquitoes.
+
+- Workflow for Use Case 2-1:
+
+    Takes reads from EBI SRA ERP012577 (sRNA), assembles contigs, blastx them against **vir2**, selects contigs hitting *Dicistroviridae* proteins, re-assembles selected contigs to align them to the *Drosophila* C virus (DCV) genome and integrates them to its sequence
+
+- Worflow for Use Case 2-2:
+
+    Takes reads from EBI SRA ERS977505 (mRNA), assembles contigs, and blastx them against **vir2**
+---
 
 ## Input data for Use Cases 2-1 and 2-2
 

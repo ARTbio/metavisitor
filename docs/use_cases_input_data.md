@@ -1,8 +1,32 @@
 We are now entering into real analyses using Metavisitor.
 These analyses as well as their biological context are presented as **Use Cases** in the [metavisitor article](http://dx.doi.org/10.1101/048983). We invite readers of this manual to refer to this article if they need to better understand the biological context of the described procedures.
 
-In this section, we are going to create step by step a Galaxy history that contains the input data required to run the workflows for Use Cases 1-1, 1-2, 1-3 and 1-4
+In this section, we are going to create step by step a Galaxy history that contains the input data required to run the workflows for Use Cases 1-1, 1-2, 1-3 and 1-4.
 
+---
+#### Detection of known viruses
+
+Using small RNA sequencing libraries SRP013822 (EBI ENA) and Metavisitor workflows, we are going to reconstruct Nora virus genomes.
+
+- Workflow for Use Case 1-1:
+
+    Takes the raw reads and collapses them into unique sequences to reconstruct a Nora virus genome referred to as Nora_MV
+
+- Workflow for Use Case 1-2:
+
+    Takes raw reads and reconstructs a Nora_raw_reads genome
+
+- Workflow for Use Case 1-3:
+
+    Takes raw reads, normalizes the abundances and reconstructs a Nora_Median-Norm-reads genome
+
+In order to show Metavisitor's ability to detect multiple known viruses we'll use an other workflow with SRP013822 sequences.
+
+- Workflow for Use Case 1-4:
+
+    Takes raw reads, assembles contigs and aligns them against **vir2**
+
+---
 # History with input data for Use Cases 1-1, 1-2, 1-3 and 1-4
 
 1. Create a new history and rename it "Input data for Use Cases 1-1, 1-2, 1-3 and 1-4"

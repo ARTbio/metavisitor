@@ -1,3 +1,9 @@
+#### Workflow for Use Case 3-3's aim
+
+In ths Use Case, we take the datasets from [Matranga *et al.*](https://doi.org/10.1186/PREACCEPT-1698056557139770), relevant in the context of Lassa and Ebola outbreak and epidemic response, to demonstrate the versatility of Metavisitor as well as its ability to generate high throughput reconstruction of viral genomes.
+
+---
+
 ## Input data for Use Case 3-3
 
 As for the previous Use Cases, the first step is to collect all input data in an history that we will name `Input data for Use Case 3-3`.
