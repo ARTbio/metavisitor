@@ -77,6 +77,10 @@
     
         <ul>
         
+            <li><a class="toctree-l3" href="#discovery-of-novel-viruses">Discovery of novel viruses</a></li>
+        
+            <li><a class="toctree-l3" href="#takes-reads-from-ebi-sra-ers977505-mrna-assembles-contigs-and-blastx-them-against-vir2">Takes reads from EBI SRA ERS977505 (mRNA), assembles contigs, and blastx them against vir2</a></li>
+        
             <li><a class="toctree-l3" href="#input-data-for-use-cases-2-1-and-2-2">Input data for Use Cases 2-1 and 2-2</a></li>
         
             <li><a class="toctree-l3" href="#history-for-use-case-2-1">History for Use Case 2-1</a></li>
@@ -163,6 +167,19 @@
               
                 <h1 id="histories-for-use-cases-2-1-2-2">Histories for Use Cases 2-1, 2-2</h1>
 <p>Now that are more familiar with manipulations in Galaxy with the Use Cases 1-1 to 1-4 described in details in the previous chapters, we will describe the other Use Case analyses more concisely. If you experience lack of skills in basic Galaxy operations (tool usage, copy of datasets, etc), do not hesitate to go back and examine the previous chapters step by step.</p>
+<hr />
+<h4 id="discovery-of-novel-viruses">Discovery of novel viruses</h4>
+<p>Here we are going to use Metavisitor workflows to discover new viruses infecting a laboratory colony of <em>Anopheles coluzzii</em> mosquitoes.</p>
+<ul>
+<li>
+<p>Workflow for Use Case 2-1:</p>
+<p>Takes reads from EBI SRA ERP012577 (sRNA), assembles contigs, blastx them against <strong>vir2</strong>, selects contigs hitting <em>Dicistroviridae</em> proteins, re-assembles selected contigs to align them to the <em>Drosophila</em> C virus (DCV) genome and integrates them to its sequence</p>
+</li>
+<li>
+<p>Worflow for Use Case 2-2:</p>
+<h2 id="takes-reads-from-ebi-sra-ers977505-mrna-assembles-contigs-and-blastx-them-against-vir2">Takes reads from EBI SRA ERS977505 (mRNA), assembles contigs, and blastx them against <strong>vir2</strong></h2>
+</li>
+</ul>
 <h2 id="input-data-for-use-cases-2-1-and-2-2">Input data for Use Cases 2-1 and 2-2</h2>
 <p>As for the previous Use Case 1, the first step is to collect all input data in an history that we will name <code>Input data for Use Cases 2-1 and 2-2</code></p>
 <ol>
