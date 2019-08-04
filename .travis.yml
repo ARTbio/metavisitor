@@ -48,7 +48,8 @@ jobs:
               exit
             fi
       script:
-        - . $TRAVIS_BUILD_DIR/deploy_doc.sh && . $TRAVIS_BUILD_DIR/push_to_docker_registry.sh
+        - . $TRAVIS_BUILD_DIR/deploy_doc.sh
+        - . $TRAVIS_BUILD_DIR/push_to_docker_registry.sh
 
 addons:
   apt:

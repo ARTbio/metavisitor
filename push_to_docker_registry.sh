@@ -4,7 +4,7 @@ set -e
 # we have to push the docker image because the galaxykickstart context for the Dockerfile
 # is buit dynamically
 echo "building dynamically metavisitor docker image"
-cd # ensure back in home dir
+cd $TRAVIS_BUILD_DIR # ensure back in home dir
 git clone https://github.com/artbio/galaxykickstart.git
 rm galaxykickstart/Dockerfile
 cp Dockerfile galaxykickstart/
