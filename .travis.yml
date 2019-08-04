@@ -24,6 +24,14 @@ env:
 jobs:
   include:
 
+    - stage: push_documentation
+      if: (type = push) AND (branch =~ doc)
+      before_install: skip
+      install:
+        - echo "pushing documentation to a doc branch"
+        - echo "documentation will be built when merging a pull request"
+        - echo "terminating this stage gracefully"
+
     - stage: test
       if: (type = push) AND (branch != master) AND !(branch =~ doc)
       env:
