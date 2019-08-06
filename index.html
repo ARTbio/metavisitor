@@ -19,7 +19,7 @@
     // Current page data
     var mkdocs_page_name = "Metavisitor";
     var mkdocs_page_input_path = "index.md";
-    var mkdocs_page_url = null;
+    var mkdocs_page_url = "/metavisitor/";
   </script>
   
   <script src="js/jquery-2.1.1.min.js" defer></script>
@@ -54,6 +54,12 @@
     <ul class="subnav">
             
     <li class="toctree-l2"><a href="#reference-viral-database">reference viral database</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#how-was-nucleic-vir2-generated">How was nucleic vir2 generated?</a></li>
+        
+        </ul>
     
 
     <li class="toctree-l2"><a href="#quick-start">Quick Start</a></li>
@@ -153,6 +159,9 @@
     <li>Metavisitor</li>
     <li class="wy-breadcrumbs-aside">
       
+        <a href="https://github.com/ARTbio/metavisitor/edit/master/docs/index.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
     </li>
   </ul>
   <hr/>
@@ -170,13 +179,21 @@ graphical Galaxy workflow editor, users with minimal computational skills can us
 Metavisitor workflows or adapt them to suit specific needs by adding or modifying analysis
 modules.</p>
 <h1 id="reference-viral-database">reference viral database</h1>
-<p>Metavisitor's workflows use a home-made reference viral database <strong>vir2</strong>. This database was made using <em>Galaxy-Workflow-Metavisitor__Workflow_for_nucleic_vir2_generation</em> and <em>Galaxy-Workflow-Metavisitor__Workflow_for_proteic_vir2_generation</em>, they can both be found in <a href="https://github.com/ARTbio/metavisitor/tree/master/extra-files/metavisitor">Metavisitor's Github</a>.</p>
-<p>How is <em>nucleic vir2</em> generated?</p>
+<p>Metavisitor's workflows use a home-made reference viral database <strong>vir2</strong>. This database was
+made using <em>Galaxy-Workflow-Metavisitor__Workflow_for_nucleic_vir2_generation</em> and
+<em>Galaxy-Workflow-Metavisitor__Workflow_for_proteic_vir2_generation</em>, that can both be found
+in <a href="https://github.com/ARTbio/metavisitor/tree/master/extra-files/metavisitor">Metavisitor's Github</a>.</p>
+<h4 id="how-was-nucleic-vir2-generated">How was <em>nucleic vir2</em> generated?</h4>
 <ul>
-<li>Download every viral sequence from NCBI's <em>nuccore</em> database</li>
-<li>Cluster sequences sorter than 10 001 bp with 95% identity</li>
+<li>
+<p>Downloading every viral sequence from NCBI's <em>nuccore</em> database with the following
+  query (2018/03/21):</p>
+</li>
+<li>
+<p>Clustering sequences with 95% identity and shorter than 10 001 bp using vclust.</p>
+</li>
 </ul>
-<p><strong>vir2</strong> is also available for download in <a href="https://figshare.com/articles/vir2_NCBI_21-03-2018/6106892">Figshare</a></p>
+<p><strong>vir2</strong> is  available for download in <a href="https://figshare.com/articles/vir2_NCBI_21-03-2018/6106892">Figshare</a></p>
 <h1 id="quick-start">Quick Start</h1>
 <p>Users who want to use Metavisitor on the <a href="https://mississippi.snv.jussieu.fr">Galaxy Mississippi Server</a>,
 or got already the Metavisitor suite of tools installed in their own Galaxy server, can
@@ -184,9 +201,9 @@ jump to the next chapter <a href="use_cases_input_data">Prepare input data histo
 <h2 id="availability-of-metavisitor-tools-and-workflows">Availability of Metavisitor tools and workflows</h2>
 <p>Metavisitor has been developed at the <a href="http://artbio.fr">ARTbio platform</a>. Its tools are
 primarily available in <a href="https://github.com/ARTbio/tools-artbio">GitHub</a>. Its workflows are
-primarily available in this
-<a href="https://github.com/ARTbio/metavisitor/tree/master/extra-files/metavisitor">metavisitor repository</a>
-as well as in the <a href="https://github.com/ARTbio/GalaxyKickStart/tree/master/extra-files/metavisitor">GalaxyKickStart repository</a></p>
+primarily available in the
+<a href="https://github.com/ARTbio/metavisitor/tree/master/extra-files/metavisitor">metavisitor repository</a></p>
+<p>Metavisitor tools and workflows are also available in the <a href="https://toolshed.g2.bx.psu.edu/">toolshed</a></p>
 <h4 id="metavisitor-tools-developed-by-artbio-in-the-artbio-github">Metavisitor tools developed by ARTbio in the <a href="https://github.com/ARTbio/tools-artbio">ARTbio GitHub</a></h4>
 <ul>
 <li><a href="https://github.com/ARTbio/tools-artbio/tree/master/tools/blast_to_scaffold"><code>blast_to_scaffold</code></a></li>
@@ -203,7 +220,7 @@ as well as in the <a href="https://github.com/ARTbio/GalaxyKickStart/tree/master
 <li><a href="https://github.com/ARTbio/tools-artbio/tree/master/tools/sr_bowtie"><code>sr_bowtie</code></a></li>
 <li><a href="https://github.com/ARTbio/tools-artbio/tree/master/tools/yac_clipper"><code>yac_clipper</code></a></li>
 </ul>
-<p>Other tools from other developers are used in the suite metavisitor-2. These tools are
+<p>Tools from other developers are used in the suite metavisitor-2. These tools are
 available from the <a href="https://toolshed.g2.bx.psu.edu/">main Galaxy toolshed</a>:</p>
 <pre><code> name="bowtie2" owner="devteam"
  name="data_manager_bowtie2_index_builder" owner="devteam"
@@ -221,13 +238,14 @@ available from the <a href="https://toolshed.g2.bx.psu.edu/">main Galaxy toolshe
  name="spades" owner="nml"
 </code></pre>
 <h4 id="availability-of-metavisitor-tools-and-workflows-for-galaxy-instance-administrators">Availability of Metavisitor tools and workflows for <strong>Galaxy instance administrators</strong></h4>
-<p>All metavisitor tools are available in the
-<a href="https://toolshed.g2.bx.psu.edu/repository/browse_repositories?sort=name&amp;operation=view_or_manage_repository&amp;f-free-text-search=metavisitor&amp;id=ca18473f5a7e691a#TODO: Change this link when the suite is published">suite_metavisitor_2</a>
+<p>All metavisitor tools are available from the
+<a href="https://toolshed.g2.bx.psu.edu/view/artbio/suite_metavisitor_2/1570b18266be">suite_metavisitor_2</a>
 Galaxy Admin can just install this suite of tools by using the <code>Install new tools</code> menu in
 their Admin panel, searching for "metavisitor", and installing the <code>suite_metavisitor_2</code>
 tool suite.</p>
-<p>Admins can also install the tools from the <code>metavisitor_workflows</code> repository, which will
-provide in addition the metavisitors workflows.</p>
+<p>Galaxy Admins can install the workflows from the <code>metavisitor_workflows</code> repository in the
+<a href="https://toolshed.g2.bx.psu.edu/">main Galaxy toolshed</a>, which will
+install in addition all tools needed for Metavisitor.</p>
 <h4 id="availability-of-metavisitors-workflows-for-any-galaxy-instance-user">Availability of Metavisitors workflows for any Galaxy instance user.</h4>
 <p>We have deposited the Metavisitors workflows in the
 <a href="http://www.myexperiment.org/workflows #TODO: this will need to be updated too">myexperiment server</a>,
@@ -274,6 +292,8 @@ with <em>pre-installed</em> Metavisitor tools and workflows:</p>
   <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
+          <a href="https://github.com/ARTbio/metavisitor/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
       
       
         <span style="margin-left: 15px"><a href="metavisitor_configure_references/" style="color: #fcfcfc">Next &raquo;</a></span>
@@ -289,5 +309,5 @@ with <em>pre-installed</em> Metavisitor tools and workflows:</p>
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2019-08-04 13:23:35
+Build Date UTC : 2019-08-06 14:20:47
 -->

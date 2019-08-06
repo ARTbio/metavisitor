@@ -19,7 +19,7 @@
     // Current page data
     var mkdocs_page_name = "Prepare Metavisitor Galaxy instance for analyses";
     var mkdocs_page_input_path = "metavisitor_configure_references.md";
-    var mkdocs_page_url = null;
+    var mkdocs_page_url = "/metavisitor/metavisitor_configure_references/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
@@ -165,6 +165,9 @@
     <li>Prepare Metavisitor Galaxy instance for analyses</li>
     <li class="wy-breadcrumbs-aside">
       
+        <a href="https://github.com/ARTbio/metavisitor/edit/master/docs/metavisitor_configure_references.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
     </li>
   </ul>
   <hr/>
@@ -172,14 +175,23 @@
           <div role="main">
             <div class="section">
               
-                <p>Once you know how to access to your Metavisitor Galaxy instance with a web browser and are able to perform basic start/stop/restart operations, there is still some work needed to import and configure reference data (genomes) so that they are directly available to all instance users for running tools and workflows.</p>
-<p>Here we provide the step-by-step description of what we <em>actually did ourselves</em> to prepare our Metavisitor instance before performing the analyses described <a href="http://dx.doi.org/10.1101/048983">here</a>.</p>
+                <p>Once you know how to access to your Metavisitor Galaxy instance with a web browser and
+are able to perform basic start/stop/restart operations, there is still some work needed
+to import and configure reference data (reference genomes and databases) so that they are
+directly available to all Galaxy users for running tools and workflows.</p>
+<p>Here we provide the step-by-step description of what we did to prepare our Metavisitor
+instance before performing the analyses described <a href="http://dx.doi.org/10.1101/048983">here</a>.</p>
 <h2 id="1-connect-to-your-metavisitor-galaxy-admin-account-with-your-web-browser">1. Connect to your Metavisitor Galaxy admin account with your web browser</h2>
 <h2 id="2-import-reference-data-in-an-history-references">2. Import reference data in an history "References"</h2>
-<p>At first, you need to import and prepare the reference datasets you will need for most of the Metavisitor analyses. As a Galaxy admin you will make latter some of these references directly accessible to the Galaxy tools, and/or accessible to any other users by putting them in a Galaxy public library.</p>
+<p>At first, you need to import and prepare the reference datasets you will need for most of
+the Metavisitor analyses. As a Galaxy admin you will make latter some of these references
+directly accessible to the Galaxy tools, and/or accessible to any other users by putting
+them in a Galaxy public library.</p>
 <h4 id="a-preliminary-actions">a. Preliminary actions</h4>
-<p>Click on the <code>Analyze Data</code> menu
-rename the <code>Unnamed history</code> to <code>References</code></p>
+<ul>
+<li>Click on the <code>Analyze Data</code> menu</li>
+<li>rename the <code>Unnamed history</code> to <code>References</code></li>
+</ul>
 <h4 id="b-upload-nucleotide-vir2-fasta-file">b. Upload nucleotide vir2 fasta file</h4>
 <ul>
 <li>Click on the <img alt="upload_button" src="../images/upload_button.png" /> button on top of the tool bar (left handside of the Galaxy interface)</li>
@@ -216,7 +228,7 @@ rename the <code>Unnamed history</code> to <code>References</code></p>
 <td>ftp://ftp.ensemblgenomes.org/pub/release-28/protists/fasta/plasmodium_berghei/dna/Plasmodium_berghei.May_2010.28.dna_sm.genome.fa.gz</td>
 </tr>
 <tr>
-<td><code>hg19</code></td>
+<td><code>hg38</code></td>
 <td>ftp://ftp.ensembl.org/pub/release-84/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz</td>
 </tr>
 </tbody>
@@ -278,7 +290,7 @@ rename the <code>Unnamed history</code> to <code>References</code></p>
 <th>nucleotide vir2</th>
 <th>dm6</th>
 <th>AgamP4</th>
-<th>hg19</th>
+<th>hg38</th>
 </tr>
 </thead>
 <tbody>
@@ -294,7 +306,7 @@ rename the <code>Unnamed history</code> to <code>References</code></p>
 <td>vir2</td>
 <td>dm6</td>
 <td>AgamP4</td>
-<td>hg19</td>
+<td>hg38</td>
 </tr>
 <tr>
 <td>Choose the source for the reference genome</td>
@@ -308,14 +320,16 @@ rename the <code>Unnamed history</code> to <code>References</code></p>
 <td>nucleotide vir2</td>
 <td>dm6</td>
 <td>AgamP4</td>
-<td>hg19</td>
+<td>hg38</td>
 </tr>
 </tbody>
 </table>
 <ul>
 <li>Leave the rest of the fields empty and click the <code>Execute</code> button</li>
 </ul>
-<p><strong>Tip:</strong> <em>Once you have run the first job. You can expand the new dataset that appeared in your history and click on the</em> <img alt="redo" src="../images/redo.png" /> <em>button, instead of going back to the admin panel.</em></p>
+<p><strong>Tip:</strong> <em>Once you have run the first job. You can expand the new dataset that appeared in
+your history and click on the</em> <img alt="redo" src="../images/redo.png" /> <em>button, instead of going back to
+the admin panel.</em></p>
 <h2 id="5-creating-galaxy-bowtie-indexes-accessible-to-tools-for-every-user">5. Creating Galaxy bowtie indexes accessible to tools for every user</h2>
 <p>Now we are going to generate the bowtie indexes using another data manager tool.</p>
 <ul>
@@ -328,7 +342,7 @@ rename the <code>Unnamed history</code> to <code>References</code></p>
 <li>Repeat the previous 3 steps for "<em>dm6</em>", "<em>AgamP4</em>" and "<em>hg19</em>"</li>
 </ul>
 <hr />
-<p><strong>Note that the preparation of bowtie indexes can be long ! (several hours for the vir2 bowtie index for instance)</strong></p>
+<p><strong>Note that the preparation of bowtie indexes can be long (several hours for the vir2 bowtie index for instance)</strong></p>
 <h2 id="6-creating-galaxy-bowtie2-indexes-accessible-to-tools-for-every-user">6. Creating Galaxy bowtie2 indexes accessible to tools for every user</h2>
 <p>Finally, we are going to generate the bowtie2 indexes using another data manager tool.</p>
 <ul>
@@ -341,7 +355,7 @@ rename the <code>Unnamed history</code> to <code>References</code></p>
 <li>Repeat the previous 3 steps for "<em>AgamP4</em>" and "<em>hg19</em>"</li>
 </ul>
 <hr />
-<p><strong>Note that the preparation of bowtie2 indexes can be long too ! (several hours for the vir2 bowtie2 index for instance)</strong></p>
+<p><strong>Note that the preparation of bowtie2 indexes can be long too (several hours for the vir2 bowtie2 index for instance)</strong></p>
               
             </div>
           </div>
@@ -376,6 +390,8 @@ rename the <code>Unnamed history</code> to <code>References</code></p>
 
   <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/ARTbio/metavisitor/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
         <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
