@@ -1,5 +1,5 @@
 site_name: Metavisitor-2
-pages:
+nav:
   - Metavisitor: index.md
   - Prepare Metavisitor Galaxy instance for analyses: metavisitor_configure_references.md
   - Prepare input data histories: use_cases_input_data.md
@@ -13,5 +13,6 @@ pages:
     - GalaxyKickStart: metavisitor_ansible.md
     - Docker: metavisitor_docker.md
     - Access and Control Metavisitor Galaxy instance: metavisitor_access_control.md
-
+site_url: https://artbio.github.io/metavisitor/
+repo_url: https://github.com/ARTbio/metavisitor
 theme: readthedocs
