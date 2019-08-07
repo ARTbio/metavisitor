@@ -88,7 +88,7 @@ Now we are going to generate the bowtie indexes using another data manager tool.
   - Select "*vir2*" in the "Source FASTA Sequence"
   - Leave the other options empty and click the `Execute` button
   - Expand the "*bowtie index*" dataset that appeared in your history and click the ![redo](images/redo.png) button
-  - Repeat the previous 3 steps for "*dm6*", "*AgamP4*" and "*hg19*"
+  - Repeat the previous 3 steps for "*dm6*", "*AgamP4*" and "*hg38*"
 
 ----
 **Note that the preparation of bowtie indexes can be long (several hours for the vir2 bowtie index for instance)**
@@ -102,7 +102,7 @@ Finally, we are going to generate the bowtie2 indexes using another data manager
 - Select "*vir2*" in the "Source FASTA Sequence"
 - Leave the other options empty and click the `Execute` button
 - Expand the "*bowtie index*" dataset that appeared in your history and click the ![redo](images/redo.png) button
-- Repeat the previous 3 steps for "*AgamP4*" and "*hg19*"
+- Repeat the previous 3 steps for "*AgamP4*" and "*hg38*"
 
 ----
 **Note that the preparation of bowtie2 indexes can be long too (several hours for the vir2 bowtie2 index for instance)**
