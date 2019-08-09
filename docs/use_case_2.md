@@ -66,9 +66,9 @@ You may follow the link to the new history when the workflow has started.
 6. Run Workflow.
 
 ## Re-mapping of the small RNA reads (ERP012577) to the AnCV genome (KU169878).
-The previous workflow allowed to assemble a large contig of 8919 nt which significantly
-matched structural and non-structural polyproteins of Drosophila C Virus and Cricket
-Paralysis Virus in blastx alignments (see the dataset `blast analysis, by subjects`
+The previous Workflow for Use Case 2-2 allowed to assemble a large contig of 8919 nt which
+significantly matched structural and non-structural polyproteins of Drosophila C Virus and
+Cricket Paralysis Virus in blastx alignments (see the dataset `blastx Filter sequences by length on data 17 vs 'protein BLAST database from data 2'`
 of the history). This large contig corresponds to the genome of a new Anopheles C Virus
 deposited to the NCBI nucleotide database under accession number KU169878 (see the
 [companion Metavisitor article](http://dx.doi.org/10.1101/048983) and
@@ -85,9 +85,7 @@ Locus_69_Transcript_1/1_Confidence_0.000_Length_8919.
 query string` in the Galaxy tool bar, and paste the name in the field `Select sequences
 with this string in their header` of the tool form. Select the dataset `Oases_optimiser on
 data 21: Denovo assembled transcripts` as a source file, and run the tool.
-3. Use the tool `Concatenate multiple datasets tail-to-head` and select the output files
-of the previous step as inputs. Run the tool.
-4. Now, we are going to change the header of the previously extracted fasta sequences using
+3. Now, we are going to change the header of the previously extracted fasta sequences using
 the tool `Regex Find And Replace`.
     - Select the previous dataset `Concatenated datasets` as input dataset for this tool.
     Click on `+ Insert Check`. Use `>.*Confidence(.*)_Length_8919` (or the equivalent you
