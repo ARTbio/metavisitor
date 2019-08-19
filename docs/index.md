@@ -10,7 +10,7 @@ graphical Galaxy workflow editor, users with minimal computational skills can us
 Metavisitor workflows or adapt them to suit specific needs by adding or modifying analysis
 modules.
 
-# reference viral database
+# Reference viral database
 
 Metavisitor's workflows use a home-made reference viral database **vir2**. This database was
 made using *Galaxy-Workflow-Metavisitor__Workflow_for_nucleic_vir2_generation* and
@@ -20,8 +20,12 @@ in [Metavisitor's Github](https://github.com/ARTbio/metavisitor/tree/master/extr
 #### How was *nucleic vir2* generated?
 
 - Downloading every viral sequence from NCBI's *nuccore* database with the following
-  query (2018/03/21):
-  
+  queries (2018/03/21):
+
+  >*txid10239[Organism] NOT txid131567[Organism] NOT phage[All Fields] NOT patent[All Fields] NOT chimeric[Title] NOT vector[Title] NOT method[Title] NOT X174[All Fields] AND 301:10000[Sequence length]*
+
+  >*txid10239[Organism] NOT txid131567[Organism] NOT phage[All Fields] NOT patent[All Fields] NOT chimeric[Title] NOT vector[Title] NOT method[Title] NOT X174[All Fields] AND 10001:1300000[Sequence length]*
+
 - Clustering sequences with 95% identity and shorter than 10 001 bp using vclust.
 
 **vir2** is  available for download in [Figshare](https://figshare.com/articles/vir2_NCBI_21-03-2018/6106892)
