@@ -29,7 +29,7 @@ As for the previous Use Cases, the first step is to collect all input data in an
 
 - Click the "Start" button.
 - Use the `Download and Extract Reads in FASTA/Q format from NCBI SRA` tool. Set "List of SRA accession" in "select input type" and enter "Ebola_accessions" as input. Execute the tool.
-- Select `Concatenate multiple datasets tail-to-head`. Change "What type of data do you wish to concatenate?" to "Paired collection", set the collection as input and "Concatenation by pairs" in "What type of concatenation do you wish to perform?".
+- Select `Concatenate multiple datasets tail-to-head`. Change "What type of data do you wish to concatenate?" to "Paired collection", set the collection as input and "Concatenate pairs of datasets" in "What type of concatenation do you wish to perform?".
 
 When you are finished, you'll have 8 datasets. Make sure to verify their datatype is `fastqsanger` or `fastqsanger.gz`, and create a dataset collection (as explained in the previous chapter) of these 8 datasets that you will name `Ebola virus`.
 
