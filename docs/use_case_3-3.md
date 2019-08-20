@@ -29,7 +29,7 @@ As for the previous Use Cases, the first step is to collect all input data in an
 
 - Click the "Start" button.
 - Use the `Download and Extract Reads in FASTA/Q format from NCBI SRA` tool. Set "List of SRA accession" in "select input type" and enter "Ebola_accessions" as input. Execute the tool.
-- Select `Concatenate multiple datasets tail-to-head`. Change "What type of data do you wish to concatenate?" to "Paired collection", set the collection as input and "Concatenation by pairs" in "What type of concatenation do you wish to perform?".
+- Select `Concatenate multiple datasets tail-to-head`. Change "What type of data do you wish to concatenate?" to "Paired collection", set the collection as input and "Concatenate pairs of datasets" in "What type of concatenation do you wish to perform?".
 
 When you are finished, you'll have 8 datasets. Make sure to verify their datatype is `fastqsanger` or `fastqsanger.gz`, and create a dataset collection (as explained in the previous chapter) of these 8 datasets that you will name `Ebola virus`.
 
@@ -98,11 +98,11 @@ When you are finished, you'll have 8 datasets. Make sure to verify their datatyp
 
 When you are finished you'll have 55 datasets. Make sure their datatype is `fastqsanger` or `fastqsanger.gz`, and create a dataset collection (as explained in the previous chapter) of these 55 datasets that you will name `Lassa virus`.
 
-- Copy the `vir2 nucleotide BLAST database` from the `References` history to the current history `Input data for Use Case 3-3`.
+- Copy the `nucleotide vir2 blast database` from the `References` history to the current history `Input data for Use Case 3-3`.
 
 ## History for Use Case 3-3 / Ebola virus
 1. Stay in the history `Input data for Use Case 3-3`
-- pick the workflow `Metavisitor: Workflow for Use Case 3-3` in the workflows menu. Save the workflow and select the `run` option.
+- Pick the workflow `Metavisitor: Workflow for Use Case 3-3` in the workflows menu, and select the `run` option.
 - Before Step 1, you have to specify some parameters at run time. For Ebola virus, the field `reference_virus` has to be filled with `NC_002549.1` (as a guide for reconstruction of the Ebola virus genome) and the field `target_virus` has to be filled with `Ebola`.
 - For Step 1, select `Ebola virus`.
 - For Step 2, select the `nucleotide vir2 blast database` (this should also be already selected)
@@ -112,7 +112,7 @@ The workflow for Use Case 3-3 may take a long time. Be patient.
 
 ## History for Use Case 3-3 / Lassa virus, segment L
 1. Stay in the history `Input data for Use Case 3-3`
-- pick the workflow `Metavisitor: Workflow for Use Case 3-3` in the workflows menu. Save the workflow and select the `run` option.
+- Pick the workflow `Metavisitor: Workflow for Use Case 3-3` in the workflows menu, and select the `run` option.
 - Before Step 1, you have to specify some parameters at run time. For Lassa virus, the field `reference_virus` has to be filled with `NC_004297.1` (as a guide for reconstruction of the segment L of the Lassa virus genome) and the field `target_virus` has to be filled with `Lassa`.
 - For Step 1, select `Lassa virus`.
 - For Step 2, select the `nucleotide vir2 blast database` (this should also be already selected)
@@ -122,7 +122,7 @@ The workflow for Use Case 3-3 may take a long time. Be patient.
 
 ## History for Use Case 3-3 / Lassa virus, segment S
 1. Stay in the history `Input data for Use Case 3-3`
-- pick the workflow `Metavisitor: Workflow for Use Case 3-3` in the workflows menu. Save the workflow and select the `run` option.
+- Pick the workflow `Metavisitor: Workflow for Use Case 3-3` in the workflows menu, and select the `run` option.
 - Before Step 1, you have to specify some parameters at run time. For Lassa virus, the field `reference_virus` has to be filled with `NC_004296.1` (as a guide for reconstruction of the segment S of the Lassa virus genome) and the field `target_virus` has to be filled with `Lassa`.
 - For Step 1, select `Lassa virus` (this should be already selected).
 - For Step 2, select the `nucleotide vir2 blast database` (this should also be already selected)
