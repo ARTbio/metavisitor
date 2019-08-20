@@ -62,7 +62,8 @@ that we will name `Input data for Use Cases 2-1 and 2-2`
     the sequencing runs "IP-isoT-1_AGTCAA_L001_R_1.fastq", "IP-isoT-1_AGTCAA_L001_R_2.fastq",
     "IP-isoT-2_ATGTCA_L002_R_1.fastq" and "IP-isoT-2_ATGTCA_L002_R_2.fastq"
  - Create a dataset collection as explained in the previous chapter and name it
- `long read RNAseq datasets`.
+ `long read RNAseq datasets`. Note that we are not handling the files as paired-ends, thus
+ use the `Build dataset list` command and not the `Build list of dataset pairs` command.
  - Use the `Retrieve FASTA from NCBI`, paste `phix174[title]` in the "Query to NCBI in
  entrez format" field and select `Nucleotide` for the NCBI database. This will upload 154
  fasta sequences from phix174.
