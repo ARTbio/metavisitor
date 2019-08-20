@@ -98,7 +98,7 @@ When you are finished, you'll have 8 datasets. Make sure to verify their datatyp
 
 When you are finished you'll have 55 datasets. Make sure their datatype is `fastqsanger` or `fastqsanger.gz`, and create a dataset collection (as explained in the previous chapter) of these 55 datasets that you will name `Lassa virus`.
 
-- Copy the `vir2 nucleotide BLAST database` from the `References` history to the current history `Input data for Use Case 3-3`.
+- Copy the `nucleotide vir2 blast database` from the `References` history to the current history `Input data for Use Case 3-3`.
 
 ## History for Use Case 3-3 / Ebola virus
 1. Stay in the history `Input data for Use Case 3-3`
