@@ -53,7 +53,7 @@
     <a class="current" href=".">Metavisitor</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#reference-viral-database">reference viral database</a></li>
+    <li class="toctree-l2"><a href="#reference-viral-database">Reference viral database</a></li>
     
         <ul>
         
@@ -178,20 +178,22 @@ workflows was implemented as the Metavisitor package in the Galaxy framework. Us
 graphical Galaxy workflow editor, users with minimal computational skills can use existing
 Metavisitor workflows or adapt them to suit specific needs by adding or modifying analysis
 modules.</p>
-<h1 id="reference-viral-database">reference viral database</h1>
+<h1 id="reference-viral-database">Reference viral database</h1>
 <p>Metavisitor's workflows use a home-made reference viral database <strong>vir2</strong>. This database was
 made using <em>Galaxy-Workflow-Metavisitor__Workflow_for_nucleic_vir2_generation</em> and
 <em>Galaxy-Workflow-Metavisitor__Workflow_for_proteic_vir2_generation</em>, that can both be found
 in <a href="https://github.com/ARTbio/metavisitor/tree/master/extra-files/metavisitor">Metavisitor's Github</a>.</p>
 <h4 id="how-was-nucleic-vir2-generated">How was <em>nucleic vir2</em> generated?</h4>
 <ul>
-<li>
-<p>Downloading every viral sequence from NCBI's <em>nuccore</em> database with the following
-  query (2018/03/21):</p>
-</li>
-<li>
-<p>Clustering sequences with 95% identity and shorter than 10 001 bp using vclust.</p>
-</li>
+<li>Downloading every viral sequence from NCBI's <em>nuccore</em> database with the following
+  queries (2018/03/21):</li>
+</ul>
+<blockquote>
+<p><em>txid10239[Organism] NOT txid131567[Organism] NOT phage[All Fields] NOT patent[All Fields] NOT chimeric[Title] NOT vector[Title] NOT method[Title] NOT X174[All Fields] AND 301:10000[Sequence length]</em></p>
+<p><em>txid10239[Organism] NOT txid131567[Organism] NOT phage[All Fields] NOT patent[All Fields] NOT chimeric[Title] NOT vector[Title] NOT method[Title] NOT X174[All Fields] AND 10001:1300000[Sequence length]</em></p>
+</blockquote>
+<ul>
+<li>Clustering sequences with 95% identity and shorter than 10 001 bp using vclust.</li>
 </ul>
 <p><strong>vir2</strong> is  available for download in <a href="https://figshare.com/articles/vir2_NCBI_21-03-2018/6106892">Figshare</a></p>
 <h1 id="quick-start">Quick Start</h1>
@@ -309,5 +311,5 @@ with <em>pre-installed</em> Metavisitor tools and workflows:</p>
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2019-08-07 10:05:15
+Build Date UTC : 2019-08-21 10:12:00
 -->

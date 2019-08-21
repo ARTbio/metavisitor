@@ -224,7 +224,7 @@
 <p>Click the "Start" button.</p>
 </li>
 <li>Use the <code>Download and Extract Reads in FASTA/Q format from NCBI SRA</code> tool. Set "List of SRA accession" in "select input type" and enter "Ebola_accessions" as input. Execute the tool.</li>
-<li>Select <code>Concatenate multiple datasets tail-to-head</code>. Change "What type of data do you wish to concatenate?" to "Paired collection", set the collection as input and "Concatenation by pairs" in "What type of concatenation do you wish to perform?".</li>
+<li>Select <code>Concatenate multiple datasets tail-to-head</code>. Change "What type of data do you wish to concatenate?" to "Paired collection", set the collection as input and "Concatenate pairs of datasets" in "What type of concatenation do you wish to perform?".</li>
 </ul>
 <p>When you are finished, you'll have 8 datasets. Make sure to verify their datatype is <code>fastqsanger</code> or <code>fastqsanger.gz</code>, and create a dataset collection (as explained in the previous chapter) of these 8 datasets that you will name <code>Ebola virus</code>.</p>
 <h5 id="for-lassa-virus-samples">For Lassa virus samples:</h5>
@@ -409,12 +409,12 @@
 </ul>
 <p>When you are finished you'll have 55 datasets. Make sure their datatype is <code>fastqsanger</code> or <code>fastqsanger.gz</code>, and create a dataset collection (as explained in the previous chapter) of these 55 datasets that you will name <code>Lassa virus</code>.</p>
 <ul>
-<li>Copy the <code>vir2 nucleotide BLAST database</code> from the <code>References</code> history to the current history <code>Input data for Use Case 3-3</code>.</li>
+<li>Copy the <code>nucleotide vir2 blast database</code> from the <code>References</code> history to the current history <code>Input data for Use Case 3-3</code>.</li>
 </ul>
 <h2 id="history-for-use-case-3-3-ebola-virus">History for Use Case 3-3 / Ebola virus</h2>
 <ol>
 <li>Stay in the history <code>Input data for Use Case 3-3</code></li>
-<li>pick the workflow <code>Metavisitor: Workflow for Use Case 3-3</code> in the workflows menu. Save the workflow and select the <code>run</code> option.</li>
+<li>Pick the workflow <code>Metavisitor: Workflow for Use Case 3-3</code> in the workflows menu, and select the <code>run</code> option.</li>
 <li>Before Step 1, you have to specify some parameters at run time. For Ebola virus, the field <code>reference_virus</code> has to be filled with <code>NC_002549.1</code> (as a guide for reconstruction of the Ebola virus genome) and the field <code>target_virus</code> has to be filled with <code>Ebola</code>.</li>
 <li>For Step 1, select <code>Ebola virus</code>.</li>
 <li>For Step 2, select the <code>nucleotide vir2 blast database</code> (this should also be already selected)</li>
@@ -424,7 +424,7 @@
 <h2 id="history-for-use-case-3-3-lassa-virus-segment-l">History for Use Case 3-3 / Lassa virus, segment L</h2>
 <ol>
 <li>Stay in the history <code>Input data for Use Case 3-3</code></li>
-<li>pick the workflow <code>Metavisitor: Workflow for Use Case 3-3</code> in the workflows menu. Save the workflow and select the <code>run</code> option.</li>
+<li>Pick the workflow <code>Metavisitor: Workflow for Use Case 3-3</code> in the workflows menu, and select the <code>run</code> option.</li>
 <li>Before Step 1, you have to specify some parameters at run time. For Lassa virus, the field <code>reference_virus</code> has to be filled with <code>NC_004297.1</code> (as a guide for reconstruction of the segment L of the Lassa virus genome) and the field <code>target_virus</code> has to be filled with <code>Lassa</code>.</li>
 <li>For Step 1, select <code>Lassa virus</code>.</li>
 <li>For Step 2, select the <code>nucleotide vir2 blast database</code> (this should also be already selected)</li>
@@ -434,7 +434,7 @@
 <h2 id="history-for-use-case-3-3-lassa-virus-segment-s">History for Use Case 3-3 / Lassa virus, segment S</h2>
 <ol>
 <li>Stay in the history <code>Input data for Use Case 3-3</code></li>
-<li>pick the workflow <code>Metavisitor: Workflow for Use Case 3-3</code> in the workflows menu. Save the workflow and select the <code>run</code> option.</li>
+<li>Pick the workflow <code>Metavisitor: Workflow for Use Case 3-3</code> in the workflows menu, and select the <code>run</code> option.</li>
 <li>Before Step 1, you have to specify some parameters at run time. For Lassa virus, the field <code>reference_virus</code> has to be filled with <code>NC_004296.1</code> (as a guide for reconstruction of the segment S of the Lassa virus genome) and the field <code>target_virus</code> has to be filled with <code>Lassa</code>.</li>
 <li>For Step 1, select <code>Lassa virus</code> (this should be already selected).</li>
 <li>For Step 2, select the <code>nucleotide vir2 blast database</code> (this should also be already selected)</li>
