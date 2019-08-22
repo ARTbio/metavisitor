@@ -167,11 +167,10 @@
             <div class="section">
               
                 <h1 id="histories-for-use-cases-2-1-2-2">Histories for Use Cases 2-1, 2-2</h1>
-<p>Now that are more familiar with manipulations in Galaxy with the Use Cases 1-1 to 1-4
-described in details in the previous chapters, we will describe the other Use Case analyses
-more concisely. If you experience lack of skills in basic Galaxy operations
-(tool usage, copy of datasets, etc), do not hesitate to go back and examine the previous
-chapters step by step.</p>
+<p>Now that are more familiar with manipulations in Galaxy with the Use Cases 1-1 to 1-4, we will
+describe the other Use Case analyses more concisely. If you experience lack of skills in basic
+Galaxy operations (tool usage, copy of datasets, etc), do not hesitate to go back and
+examine the previous chapters step by step.</p>
 <hr />
 <h4 id="discovery-of-novel-viruses">Discovery of novel viruses</h4>
 <p>Here we are going to use Metavisitor workflows to discover new viruses infecting a
@@ -179,7 +178,7 @@ laboratory colony of <em>Anopheles coluzzii</em> mosquitoes.</p>
 <ul>
 <li>
 <p>Workflow for Use Case 2-1:</p>
-<p>Takes reads from EBI SRA ERP012577 (sRNA), assembles contigs, blastx them against
+<p>Takes reads from EBI SRA ERP012577 (small RNAs), assembles contigs, blastx them against
 <strong>vir2</strong>, selects contigs hitting <em>Dicistroviridae</em> proteins, re-assembles selected
 contigs to align them to the <em>Drosophila</em> C virus (DCV) genome and integrates them to its sequence</p>
 </li>
@@ -214,7 +213,7 @@ it to <code>fastqsanger.gz</code>.</li>
 <li>Repeat this operation for the other 3 datasets.</li>
 </ul>
 </li>
-<li>Create a dataset collection as <a href="use_case_1/#history-for-remapping-in-use-cases-1-123">previously explained</a>
+<li>Create a dataset collection as <a href="https://artbio.github.io/metavisitor/use_case_1/#history-for-remapping-in-use-cases-1-123">previously explained</a>
  (step 9) and name it <code>Small RNA reads ERP012577</code></li>
 <li>For the RNA sequence datasets (ERS977505) that will be used in Use Case 2-2, use again
  the <code>EBI SRA ENA SRA</code>tool which in the "Get data" section of the left tool bar.<ul>
@@ -240,7 +239,8 @@ the sequencing runs "IP-isoT-1_AGTCAA_L001_R_1.fastq", "IP-isoT-1_AGTCAA_L001_R_
  <code>protein vir2 blast database</code> and <code>P. berghei</code> <strong>from</strong> the history <code>References</code> <strong>to</strong>
  the current history <code>Input data for Use Cases 2-1 and 2-2</code>. If you don't remember well
  how to copy datasets between histories, you may read again the explanation
- <a href="use_cases_input_data/#history-with-input-data-for-use-cases-1-1-1-2-1-3-and-1-4">here</a> (step 3)</li>
+ <a href="https://artbio.github.io/metavisitor/use_cases_input_data/#history-with-input-data-for-use-cases-1-1-1-2-1-3-and-1-4">here</a>
+ (step 3)</li>
 </ul>
 <p><strong><em>Your are now ready for generating Uses Cases 2-1 and 2-2</em></strong></p>
 <h2 id="history-for-use-case-2-1">History for Use Case 2-1</h2>
