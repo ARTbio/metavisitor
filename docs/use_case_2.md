@@ -26,7 +26,7 @@ laboratory colony of *Anopheles coluzzii* mosquitoes.
 ## Input data for Use Cases 2-1 and 2-2
 
 As for the previous Use Case 1, the first step is to collect all input data in an history
-that we will named `Input data for Use Cases 2-1 and 2-2`
+that we will name `Input data for Use Cases 2-1 and 2-2`
 
  - Create a new history
  - Rename this history `Input data for Use Cases 2-1 and 2-2`
