@@ -47,7 +47,7 @@ that we will name `Input data for Use Cases 2-1 and 2-2`
     crayon button of any one of these four datasets and select the `Datatypes` tab and set
     it to `fastqsanger.gz`.
     - Repeat this operation for the other 3 datasets.
- - Create a dataset collection as [previously explained](use_case_1/#history-for-remapping-in-use-cases-1-123)
+ - Create a dataset collection as [previously explained](https://artbio.github.io/metavisitor/use_case_1/#history-for-remapping-in-use-cases-1-123)
  (step 9) and name it `Small RNA reads ERP012577`
  - For the RNA sequence datasets (ERS977505) that will be used in Use Case 2-2, use again
  the `EBI SRA ENA SRA`tool which in the "Get data" section of the left tool bar.
@@ -71,7 +71,8 @@ that we will name `Input data for Use Cases 2-1 and 2-2`
  `protein vir2 blast database` and `P. berghei` **from** the history `References` **to**
  the current history `Input data for Use Cases 2-1 and 2-2`. If you don't remember well
  how to copy datasets between histories, you may read again the explanation
- [here](use_cases_input_data/#history-with-input-data-for-use-cases-1-1-1-2-1-3-and-1-4) (step 3)
+ [here](https://artbio.github.io/metavisitor/use_cases_input_data/#history-with-input-data-for-use-cases-1-1-1-2-1-3-and-1-4)
+ (step 3)
 
 **_Your are now ready for generating Uses Cases 2-1 and 2-2_**
 
