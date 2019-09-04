@@ -64,7 +64,7 @@ As for the previous Use Cases 1 and 2, the first step is to collect all the inpu
 
     - Click the `Start` button Name and rename the dataset "Use-Case_3-1_information".
     - Use the tool `Cut columns from table`. In the "Cut columns field" write `c1` and make sure you select "Use-Case_3-1_information" file in the "From" field before executing. Rename the output "Use-Case_3-1_accessions".
-    - Use the tool `Extract reads in FASTQ/A format from NCBI SRA`, select `List of SRA accession, one per line`from `select input type` and "Use-Case_3-1_accessions" in sra accession list. Click the `Execute` button.
+    - Use the tool `Download and Extract Reads in FASTA/Q format from NCBI SRA`, select `List of SRA accession, one per line`from `select input type` and "Use-Case_3-1_accessions" in sra accession list. Click the `Execute` button.
     - When the tool is finished running you should have 2 new dataset collections in your history, one of them is empty. Delete the empty collection and verify that you have 40 pairs of datasets in the second collection.
     - If you are missing some sequences you'll have to re-do the steps above with only the missing identifiers. Once done, merge the collections using the tool `Merge Collections`.
     - Use the `Concatenate multiple datasets tail-to-head` tool and select "Paired collection" as type of data. Set the paired collection as input and select "Concatenate pairs of datasets" as type of concatenation. Execute the tool.
