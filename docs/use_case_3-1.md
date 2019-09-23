@@ -90,3 +90,19 @@ As for the previous Use Cases 1 and 2, the first step is to collect all the inpu
 - For Step 1 (Fever Patient Sequences collection), select `patient collection` (this should be already selected).
 - For Step 2, select the `nucleotide vir2 blast database` (this should also be already selected)
 - As usual, check the box `Send results to a new history`, edit the name of the new history to `History for Use Case 3-1`, and `Execute` the workflow ! Note, that for complex workflows with dataset collections in input, the actual warning that the workflow is started may take time to show up.
+
+---
+
+## Results
+
+As you can see the results for this use case differ whether you use [Metavisitor](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0168397) or Metavisitor2.
+There are failed (red) datasets in this history, this is normal, it means not all patients had sequences matching the viral database. You will notice that only `patient 0629-453` has contigs matching HIV sequences, this is a false positive, you can tell it's a false positive by looking at the other matching sequences names which are very heterogeneous (bovine, shrimp and plant viruses). To make sure its a false positive you can:
+
+- Copy the name of the contig
+- Select `Pick Fasta sequences`
+- Paste the contig name in the "Select sequences with this string in their header" section
+- Select dataset `85: Oases viral contigs` and run the tool
+- In a new browser tab go to the [Blastn web page](https://blast.ncbi.nlm.nih.gov/Blast.cgi?LINK_LOC=blasthome&PAGE_TYPE=BlastSearch&PROGRAM=blastn)
+- Copy paste the contig sequence in the query section and mae sure the `Nucleotide collection nr` is selected as database before running blast
+
+The sequence matches cloning vectors and not viruses. This is due to the fact that some sequences in the NCBI database are incorrectly labeled.
