@@ -96,7 +96,7 @@ As for the previous Use Cases 1 and 2, the first step is to collect all the inpu
 ## Results
 
 The results for this use case differ whether you use [Metavisitor](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0168397) or Metavisitor2.
-There are failed (red) datasets in this history, this is expected, it means not all patients had sequences matching the viral database. You will notice that only `patient 0629-453` has contigs matching HIV sequences, this is a false positive, you can tell it's a false positive by looking at the other matching sequences names which are very heterogeneous (bovine, shrimp and plant viruses). To make sure its a false positive you can:
+There are failed (red) datasets in this history, this is expected, it means not all patients had sequences matching the viral database. You will notice that only `patient 0629-453` has contigs matching HIV sequences, this is a false positive. To make sure its a false positive you can:
 
 - Copy the name of the contig
 - Select `Pick Fasta sequences`
@@ -105,4 +105,4 @@ There are failed (red) datasets in this history, this is expected, it means not 
 - In a new browser tab go to the [Blastn web page](https://blast.ncbi.nlm.nih.gov/Blast.cgi?LINK_LOC=blasthome&PAGE_TYPE=BlastSearch&PROGRAM=blastn)
 - Copy paste the contig sequence in the query section and mae sure the `Nucleotide collection nr` is selected as database before running blast
 
-The sequence does not match viruses but cloning vectors. This is due to the fact that some sequences in the NCBI database are incorrectly labeled.
+The sequence does not match viruses but cloning vectors.
