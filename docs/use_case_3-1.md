@@ -96,7 +96,7 @@ As for the previous Use Cases 1 and 2, the first step is to collect all the inpu
 ## Results
 
 The results for this use case differ whether you use [Metavisitor](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0168397) or Metavisitor2.
-There are failed (red) datasets in this history, this is expected, it means not all patients had sequences matching the viral database. You will notice that only `patient 0629-453` has contigs matching HIV sequences, this is a false positive. To make sure its a false positive you can:
+There are failed (red), empty datasets in this history. These datasets correspond to patients who didn't have any sequence matchng the viral database. Only `patient 0629-453` has contigs matching HIV sequences, this is a false positive. To make sure its a false positive you can:
 
 - Copy the name of the contig
 - Select `Pick Fasta sequences`
