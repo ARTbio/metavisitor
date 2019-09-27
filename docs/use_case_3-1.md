@@ -64,7 +64,7 @@ As for the previous Use Cases 1 and 2, the first step is to collect all the inpu
 
     - Click the `Start` button Name and rename the dataset "Use-Case_3-1_information".
     - Use the tool `Cut columns from table`. In the "Cut columns field" write `c1` and make sure you select "Use-Case_3-1_information" file in the "From" field before executing. Rename the output "Use-Case_3-1_accessions".
-    - Use the tool `Extract reads in FASTQ/A format from NCBI SRA`, select `List of SRA accession, one per line`from `select input type` and "Use-Case_3-1_accessions" in sra accession list. Click the `Execute` button.
+    - Use the tool `Download and Extract Reads in FASTA/Q format from NCBI SRA`, select `List of SRA accession, one per line`from `select input type` and "Use-Case_3-1_accessions" in sra accession list. Click the `Execute` button.
     - When the tool is finished running you should have 2 new dataset collections in your history, one of them is empty. Delete the empty collection and verify that you have 40 pairs of datasets in the second collection.
     - If you are missing some sequences you'll have to re-do the steps above with only the missing identifiers. Once done, merge the collections using the tool `Merge Collections`.
     - Use the `Concatenate multiple datasets tail-to-head` tool and select "Paired collection" as type of data. Set the paired collection as input and select "Concatenate pairs of datasets" as type of concatenation. Execute the tool.
@@ -90,3 +90,19 @@ As for the previous Use Cases 1 and 2, the first step is to collect all the inpu
 - For Step 1 (Fever Patient Sequences collection), select `patient collection` (this should be already selected).
 - For Step 2, select the `nucleotide vir2 blast database` (this should also be already selected)
 - As usual, check the box `Send results to a new history`, edit the name of the new history to `History for Use Case 3-1`, and `Execute` the workflow ! Note, that for complex workflows with dataset collections in input, the actual warning that the workflow is started may take time to show up.
+
+---
+
+## Results
+
+The results for this use case differ whether you use [Metavisitor](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0168397) or Metavisitor2.
+There are failed (red), empty datasets in this history. These datasets correspond to patients who didn't have any sequence matchng the viral database. You will notice that only `patient 0629-453` has contigs matching HIV sequences. However, this patient is a false positive. In support to this conclusion, you can:
+
+- Copy the name of the contig
+- Select `Pick Fasta sequences`
+- Paste the contig name in the "Select sequences with this string in their header" section
+- Select dataset `85: Oases viral contigs` and run the tool
+- In a new browser tab go to the [Blastn web page](https://blast.ncbi.nlm.nih.gov/Blast.cgi?LINK_LOC=blasthome&PAGE_TYPE=BlastSearch&PROGRAM=blastn)
+- Copy paste the contig sequence in the query section and mae sure the `Nucleotide collection nr` is selected as database before running blast
+
+The sequence does not match viruses but cloning vectors.
